@@ -1,6 +1,6 @@
 <template>
   <div class="body"> 
-    <img src="~/static/images/shape1.svg" alt="" class="blob-1">
+    <!-- <img src="~/static/images/shape1.svg" alt="" class="blob-1"> -->
     <Nuxt/>
   </div>
 </template>
