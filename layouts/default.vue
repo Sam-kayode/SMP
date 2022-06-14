@@ -1,6 +1,6 @@
 <template>
   <div class="body"> 
-    <!-- <img src="~/static/images/shape1.svg" alt="" class="blob-1"> -->
+    <img src="~/static/images/shape1.svg" alt="" class="blob-1">
     <Nuxt/>
   </div>
 </template>
@@ -19,6 +19,13 @@ body{
   top:-140px;
   position:fixed;
   z-index:-3;
+}
+
+.logo{
+  transform: scale(0.5);
+  position:fixed;
+  top:-20px;
+  left:-10px;
 }
 }
 
