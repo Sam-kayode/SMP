@@ -1,5 +1,6 @@
 <template>
   <div class="body"> 
+    <Navbar/>
     <img src="~/static/images/shape1.svg" alt="" class="blob-1">
     <Nuxt/>
   </div>
@@ -21,12 +22,7 @@ body{
   z-index:-3;
 }
 
-.logo{
-  transform: scale(0.5);
-  position:fixed;
-  top:-20px;
-  left:-10px;
-}
+
 }
 
 
