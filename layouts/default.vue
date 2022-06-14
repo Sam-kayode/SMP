@@ -15,11 +15,13 @@ export default {
 <style lang="scss">
 body{
 
+
 .blob-1{
-  left:-140px;
-  top:-140px;
-  position:fixed;
+  left:-7vw;
+  top:-6vw;
+  position:absolute;
   z-index:-3;
+  width:25vw;
 }
 
 

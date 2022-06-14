@@ -23,13 +23,15 @@ export default {}
 
   .logo {
     transform: scale(0.5);
+
   }
 
   ul {
     list-style: none;
+
     li {
       display: inline;
-      padding: 0px 30px;
+      padding: 0px 1.5vw;
       a {
         color: rgb(109, 91, 161);
       }
