@@ -22,7 +22,7 @@ export default {}
   display: flex;
 
   .logo {
-    transform: scale(0.5);
+    transform: scale(0.6);
 
   }
 
