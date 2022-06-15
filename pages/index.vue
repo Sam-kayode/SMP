@@ -14,7 +14,7 @@
         </p>
       </div>
       <div class="right">
-        <img src="~/static/images/tumi1.png" alt="" class="tumi" />
+        <img src="https://res.cloudinary.com/sam-kay/image/upload/v1655297755/smp/Group_1_1_2_mxfflk.png" alt="" class="tumi" />
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@ export default {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   height: 100%;
-  
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
