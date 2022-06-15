@@ -56,15 +56,10 @@ export default {
     families: {
       Roboto: true,
       'Josefin+Sans': true,
-      Lato: [100, 300,400],
-      Raleway: {
+      Lato: [100, 300],
+      'Open+Sans': {
         wght: [100, 400],
-        ital: [100],
       },
     },
-    display: 'auto', // 'auto' | 'block' | 'swap' | 'fallback' | 'optional',
-    prefetch: true,
-    download: true,
-    base64: true,
   },
 }

@@ -3,7 +3,7 @@
     <div class="index">
       <div class="left">
         <h4>Hi There, I am</h4>
-        <h1 class="p-0 m-0">Tumilara</h1>
+        <h1 class="p-0 m-0">Tum<span>il</span>ara</h1>
         <h3 class="">
           <span>-</span> The Social Media Princess <span>-</span>
         </h3>
@@ -31,7 +31,8 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-
+  height: 100%;
+  
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
@@ -48,38 +49,34 @@ export default {
 
 .left {
   h4 {
-    font-family: 'josefin sans';
-    font-size: 1.6vw;
-    font-weight: 100;
+    font-family: 'open sans', sans-serif;
+    font-size: 1.3rem;
   }
 
   h1 {
-    font-family: 'josefin sans';
+    font-family: 'josefin sans', sans-serif;
     font-size: 8vw;
     font-weight: bolder;
-    color: #a966c8;
-  }
-  h3 {
-    font-family: 'josefin sans';
-    font-size: 2vw;
-    margin-bottom: 70px;
-    margin-top: -10px;
-    font-weight: bolder;
-
-    hr {
-      display: inline;
-      width: 50px !important;
+    span {
       color: #a966c8;
     }
   }
-  p {
-    font-family: 'josefin sans';
+  h3 {
+    font-family: 'open sans', sans-serif;
     font-size: 1.7vw;
+    margin-bottom: 35px;
+    margin-top: -10px;
+    font-weight: bolder;
+    color: #a966c8;
+  }
+  p {
+    font-family: 'open sans', sans-serif;
+    font-size: 1.1vw;
     color: #000000;
-    width: 80%;
+    width: 65%;
 
     span {
-      font-size: 1.7vw;
+      // font-size: 1.7vw;
       color: #a966c8;
       font-weight: bolder;
     }
