@@ -1,18 +1,21 @@
 <template>
-  <div class="index">
-    <div class="left">
-      <h4>Hi There, I am</h4>
-      <h1 class="p-0 m-0">Tumilara</h1>
-      <h3 class=""><hr>
-        The Social Media Princess <hr></h3>
-      <p>
-        I make your audience my <span>PRIORITY</span> by
-        <span>INFLUENCING </span> and <span> INSPIRING</span> them through
-        <span>YOU</span>
-      </p>
-    </div>
-    <div class="right">
-      <img src="~/static/images/tumi1.png" alt="" class="tumi" />
+  <div>
+    <div class="index">
+      <div class="left">
+        <h4>Hi There, I am</h4>
+        <h1 class="p-0 m-0">Tumilara</h1>
+        <h3 class="">
+          <span>-</span> The Social Media Princess <span>-</span>
+        </h3>
+        <p>
+          I make your audience my <span>PRIORITY</span> by
+          <span>INFLUENCING </span>them through
+          <span>YOU</span>
+        </p>
+      </div>
+      <div class="right">
+        <img src="~/static/images/tumi1.png" alt="" class="tumi" />
+      </div>
     </div>
   </div>
 </template>
@@ -29,6 +32,10 @@ export default {
   grid-template-columns: 1fr 1fr;
   align-items: center;
 
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
   .right {
     .tumi {
       width: 100% !important;
@@ -41,33 +48,40 @@ export default {
 
 .left {
   h4 {
-    font-family: 'roboto';
-    font-size: 1.8vw;
+    font-family: 'josefin sans';
+    font-size: 1.6vw;
     font-weight: 100;
   }
 
   h1 {
     font-family: 'josefin sans';
-    font-size: 9vw;
+    font-size: 8vw;
     font-weight: bolder;
     color: #a966c8;
   }
-  h3{
+  h3 {
+    font-family: 'josefin sans';
     font-size: 2vw;
-    margin-bottom:25px;
+    margin-bottom: 70px;
+    margin-top: -10px;
+    font-weight: bolder;
 
-    hr{
-      
+    hr {
+      display: inline;
+      width: 50px !important;
+      color: #a966c8;
     }
   }
   p {
     font-family: 'josefin sans';
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     color: #000000;
+    width: 80%;
 
     span {
-      font-size: 1.6vw;
+      font-size: 1.7vw;
       color: #a966c8;
+      font-weight: bolder;
     }
   }
 }
