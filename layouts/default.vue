@@ -14,9 +14,24 @@ export default {}
 </script>
 
 <style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html {
   font-size: 16px;
-  font:sans-serif;
+  font: sans-serif;
+
+  @include mobile  {
+    font-size: 8px;
+  }
+  @include tablet{
+    font-size:10px;
+  }
+   @include bg-tablet{
+    font-size:12px;
+  }
 }
 
 body {
@@ -32,13 +47,11 @@ body {
     width: 25vw;
   }
   .blob-2 {
-  right: 20vw;
+    right: 20vw;
     top: -13vw;
     position: absolute;
     z-index: -3;
     width: 20vw;
   }
-
-  
 }
 </style>

@@ -1,0 +1,28 @@
+// Media queries
+
+// mobile screen
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+// tablet screen
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin bg-tablet{
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+// desktop screen
+@mixin desktop {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}

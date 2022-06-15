@@ -17,7 +17,7 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/images/logo.svg' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -34,6 +34,8 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/style-resources',
+
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -44,6 +46,20 @@ export default {
     '@nuxtjs/axios',
   ],
 
+  styleResources: {
+    scss: [
+      "~/assets/scss/abstracts/_variables.scss",
+      "~/assets/scss/abstracts/_mixins.scss",
+      "~/assets/scss/abstracts/_animations.scss",
+    ],
+  },
+  loading: {
+    color: "#aa3636",
+    height: "5px",
+    throttle: 0,
+    continous: true,
+    duration: 5000,
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308

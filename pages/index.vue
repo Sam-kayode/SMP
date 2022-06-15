@@ -14,7 +14,11 @@
         </p>
       </div>
       <div class="right">
-        <img src="https://res.cloudinary.com/sam-kay/image/upload/v1655297755/smp/Group_1_1_2_mxfflk.png" alt="" class="tumi" />
+        <img
+          src="https://res.cloudinary.com/sam-kay/image/upload/v1655297755/smp/Group_1_1_2_mxfflk.png"
+          alt=""
+          class="tumi"
+        />
       </div>
     </div>
   </div>
@@ -29,11 +33,11 @@ export default {
 <style scoped lang="scss">
 .index {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   align-items: center;
-  height: 100%;
+  width: 100%;
 
-  @media (max-width: 768px) {
+  @include tablet {
     grid-template-columns: 1fr;
   }
 
@@ -44,26 +48,38 @@ export default {
       padding: 5px;
       overflow-x: hidden;
     }
+    @include tablet {
+      order: 1;
+    }
   }
 }
 
 .left {
   h4 {
     font-family: 'open sans', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   h1 {
     font-family: 'josefin sans', sans-serif;
-    font-size: 8vw;
+    font-size: 8rem;
     font-weight: bolder;
     span {
       color: #a966c8;
     }
+
+    @include bg-tablet {
+      font-size: 7rem !important;
+    }
+
+    @include mobile{
+      font-size: 6rem !important;
+
+    }
   }
   h3 {
     font-family: 'open sans', sans-serif;
-    font-size: 1.7vw;
+    font-size: 1.8rem;
     margin-bottom: 35px;
     margin-top: -10px;
     font-weight: bolder;
@@ -71,7 +87,7 @@ export default {
   }
   p {
     font-family: 'open sans', sans-serif;
-    font-size: 1.1vw;
+    font-size: 1.5rem;
     color: #000000;
     width: 65%;
 
@@ -79,6 +95,11 @@ export default {
       // font-size: 1.7vw;
       color: #a966c8;
       font-weight: bolder;
+    }
+
+    @include mobile{
+    width: 90%;
+
     }
   }
 }

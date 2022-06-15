@@ -34,6 +34,8 @@ export default {}
       padding: 0px 1.5vw;
       a {
         color: rgb(109, 91, 161);
+        font-family:'open sans', sans-serif;
+        font-size:1.1rem;
       }
     }
   }
