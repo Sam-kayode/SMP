@@ -1,6 +1,9 @@
 <template>
   <div class="navbar">
-    <img src="~/static/images/logo.svg" alt="" class="logo" />
+    <div>
+      <img src="~/static/images/logo.svg" alt="" class="logo" />
+      <img src="~/static/images/smp.svg" alt="" class="smp" />
+    </div>
     <ul>
       <li><a href="">Home</a></li>
       <li><a href="">Works</a></li>
@@ -21,12 +24,21 @@ export default {}
   padding: 10px 6%;
   display: flex;
 
+  @include tablet {
+    padding: 10px 1%;
+  }
   @include mobile {
     display: block;
   }
 
   .logo {
-    transform: scale(0.6);
+    transform: scale(0.5);
+    display: inline;
+  }
+
+  .smp {
+    margin-left: -25px;
+    width: 45px;
   }
 
   ul {
@@ -44,8 +56,7 @@ export default {}
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      display:none;
-
+      display: none;
     }
 
     li {
@@ -60,7 +71,7 @@ export default {}
         display: block;
         width: 70vw;
         text-align: center;
-        margin:20px auto;
+        margin: 20px auto;
         padding: 0;
       }
     }

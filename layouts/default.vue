@@ -57,11 +57,11 @@ body {
   } 
   
   .blob-3 {
-    left:-150px;
-    top: 100vh;
+    left:-170px;
+    top: 80vh;
     position: absolute;
     z-index: -3;
-    width: 20vw;
+    height:70vh;
   }
 }
 </style>

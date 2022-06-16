@@ -50,6 +50,7 @@ export default {
     }
     @include tablet {
       order: 1;
+      margin-top:50px;
     }
   }
 }
@@ -67,7 +68,7 @@ export default {
 
   h1 {
     font-family: 'josefin sans', sans-serif;
-    font-size: 95px;
+    font-size: 100px;
     font-weight: bolder;
 
     @include mobile {
@@ -100,7 +101,7 @@ export default {
   }
   p {
     font-family: 'open sans', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     color: #000000;
     width: 85%;
     
