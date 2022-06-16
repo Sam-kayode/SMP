@@ -3,6 +3,7 @@
     <Navbar />
     <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
     <img src="~/static/images/shape5.svg" alt="" class="blob-2" />
+    <img src="~/static/images/shape6.svg" alt="" class="blob-3" />
     <div class="content">
       <Nuxt />
     </div>
@@ -35,8 +36,9 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   .content {
-    padding: 0px 7%;
+    padding: 0px 10%;
   }
 
   .blob-1 {
@@ -49,6 +51,14 @@ body {
   .blob-2 {
     right: 20vw;
     top: -13vw;
+    position: absolute;
+    z-index: -3;
+    width: 20vw;
+  } 
+  
+  .blob-3 {
+    left:-150px;
+    top: 100vh;
     position: absolute;
     z-index: -3;
     width: 20vw;

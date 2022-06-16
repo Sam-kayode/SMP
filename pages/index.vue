@@ -33,11 +33,11 @@ export default {
 <style scoped lang="scss">
 .index {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1.3fr;
   align-items: center;
   width: 100%;
 
-  @include tablet {
+  @include mobile {
     grid-template-columns: 1fr;
   }
 
@@ -57,39 +57,53 @@ export default {
 .left {
   h4 {
     font-family: 'open sans', sans-serif;
-    font-size: 1.5rem;
+    font-size: 16px;
+    font-weight: bolder;
+
+    @include bg-tablet {
+      font-size: 16px;
+    }
   }
 
   h1 {
     font-family: 'josefin sans', sans-serif;
-    font-size: 8rem;
+    font-size: 95px;
     font-weight: bolder;
-    span {
-      color: #a966c8;
+
+    @include mobile {
+      font-size: 40px;
     }
 
     @include bg-tablet {
-      font-size: 7rem !important;
+      font-size: 70px;
     }
 
-    @include mobile{
-      font-size: 6rem !important;
-
+    span {
+      color: #a966c8;
     }
   }
   h3 {
     font-family: 'open sans', sans-serif;
-    font-size: 1.8rem;
+    font-size: 20px;
     margin-bottom: 35px;
     margin-top: -10px;
     font-weight: bolder;
     color: #a966c8;
+
+    @include mobile {
+      font-size: 12px;
+    }
+
+    @include bg-tablet {
+      font-size: 16px;
+    }
   }
   p {
     font-family: 'open sans', sans-serif;
-    font-size: 1.5rem;
+    font-size: 16px;
     color: #000000;
-    width: 65%;
+    width: 85%;
+    
 
     span {
       // font-size: 1.7vw;
@@ -97,9 +111,13 @@ export default {
       font-weight: bolder;
     }
 
-    @include mobile{
-    width: 90%;
+    @include mobile {
+      font-size: 16px;
+      width: 90%;
+    }
 
+    @include bg-tablet {
+      font-size: 16px;
     }
   }
 }

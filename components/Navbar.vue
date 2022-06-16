@@ -18,24 +18,50 @@ export default {}
 <style lang="scss" scoped>
 .navbar {
   width: 100vw;
-  padding: 10px 10%;
+  padding: 10px 6%;
   display: flex;
+
+  @include mobile {
+    display: block;
+  }
 
   .logo {
     transform: scale(0.6);
-
   }
 
   ul {
     list-style: none;
+
+    @include mobile {
+      position: fixed;
+      z-index: 5;
+      background: rgb(252, 199, 254);
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      display:none;
+
+    }
 
     li {
       display: inline;
       padding: 0px 1.5vw;
       a {
         color: rgb(109, 91, 161);
-        font-family:'open sans', sans-serif;
-        font-size:1.1rem;
+        font-family: 'open sans', sans-serif;
+        font-size: 1.1rem;
+      }
+      @include mobile {
+        display: block;
+        width: 70vw;
+        text-align: center;
+        margin:20px auto;
+        padding: 0;
       }
     }
   }
