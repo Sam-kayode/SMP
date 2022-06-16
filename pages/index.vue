@@ -30,8 +30,12 @@
       </div>
       <div class="right">
         <div class="content">
-          <h2></h2>
-        </div>
+  <div class="content p-0">
+          <h2>Keep your audience <span>addicted</span> to your content</h2>
+          <p>
+            With me, you have absolutely nothing to worry as the best social media needs any business owner can ask for are met. 
+          </p>
+        </div>        </div>
       </div>
     </div>
   </div>
