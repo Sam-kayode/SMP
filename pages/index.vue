@@ -36,6 +36,10 @@
               With me, you have absolutely nothing to worry as the best social
               media needs any business owner can ask for are met.
             </p>
+            <p>
+              Stay organized, save time and easily manage your social media
+              presence without any hassle.
+            </p>
           </div>
         </div>
       </div>
@@ -150,30 +154,42 @@ export default {
   grid-template-columns: 1fr 1.3fr;
   align-items: center;
   width: 100%;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
   .left {
     img {
-      max-width:100%;
+      max-width: 100%;
     }
   }
   .right {
     .content {
-       h2{
-      font-family: 'josefin sans', sans-serif;
-      font-size: 64px;
-      font-weight: bolder;
+      h2 {
+        font-family: 'josefin sans', sans-serif;
+        font-size: 64px;
+        font-weight: bolder;
+        letter-spacing: 0.1px;
+        
 
-      @include mobile {
-        font-size: 40px;
+        @include mobile {
+          font-size: 30px;
+        }
+
+        @include bg-tablet {
+          font-size: 52px;
+        }
+
+        span {
+          color: #a966c8;
+        }
       }
 
-      @include bg-tablet {
-        font-size: 70px;
+      p {
+        font-family: 'open sans', sans-serif;
+        font-size: 18px;
+        color: #000000;
       }
-
-      span {
-        color: #a966c8;
-      }
-    }
     }
   }
 }
