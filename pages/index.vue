@@ -30,12 +30,14 @@
       </div>
       <div class="right">
         <div class="content">
-  <div class="content p-0">
-          <h2>Keep your audience <span>addicted</span> to your content</h2>
-          <p>
-            With me, you have absolutely nothing to worry as the best social media needs any business owner can ask for are met. 
-          </p>
-        </div>        </div>
+          <div class="content p-0">
+            <h2>Keep your audience <span>addicted</span> to your content</h2>
+            <p>
+              With me, you have absolutely nothing to worry as the best social
+              media needs any business owner can ask for are met.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -150,11 +152,29 @@ export default {
   width: 100%;
   .left {
     img {
-      max-width: 600px;
+      max-width:100%;
     }
   }
-  .right{
-    
+  .right {
+    .content {
+       h2{
+      font-family: 'josefin sans', sans-serif;
+      font-size: 64px;
+      font-weight: bolder;
+
+      @include mobile {
+        font-size: 40px;
+      }
+
+      @include bg-tablet {
+        font-size: 70px;
+      }
+
+      span {
+        color: #a966c8;
+      }
+    }
+    }
   }
 }
 </style>
