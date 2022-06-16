@@ -37,7 +37,7 @@ export default {}
   }
 
   .smp {
-    margin-left: -25px;
+    margin-left: -28px;
     width: 45px;
   }
 

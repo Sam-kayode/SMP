@@ -47,6 +47,12 @@ body {
     position: absolute;
     z-index: -3;
     width: 25vw;
+
+    @include mobile{
+     width:80vw;
+     left:-30vw;
+
+    }
   }
   .blob-2 {
     right: 20vw;

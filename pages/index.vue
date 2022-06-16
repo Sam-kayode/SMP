@@ -56,6 +56,10 @@ export default {
 }
 
 .left {
+  @include tablet {
+      order: 1;
+      margin-top:50px;
+    }
   h4 {
     font-family: 'open sans', sans-serif;
     font-size: 16px;
