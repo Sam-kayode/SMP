@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="index">
+    <div class="first">
       <div class="left">
         <h4>Hi There, I am</h4>
         <h1 class="p-0 m-0">Tum<span>il</span>ara</h1>
@@ -21,6 +21,19 @@
         />
       </div>
     </div>
+    <div class="second">
+      <div class="left">
+        <img
+          src="https://res.cloudinary.com/sam-kay/image/upload/v1655414741/smp/picture1_oea911.png"
+          alt=""
+        />
+      </div>
+      <div class="right">
+        <div class="content">
+          <h2></h2>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -31,7 +44,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.index {
+.first {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
   align-items: center;
@@ -50,80 +63,94 @@ export default {
     }
     @include tablet {
       order: 1;
-      margin-top:50px;
+      margin-top: 50px;
+    }
+  }
+  .left {
+    @include tablet {
+      order: 1;
+      margin-top: 50px;
+    }
+    h4 {
+      font-family: 'open sans', sans-serif;
+      font-size: 16px;
+      font-weight: bolder;
+
+      @include bg-tablet {
+        font-size: 16px;
+      }
+    }
+
+    h1 {
+      font-family: 'josefin sans', sans-serif;
+      font-size: 100px;
+      font-weight: bolder;
+
+      @include mobile {
+        font-size: 40px;
+      }
+
+      @include bg-tablet {
+        font-size: 70px;
+      }
+
+      span {
+        color: #a966c8;
+      }
+    }
+    h3 {
+      font-family: 'open sans', sans-serif;
+      font-size: 20px;
+      margin-bottom: 35px;
+      margin-top: -10px;
+      font-weight: bolder;
+      color: #a966c8;
+
+      @include mobile {
+        font-size: 12px;
+      }
+
+      @include bg-tablet {
+        font-size: 16px;
+      }
+    }
+    p {
+      font-family: 'open sans', sans-serif;
+      font-size: 18px;
+      color: #000000;
+      width: 85%;
+
+      span {
+        // font-size: 1.7vw;
+        color: #a966c8;
+        font-weight: bolder;
+      }
+
+      @include mobile {
+        font-size: 16px;
+        width: 90%;
+      }
+
+      @include bg-tablet {
+        font-size: 16px;
+      }
     }
   }
 }
 
-.left {
-  @include tablet {
-      order: 1;
-      margin-top:50px;
-    }
-  h4 {
-    font-family: 'open sans', sans-serif;
-    font-size: 16px;
-    font-weight: bolder;
-
-    @include bg-tablet {
-      font-size: 16px;
+.second {
+  margin-top: 20vh;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  align-items: center;
+  width: 100%;
+  .left {
+    img {
+      max-width: 600px;
     }
   }
-
-  h1 {
-    font-family: 'josefin sans', sans-serif;
-    font-size: 100px;
-    font-weight: bolder;
-
-    @include mobile {
-      font-size: 40px;
-    }
-
-    @include bg-tablet {
-      font-size: 70px;
-    }
-
-    span {
-      color: #a966c8;
-    }
-  }
-  h3 {
-    font-family: 'open sans', sans-serif;
-    font-size: 20px;
-    margin-bottom: 35px;
-    margin-top: -10px;
-    font-weight: bolder;
-    color: #a966c8;
-
-    @include mobile {
-      font-size: 12px;
-    }
-
-    @include bg-tablet {
-      font-size: 16px;
-    }
-  }
-  p {
-    font-family: 'open sans', sans-serif;
-    font-size: 18px;
-    color: #000000;
-    width: 85%;
+  .right{
     
-
-    span {
-      // font-size: 1.7vw;
-      color: #a966c8;
-      font-weight: bolder;
-    }
-
-    @include mobile {
-      font-size: 16px;
-      width: 90%;
-    }
-
-    @include bg-tablet {
-      font-size: 16px;
-    }
   }
 }
 </style>

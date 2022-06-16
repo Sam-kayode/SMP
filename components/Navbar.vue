@@ -23,14 +23,18 @@ export default {}
   width: 100vw;
   padding: 10px 6%;
   display: flex;
+  align-items: center;
   .logo-container {
     height: 60px;
   }
   @include tablet {
-    padding: 10px 1%;
+    padding: 4px 2%;
   }
   @include mobile {
     display: block;
+    margin: auto;
+    position: sticky;
+    top: 0;
   }
 
   .logo {
@@ -45,7 +49,7 @@ export default {}
 
   ul {
     list-style: none;
-
+    margin: 0;
     @include mobile {
       position: fixed;
       z-index: 5;
@@ -68,6 +72,7 @@ export default {}
         color: rgb(109, 91, 161);
         font-family: 'open sans', sans-serif;
         font-size: 1.1rem;
+        
       }
       @include mobile {
         display: block;
