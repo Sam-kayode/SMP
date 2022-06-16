@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <div>
+    <div class="logo-container">
       <img src="~/static/images/logo.svg" alt="" class="logo" />
       <img src="~/static/images/smp.svg" alt="" class="smp" />
     </div>
@@ -23,7 +23,9 @@ export default {}
   width: 100vw;
   padding: 10px 6%;
   display: flex;
-
+  .logo-container {
+    height: 60px;
+  }
   @include tablet {
     padding: 10px 1%;
   }
@@ -32,12 +34,12 @@ export default {}
   }
 
   .logo {
-    transform: scale(0.5);
+    height: 100%;
     display: inline;
   }
 
   .smp {
-    margin-left: -28px;
+    margin-left: -5px;
     width: 45px;
   }
 
