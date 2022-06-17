@@ -44,6 +44,10 @@
         </div>
       </div>
     </div>
+
+    <div class="third">
+      <h2>My Services</h2>
+    </div>
   </div>
 </template>
 
@@ -149,15 +153,19 @@ export default {
 }
 
 .second {
-  margin-top: 20vh;
+  margin-top: 12vh;
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
+  grid-template-columns: 1fr 1.2fr;
   align-items: center;
   width: 100%;
 
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
   @include mobile {
     grid-template-columns: 1fr;
   }
+
   .left {
     img {
       max-width: 100%;
@@ -165,19 +173,24 @@ export default {
   }
   .right {
     .content {
+      padding: 0 0 0 60px;
+
+      @include mobile {
+        padding: 0;
+      }
+
       h2 {
         font-family: 'josefin sans', sans-serif;
         font-size: 64px;
         font-weight: bolder;
         letter-spacing: 0.1px;
-        
 
         @include mobile {
           font-size: 30px;
         }
 
         @include bg-tablet {
-          font-size: 52px;
+          font-size: 48px;
         }
 
         span {
@@ -190,6 +203,30 @@ export default {
         font-size: 18px;
         color: #000000;
       }
+    }
+  }
+}
+
+.third {
+  margin-top: 11vh;
+
+  h2 {
+    font-family: 'josefin sans', sans-serif;
+    font-size: 64px;
+    font-weight: bolder;
+    letter-spacing: 0.1px;
+    text-align: center;
+
+    @include mobile {
+      font-size: 30px;
+    }
+
+    @include bg-tablet {
+      font-size: 48px;
+    }
+
+    span {
+      color: #a966c8;
     }
   }
 }

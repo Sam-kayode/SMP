@@ -38,7 +38,12 @@ html {
 body {
   overflow-x: hidden;
   .content {
-    padding: 0px 10%;
+    padding: 0px 10%; 
+
+    @include bg-tablet{
+    padding: 0px 6%; 
+      
+    }
   }
 
   .blob-1 {
