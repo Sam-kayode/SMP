@@ -47,6 +47,7 @@
 
     <div class="third">
       <h2>My Services</h2>
+      <p class="features text-center">Key features to add value to your business</p>
     </div>
   </div>
 </template>
@@ -190,7 +191,7 @@ export default {
         }
 
         @include bg-tablet {
-          font-size: 48px;
+          font-size: 36px;
         }
 
         span {
@@ -202,6 +203,9 @@ export default {
         font-family: 'open sans', sans-serif;
         font-size: 18px;
         color: #000000;
+        @include tablet {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -228,6 +232,15 @@ export default {
     span {
       color: #a966c8;
     }
+  }
+
+  .features{
+     font-family: 'open sans', sans-serif;
+        font-size: 18px;
+        color: #86878c;
+        @include tablet {
+          font-size: 16px;
+        }
   }
 }
 </style>
