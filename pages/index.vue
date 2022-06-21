@@ -34,10 +34,7 @@
             <h2>Keep your audience <span>addicted</span> to your content</h2>
             <p>
               With me, you have absolutely nothing to worry as the best social
-              media needs any business owner can ask for are met.
-            </p>
-            <p>
-              Stay organized, save time and easily manage your social media
+              media needs any business owner can ask for are met. Stay organized, save time and easily manage your social media
               presence without any hassle.
             </p>
           </div>
@@ -47,7 +44,7 @@
 
     <div class="third">
       <h2>My Services</h2>
-      <p class="features text-center">Key features to add value to your business</p>
+      <p class="features text-center">Together we can take your Business and Social media presence to the next level with premium features that make your audience addicted</p>
     </div>
   </div>
 </template>
@@ -98,7 +95,7 @@ export default {
 
     h1 {
       font-family: 'josefin sans', sans-serif;
-      font-size: 100px;
+      font-size: 620%;
       font-weight: bolder;
 
       @include mobile {
@@ -238,6 +235,8 @@ export default {
      font-family: 'open sans', sans-serif;
         font-size: 18px;
         color: #86878c;
+        width:40%;
+        margin:auto;
         @include tablet {
           font-size: 16px;
         }
