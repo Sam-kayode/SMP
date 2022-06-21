@@ -44,7 +44,7 @@
 
     <div class="third">
       <h2>My Services</h2>
-      <p class="features text-center">Together we can take your Business and Social media presence to the next level with premium features that make your audience addicted</p>
+      <p class="features text-center">Together we can take your business and Social media presence to the next level with premium features that are benefcial to the your success</p>
     </div>
   </div>
 </template>
@@ -151,7 +151,7 @@ export default {
 }
 
 .second {
-  margin-top: 12vh;
+  margin-top: 13vh;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   align-items: center;
@@ -209,7 +209,7 @@ export default {
 }
 
 .third {
-  margin-top: 11vh;
+  margin-top: 13vh;
 
   h2 {
     font-family: 'josefin sans', sans-serif;
@@ -239,6 +239,8 @@ export default {
         margin:auto;
         @include tablet {
           font-size: 16px;
+        width:100%;
+   
         }
   }
 }
