@@ -59,11 +59,54 @@
             />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-              quos sequi voluptate tenetur
+              quos sequi voluptate tenetur Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Beatae quos sequi voluptate tenetur
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="~/static/images/services/management.png"
+              alt=""
+              class="card-img"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+              quos sequi voluptate tenetur Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Beatae quos sequi voluptate tenetur
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="~/static/images/services/management.png"
+              alt=""
+              class="card-img"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+              quos sequi voluptate tenetur Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Beatae quos sequi voluptate tenetur
             </p>
           </div>
         </div>
       </div>
+      <p class="mt-5">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad iste
+        corrupti excepturi ullam harum repudiandae dolorum exercitationem rerum
+        id dolor voluptatum impedit, error eius quo aperiam sunt blanditiis
+        nobis optio? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Ad iste corrupti excepturi ullam harum repudiandae dolorum
+        exercitationem rerum id dolor voluptatum impedit, error eius quo aperiam
+        sunt blanditiis nobis optio? Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Ad iste corrupti excepturi ullam harum repudiandae
+        dolorum exercitationem rerum id dolor voluptatum impedit, error eius quo
+        aperiam sunt blanditiis nobis optio? Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit. Ad iste corrupti excepturi ullam harum
+        repudiandae dolorum exercitationem rerum id dolor voluptatum impedit,
+        error eius quo aperiam sunt blanditiis nobis optio? Lorem ipsum dolor
+        sit amet consectetur, adipisicing elit. Ad iste corrupti excepturi ullam
+        harum repudiandae dolorum exercitationem rerum id dolor voluptatum
+        impedit, error eius quo aperiam sunt blanditiis nobis optio?
+      </p>
     </div>
   </div>
 </template>
@@ -266,18 +309,22 @@ export default {
     .cards {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      grid-gap:6%;
+      margin-top: 60px;
       .card {
         text-align: center;
         border: none;
-        padding:10px;
-        background-color: #efddf7;
+        padding: 30px 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: rgba(118, 62, 153, 0.15) 0px 5px 15px;
         .card-img {
           width: 30%;
-          margin:auto;
+          margin: auto;
         }
         p {
-          font-size:16px;
-          margin-top:20px;
+          font-size: 16px;
+          margin-top: 20px;
         }
       }
     }
