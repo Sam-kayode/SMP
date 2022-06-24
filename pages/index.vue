@@ -49,7 +49,21 @@
         Together we can take your business and Social media presence to the next
         level with premium features that are benefcial to the your success
       </p>
-      <div class="services"></div>
+      <div class="services">
+        <div class="cards">
+          <div class="card">
+            <img
+              src="~/static/images/services/management.png"
+              alt=""
+              class="card-img"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+              quos sequi voluptate tenetur
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -245,6 +259,27 @@ export default {
     @include tablet {
       font-size: 16px;
       width: 100%;
+    }
+  }
+
+  .services {
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      .card {
+        text-align: center;
+        border: none;
+        padding:10px;
+        background-color: #efddf7;
+        .card-img {
+          width: 30%;
+          margin:auto;
+        }
+        p {
+          font-size:16px;
+          margin-top:20px;
+        }
+      }
     }
   }
 }
