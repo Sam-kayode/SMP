@@ -94,13 +94,13 @@ export default {
             '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quos sequi voluptate',
         },
         {
-          picture: require('~/static/images/services/management.png'),
+          picture: require('~/static/images/services/strategy.png'),
           title: 'Business strategy',
           content:
             '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quos sequi voluptate',
         },
         {
-          picture: require('~/static/images/services/management.png'),
+          picture: require('~/static/images/services/content.png'),
           title: 'Content creation',
           content:
             '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quos sequi voluptate',
