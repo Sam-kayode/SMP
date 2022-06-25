@@ -117,11 +117,14 @@ export default {
   grid-template-columns: 1fr 1.3fr;
   align-items: center;
   width: 100%;
+  padding: 0px 10%;
 
   @include mobile {
     grid-template-columns: 1fr;
   }
-
+  @include bg-tablet {
+    padding: 0px 6%;
+  }
   .right {
     .tumi {
       width: 100% !important;
@@ -212,6 +215,7 @@ export default {
   grid-template-columns: 1fr 1.2fr;
   align-items: center;
   width: 100%;
+  padding: 0px 10%;
 
   @include tablet {
     grid-template-columns: 1fr 1fr;
@@ -266,7 +270,9 @@ export default {
 
 .third {
   margin-top: 13vh;
-
+ background: url('~/static/images/services/curvy-bg.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
   h2 {
     font-family: 'josefin sans', sans-serif;
     font-size: 64px;
@@ -305,6 +311,7 @@ export default {
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 6%;
       margin-top: 60px;
+      padding: 0px 10%;
      
 
       @include mobile {
@@ -313,8 +320,7 @@ export default {
         margin-top: 40px;
       }
 
-      .curvy-bg{
-        
+      .curvy-bg {
       }
       .card {
         text-align: center;
