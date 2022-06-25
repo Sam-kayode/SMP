@@ -273,6 +273,8 @@ export default {
  background: url('~/static/images/services/curvy-bg.svg');
       background-size: contain;
       background-repeat: no-repeat;
+      background-position-y: center;
+
   h2 {
     font-family: 'josefin sans', sans-serif;
     font-size: 64px;
@@ -320,8 +322,7 @@ export default {
         margin-top: 40px;
       }
 
-      .curvy-bg {
-      }
+    
       .card {
         text-align: center;
         border: none;
