@@ -123,7 +123,7 @@ export default {
     grid-template-columns: 1fr;
   }
   @include bg-tablet {
-    padding: 0px 6%;
+    padding: 0px 5%;
   }
   .right {
     .tumi {
@@ -210,13 +210,16 @@ export default {
 }
 
 .second {
-  margin-top: 13vh;
+  margin-top: 100px;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   align-items: center;
   width: 100%;
   padding: 0px 10%;
 
+  @include bg-tablet {
+    padding: 0px 5%;
+  }
   @include tablet {
     grid-template-columns: 1fr 1fr;
   }
@@ -269,11 +272,16 @@ export default {
 }
 
 .third {
-  margin-top: 13vh;
- background: url('~/static/images/services/curvy-bg.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position-y: center;
+  margin-top: 100px;
+  padding: 0px 10%;
+  background: url('~/static/images/services/curvy-bg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: center;
+
+  @include bg-tablet {
+    padding: 0px 5%;
+  }
 
   h2 {
     font-family: 'josefin sans', sans-serif;
@@ -282,12 +290,11 @@ export default {
     letter-spacing: 0.1px;
     text-align: center;
 
-    @include mobile {
-      font-size: 30px;
-    }
-
     @include bg-tablet {
       font-size: 48px;
+    }
+    @include mobile {
+      font-size: 30px;
     }
 
     span {
@@ -312,17 +319,13 @@ export default {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 6%;
-      margin-top: 60px;
-      padding: 0px 10%;
-     
+      margin-top: 40px;
 
       @include mobile {
         grid-template-columns: 1fr;
-        padding: 5%;
         margin-top: 40px;
       }
 
-    
       .card {
         text-align: center;
         border: none;

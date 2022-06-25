@@ -60,11 +60,14 @@ body {
   }
 
   .blob-3 {
-    left: -170px;
-    top: 80vh;
+    left:-5px;
+    top: 50vh;
     position: absolute;
     z-index: -3;
     height: 70vh;
+    @include mobile{
+      top:100vh;
+    }
   }
 }
 </style>
