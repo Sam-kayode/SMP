@@ -30,7 +30,7 @@
       </div>
       <div class="right">
         <div class="content">
-          <div class="content p-0">
+          <div class="content p-0 mt-5 mt-md-0">
             <h2>Keep your audience <span>addicted</span> to your content</h2>
             <p>
               With me, you have absolutely nothing to worry as the best social
