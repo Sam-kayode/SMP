@@ -24,8 +24,9 @@ export default {}
   padding: 10px 6%;
   display: flex;
   align-items: center;
+  height: 80px;
   .logo-container {
-    height: 60px;
+    height: 100%;
   }
   @include tablet {
     padding: 4px 2%;
@@ -72,7 +73,6 @@ export default {}
         color: rgb(109, 91, 161);
         font-family: 'open sans', sans-serif;
         font-size: 1.1rem;
-        
       }
       @include mobile {
         display: block;
