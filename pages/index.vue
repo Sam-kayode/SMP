@@ -51,44 +51,16 @@
       </p>
       <div class="services">
         <div class="cards">
-          <div class="card">
-            <img
-              src="~/static/images/services/management.png"
-              alt=""
-              class="card-img"
-            />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-              quos sequi voluptate tenetur Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Beatae quos sequi voluptate tenetur
-            </p>
-          </div>
-          <div class="card">
-            <img
-              src="~/static/images/services/management.png"
-              alt=""
-              class="card-img"
-            />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-              quos sequi voluptate tenetur Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Beatae quos sequi voluptate tenetur
-            </p>
-          </div>
-          <div class="card">
-            <img
-              src="~/static/images/services/management.png"
-              alt=""
-              class="card-img"
-            />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-              quos sequi voluptate tenetur Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Beatae quos sequi voluptate tenetur
+          <div v-for="(card, index) in cards" :key="index" class="card">
+            <img :src="card.picture" alt="" class="card-img" />
+            <p class="title">{{ card.title }}</p>
+            <p class="content">
+              {{ card.content }}
             </p>
           </div>
         </div>
       </div>
+
       <p class="mt-5">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad iste
         corrupti excepturi ullam harum repudiandae dolorum exercitationem rerum
@@ -103,9 +75,7 @@
         consectetur, adipisicing elit. Ad iste corrupti excepturi ullam harum
         repudiandae dolorum exercitationem rerum id dolor voluptatum impedit,
         error eius quo aperiam sunt blanditiis nobis optio? Lorem ipsum dolor
-        sit amet consectetur, adipisicing elit. Ad iste corrupti excepturi ullam
-        harum repudiandae dolorum exercitationem rerum id dolor voluptatum
-        impedit, error eius quo aperiam sunt blanditiis nobis optio?
+        sit amet consectetur,
       </p>
     </div>
   </div>
@@ -114,6 +84,30 @@
 <script>
 export default {
   name: 'IndexPage',
+  data() {
+    return {
+      cards: [
+        {
+          picture: require('~/static/images/services/management.png'),
+          title: 'Social media management',
+          content:
+            '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quos sequi voluptate',
+        },
+        {
+          picture: require('~/static/images/services/management.png'),
+          title: 'Business strategy',
+          content:
+            '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quos sequi voluptate',
+        },
+        {
+          picture: require('~/static/images/services/management.png'),
+          title: 'Content creation',
+          content:
+            '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quos sequi voluptate',
+        },
+      ],
+    }
+  },
 }
 </script>
 
@@ -309,22 +303,40 @@ export default {
     .cards {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-gap:6%;
+      grid-gap: 6%;
       margin-top: 60px;
+     
+
+      @include mobile {
+        grid-template-columns: 1fr;
+        padding: 5%;
+        margin-top: 40px;
+      }
+
+      .curvy-bg{
+        
+      }
       .card {
         text-align: center;
         border: none;
-        padding: 30px 20px;
+        padding: 20px 10px;
         background-color: #ffffff;
         border-radius: 10px;
         box-shadow: rgba(118, 62, 153, 0.15) 0px 5px 15px;
-        .card-img {
-          width: 30%;
-          margin: auto;
+        @include mobile {
+          margin-bottom: 20px;
         }
-        p {
+        .card-img {
+          width: 40%;
+          margin: 0 auto;
+        }
+
+        .title {
+          font-weight: bolder;
+          font-size: 18px;
+        }
+        .content {
           font-size: 16px;
-          margin-top: 20px;
         }
       }
     }

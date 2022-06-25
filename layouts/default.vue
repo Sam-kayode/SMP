@@ -4,9 +4,7 @@
     <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
     <img src="~/static/images/shape5.svg" alt="" class="blob-2" />
     <img src="~/static/images/shape6.svg" alt="" class="blob-3" />
-    <div class="content">
       <Nuxt />
-    </div>
   </div>
 </template>
 
@@ -24,27 +22,22 @@ html {
   font-size: 16px;
   font: sans-serif;
 
-  @include mobile  {
+  @include mobile {
     font-size: 8px;
   }
-  @include tablet{
-    font-size:10px;
+  @include tablet {
+    font-size: 10px;
   }
-   @include bg-tablet{
-    font-size:12px;
+  @include bg-tablet {
+    font-size: 12px;
   }
 }
 
 body {
   overflow-x: hidden;
-  .content {
-    padding: 0px 10%; 
+  font-family: 'open sans', sans-serif;
 
-    @include bg-tablet{
-    padding: 0px 6%; 
-      
-    }
-  }
+  
 
   .blob-1 {
     left: -7vw;
@@ -53,10 +46,9 @@ body {
     z-index: -3;
     width: 25vw;
 
-    @include mobile{
-     width:80vw;
-     left:-30vw;
-
+    @include mobile {
+      width: 80vw;
+      left: -30vw;
     }
   }
   .blob-2 {
@@ -65,14 +57,14 @@ body {
     position: absolute;
     z-index: -3;
     width: 20vw;
-  } 
-  
+  }
+
   .blob-3 {
-    left:-170px;
+    left: -170px;
     top: 80vh;
     position: absolute;
     z-index: -3;
-    height:70vh;
+    height: 70vh;
   }
 }
 </style>
