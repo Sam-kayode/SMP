@@ -58,6 +58,7 @@
               {{ card.content }}
             </p>
           </div>
+          <div><button>More services &#x2192;</button></div>
         </div>
       </div>
 
@@ -95,13 +96,25 @@ export default {
         },
         {
           picture: require('~/static/images/services/strategy.png'),
-          title: 'Business strategy',
+          title: 'Brand strategy',
           content:
             'Well-outlined growth strategy with focus on making your brand stand out exclusively',
         },
         {
           picture: require('~/static/images/services/content.png'),
           title: 'Content creation',
+          content:
+            'Exquisitely crafted content to attract your business audience and target market in response to your business needs',
+        },
+        {
+          picture: require('~/static/images/services/calendar.png'),
+          title: 'Content calendar drafting',
+          content:
+            'Exquisitely crafted content to attract your business audience and target market in response to your business needs',
+        },
+        {
+          picture: require('~/static/images/services/ads.png'),
+          title: 'Ads Management',
           content:
             'Exquisitely crafted content to attract your business audience and target market in response to your business needs',
         },
@@ -281,7 +294,7 @@ export default {
   background-position-y: center;
 
   @include bg-tablet {
-  margin-top: 12vh;
+    margin-top: 12vh;
 
     padding: 0px 5%;
   }
@@ -340,8 +353,8 @@ export default {
           margin-bottom: 20px;
         }
         .card-img {
-          width:130px;
-          height:120px;
+          height: 130px;
+          width:auto;
           margin: 0 auto;
         }
 
@@ -351,7 +364,7 @@ export default {
         }
         .content {
           font-size: 16px;
-          padding:0;
+          padding: 0;
         }
       }
     }
