@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar">
+  <div class="navbar" :class="{ 'nav-position': windowTop > 180 }">
     <div class="logo-container">
       <img src="~/static/images/logo.svg" alt="" class="logo" />
       <img src="~/static/images/smp.svg" alt="" class="smp" />
@@ -17,9 +17,10 @@
 <script>
 export default {
   name: 'Navbar',
-  data(){
-    return{
-      windowTop:null,
+  data() {
+    return {
+      windowTop: null,
+      disValue: 'none',
     }
   },
   mounted() {
@@ -29,10 +30,10 @@ export default {
     window.removeEventListener('scroll', this.onScroll)
   },
   methods: {
-  onScroll(e) {
-    this.windowTop = window.top.scrollY 
-  }
-}
+    onScroll(e) {
+      this.windowTop = window.top.scrollY
+    },
+  },
 }
 </script>
 
@@ -43,8 +44,6 @@ export default {
   display: flex;
   align-items: center;
   height: 80px;
-  background-color: #ffffff;
-  box-shadow: rgba(118, 62, 153, 0.15) 0px 5px 15px;
 
   .logo-container {
     height: 100%;
@@ -56,8 +55,6 @@ export default {
   @include mobile {
     display: block;
     margin: auto;
-    position: sticky;
-    top: 0;
     height: 50px;
   }
 
@@ -106,5 +103,14 @@ export default {
       }
     }
   }
+}
+
+.nav-position {
+  transition: 0.5s ease-out;
+  background-color: #ffffff;
+  box-shadow: rgba(118, 62, 153, 0.15) 0px 5px 15px;
+  position: fixed;
+  top: 0;
+  display: flex !important;
 }
 </style>
