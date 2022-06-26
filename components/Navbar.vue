@@ -30,12 +30,15 @@ export default {}
   }
   @include tablet {
     padding: 4px 2%;
+    height: 60px;
   }
   @include mobile {
     display: block;
     margin: auto;
     position: sticky;
     top: 0;
+    height: 50px;
+
   }
 
   .logo {

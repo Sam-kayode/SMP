@@ -210,7 +210,7 @@ export default {
 }
 
 .second {
-  margin-top: 100px;
+  margin-top: 15vh;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   align-items: center;
@@ -218,6 +218,7 @@ export default {
   padding: 0px 10%;
 
   @include bg-tablet {
+    margin-top: 12vh;
     padding: 0px 5%;
   }
   @include tablet {
@@ -272,7 +273,7 @@ export default {
 }
 
 .third {
-  margin-top: 100px;
+  margin-top: 15vh;
   padding: 0px 10%;
   background: url('~/static/images/services/curvy-bg.svg');
   background-size: contain;
@@ -280,6 +281,8 @@ export default {
   background-position-y: center;
 
   @include bg-tablet {
+  margin-top: 12vh;
+
     padding: 0px 5%;
   }
 

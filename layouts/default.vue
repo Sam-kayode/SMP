@@ -4,7 +4,7 @@
     <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
     <img src="~/static/images/shape5.svg" alt="" class="blob-2" />
     <img src="~/static/images/shape6.svg" alt="" class="blob-3" />
-      <Nuxt />
+    <div class="content"><Nuxt /></div>
   </div>
 </template>
 
@@ -37,8 +37,6 @@ body {
   overflow-x: hidden;
   font-family: 'open sans', sans-serif;
 
-  
-
   .blob-1 {
     left: -7vw;
     top: -6vw;
@@ -60,13 +58,21 @@ body {
   }
 
   .blob-3 {
-    left:-5px;
+    left: -5px;
     top: 50vh;
     position: absolute;
     z-index: -3;
     height: 70vh;
+    @include mobile {
+      top: 100vh;
+    }
+  }
+
+  .content {
+    padding-top: 7vh;
+
     @include mobile{
-      top:100vh;
+      padding-top: 2vh;
     }
   }
 }
