@@ -71,7 +71,7 @@ body {
   .content {
     padding-top: 7vh;
 
-    @include mobile{
+    @include mobile {
       padding-top: 2vh;
     }
   }
