@@ -15,7 +15,25 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'Navbar',
+  data(){
+    return{
+      windowTop:null,
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+  methods: {
+  onScroll(e) {
+    this.windowTop = window.top.scrollY 
+  }
+}
+}
 </script>
 
 <style lang="scss" scoped>
@@ -25,6 +43,9 @@ export default {}
   display: flex;
   align-items: center;
   height: 80px;
+  background-color: #ffffff;
+  box-shadow: rgba(118, 62, 153, 0.15) 0px 5px 15px;
+
   .logo-container {
     height: 100%;
   }
@@ -38,7 +59,6 @@ export default {}
     position: sticky;
     top: 0;
     height: 50px;
-
   }
 
   .logo {
