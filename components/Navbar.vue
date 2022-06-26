@@ -44,7 +44,7 @@ export default {
   display: flex;
   align-items: center;
   height: 80px;
-
+  z-index: 1000;
   .logo-container {
     height: 100%;
   }
