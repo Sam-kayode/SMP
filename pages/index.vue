@@ -91,19 +91,19 @@ export default {
           picture: require('~/static/images/services/management.png'),
           title: 'Social media management',
           content:
-            '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quos sequi voluptate',
+            'Transformation of social media presence via high-quality content, daily-engagements and well defined social media presence',
         },
         {
           picture: require('~/static/images/services/strategy.png'),
           title: 'Business strategy',
           content:
-            '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quos sequi voluptate',
+            'Well-outlined growth strategy with focus on making your brand stand out exclusively',
         },
         {
           picture: require('~/static/images/services/content.png'),
           title: 'Content creation',
           content:
-            '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quos sequi voluptate',
+            'Exquisitely crafted content to attract your business audience and target market in response to your business needs',
         },
       ],
     }
@@ -340,7 +340,8 @@ export default {
           margin-bottom: 20px;
         }
         .card-img {
-          width: 40%;
+          width:130px;
+          height:120px;
           margin: 0 auto;
         }
 
@@ -350,6 +351,7 @@ export default {
         }
         .content {
           font-size: 16px;
+          padding:0;
         }
       }
     }
