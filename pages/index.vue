@@ -344,9 +344,7 @@ export default {
         background-color: #ffffff;
         border-radius: 10px;
         box-shadow: rgba(118, 62, 153, 0.15) 0px 5px 15px;
-        @include mobile {
-          margin-bottom: 20px;
-        }
+       
         .card-img {
           height: 130px;
           width: auto;
