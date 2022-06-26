@@ -72,7 +72,7 @@
         Ad iste corrupti excepturi ullam harum repudiandae dolorum
         exercitationem rerum id dolor voluptatum impedit, error eius quo aperiam
         sunt blanditiis nobis optio? Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Ad iste corrupti 
+        adipisicing elit. Ad iste corrupti
       </p>
     </div>
   </div>
@@ -256,12 +256,11 @@ export default {
         font-weight: bolder;
         letter-spacing: 0.1px;
 
-        @include mobile {
-          font-size: 30px;
-        }
-
         @include bg-tablet {
           font-size: 36px;
+        }
+        @include mobile {
+          font-size: 32px;
         }
 
         span {
@@ -306,7 +305,7 @@ export default {
       font-size: 48px;
     }
     @include mobile {
-      font-size: 30px;
+      font-size: 32px;
     }
 
     span {
@@ -370,13 +369,12 @@ export default {
         border-radius: 10px;
         background-color: #a966c8;
         color: #ffffff;
-        font-size:16px;
+        font-size: 16px;
 
         &:hover {
-          background-color: darken(#a966c8,10%);
-        padding: 22px 42px;
-        transition: 0.15s ease-out;
-
+          background-color: darken(#a966c8, 10%);
+          padding: 22px 42px;
+          transition: 0.15s ease-out;
         }
       }
     }
