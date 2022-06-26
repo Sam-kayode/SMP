@@ -58,7 +58,9 @@
               {{ card.content }}
             </p>
           </div>
-          <div><button>More services &#x2192;</button></div>
+          <div class="d-flex justify-content-center align-items-center">
+            <button>More services &#x2192;</button>
+          </div>
         </div>
       </div>
 
@@ -70,13 +72,7 @@
         Ad iste corrupti excepturi ullam harum repudiandae dolorum
         exercitationem rerum id dolor voluptatum impedit, error eius quo aperiam
         sunt blanditiis nobis optio? Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Ad iste corrupti excepturi ullam harum repudiandae
-        dolorum exercitationem rerum id dolor voluptatum impedit, error eius quo
-        aperiam sunt blanditiis nobis optio? Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Ad iste corrupti excepturi ullam harum
-        repudiandae dolorum exercitationem rerum id dolor voluptatum impedit,
-        error eius quo aperiam sunt blanditiis nobis optio? Lorem ipsum dolor
-        sit amet consectetur,
+        adipisicing elit. Ad iste corrupti 
       </p>
     </div>
   </div>
@@ -354,7 +350,7 @@ export default {
         }
         .card-img {
           height: 130px;
-          width:auto;
+          width: auto;
           margin: 0 auto;
         }
 
@@ -365,6 +361,22 @@ export default {
         .content {
           font-size: 16px;
           padding: 0;
+        }
+      }
+
+      button {
+        border: none;
+        padding: 20px 40px;
+        border-radius: 10px;
+        background-color: #a966c8;
+        color: #ffffff;
+        font-size:16px;
+
+        &:hover {
+          background-color: darken(#a966c8,10%);
+        padding: 22px 42px;
+        transition: 0.15s ease-out;
+
         }
       }
     }
