@@ -18,6 +18,13 @@
         <img src="~/static/images/logo.svg" alt="" class="logo" />
         <img src="~/static/images/smp.svg" alt="" class="smp" />
       </div>
+      <ul class="desktop-nav">
+        <li><a href="">Home</a></li>
+        <li><a href="">Works</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">Get in touch</a></li>
+        <li><a href="">Portfolio</a></li>
+      </ul>
       <transition name="fade">
         <ul v-if="visible">
           <li><a href="">Home</a></li>
@@ -98,6 +105,12 @@ export default {
     width: 45px;
     position: relative;
     z-index: 10;
+  }
+
+  .desktop-nav {
+    @include mobile {
+      display: none;
+    }
   }
 
   ul {
