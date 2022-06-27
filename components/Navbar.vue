@@ -5,14 +5,17 @@
         <img src="~/static/images/logo.svg" alt="" class="logo" />
         <img src="~/static/images/smp.svg" alt="" class="smp" />
       </div>
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Works</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="">Get in touch</a></li>
-        <li><a href="">Portfolio</a></li>
-      </ul>
-      <Hamburger />
+      <transition name="fade">
+        <ul v-if="visible">
+          <li><a href="">Home</a></li>
+          <li><a href="">Works</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Get in touch</a></li>
+          <li><a href="">Portfolio</a></li>
+        </ul>
+      </transition>
+
+      <Hamburger @click.native="toggle" />
     </div>
   </div>
 </template>
@@ -24,6 +27,7 @@ export default {
     return {
       windowTop: null,
       disValue: 'none',
+      visible: false,
     }
   },
   mounted() {
@@ -35,6 +39,9 @@ export default {
   methods: {
     onScroll(e) {
       this.windowTop = window.top.scrollY
+    },
+    toggle() {
+      this.visible = !this.visible
     },
   },
 }
@@ -83,7 +90,7 @@ export default {
     @include mobile {
       position: fixed;
       z-index: 5;
-      background: rgb(255, 255, 255);
+      background: #f6eaff;
       width: 100vw;
       height: 100vh;
       top: 0px;
@@ -92,8 +99,7 @@ export default {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
-      display: none;
+      // display: none;
     }
 
     li {
@@ -102,7 +108,7 @@ export default {
       font-size: 18px;
 
       a {
-        color: rgb(109, 91, 161);
+        color: #a966c8;
         font-family: 'open sans', sans-serif;
       }
       @include mobile {
@@ -125,5 +131,14 @@ export default {
   position: fixed;
   top: 0;
   display: flex !important;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
