@@ -12,7 +12,7 @@
         <li><a href="">Get in touch</a></li>
         <li><a href="">Portfolio</a></li>
       </ul>
-      <div><Hamburger /></div>
+      <Hamburger />
     </div>
   </div>
 </template>
@@ -57,7 +57,7 @@ export default {
     height: 60px;
   }
   @include mobile {
-    display:flex;
+    display: flex;
     margin: auto;
     height: 50px;
   }

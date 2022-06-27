@@ -45,13 +45,19 @@ export default {
   padding: 0;
   position: relative;
   z-index: 40;
-  transition: 1s ease-out;
+  display:none;
+
+  @include mobile{
+    display:block;
+  }
 }
 
 .line {
   fill: none;
   stroke: #a966c8;
   stroke-width: 6;
+  transition: stroke-dasharray 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .line1 {
   stroke-dasharray: 60 207;
@@ -84,13 +90,6 @@ export default {
     stroke-width: 8;
   }
 
-  .line1,
-  .line2,
-  .line3 {
-    transition: stroke-dasharray 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      stroke-dashoffset 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 10ms;
-  }
 }
 button {
   outline: none !important;
