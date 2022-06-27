@@ -1,11 +1,20 @@
 <template>
   <div class="navbar-contain">
-    <div
-      class="navbar"
-      :class="{ 'nav-position': windowTop > 180 }"
-      :style="[visible ? { position: 'fixed' } : '']"
-    >
-      <div class="logo-container">
+    <div class="navbar" :class="{ 'nav-position': windowTop > 180 }">
+      <div
+        class="logo-container"
+        :style="[
+          visible
+            ? {
+                position: 'fixed',
+                top: '4px',
+                left: '9px',
+                height: '41.8px',
+                'z-index': 6,
+              }
+            : '',
+        ]"
+      >
         <img src="~/static/images/logo.svg" alt="" class="logo" />
         <img src="~/static/images/smp.svg" alt="" class="smp" />
       </div>
@@ -19,7 +28,12 @@
         </ul>
       </transition>
 
-      <Hamburger @click.native="toggle" />
+      <Hamburger
+        :style="[
+          visible ? { position: 'fixed', top: '5px', right: '5px' } : '',
+        ]"
+        @click.native="toggle"
+      />
     </div>
   </div>
 </template>
