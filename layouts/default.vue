@@ -1,10 +1,12 @@
 <template>
-  <div class="body" :style="styleObject">
-    <Navbar :visible="visible" />
+  <div class="body">
+    <Navbar />
     <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
     <img src="~/static/images/shape5.svg" alt="" class="blob-2" />
     <img src="~/static/images/shape6.svg" alt="" class="blob-3" />
-    <div class="content"><Nuxt /></div>
+    <div class="content">
+      <Nuxt />
+    </div>
   </div>
 </template>
 
@@ -13,20 +15,10 @@ export default {
   name: 'Default',
   data() {
     return {
-      scroll: true,
     }
   },
-  computed: {
-    styleObject() {
-      return {
-        'overflow-y': this.scroll ? 'auto' : 'hidden',
-      }
-    },
-  },
   methods: {
-    visible() {
-      this.scroll = !this.scroll
-    },
+   
   },
 }
 </script>

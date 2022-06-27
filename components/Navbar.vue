@@ -1,6 +1,10 @@
 <template>
   <div class="navbar-contain">
-    <div class="navbar" :class="{ 'nav-position': windowTop > 180 }">
+    <div
+      class="navbar"
+      :class="{ 'nav-position': windowTop > 180 }"
+      :style="[visible ? { position: 'fixed' } : '']"
+    >
       <div class="logo-container">
         <img src="~/static/images/logo.svg" alt="" class="logo" />
         <img src="~/static/images/smp.svg" alt="" class="smp" />
@@ -26,7 +30,6 @@ export default {
   data() {
     return {
       windowTop: null,
-      disValue: 'none',
       visible: false,
     }
   },
@@ -42,9 +45,6 @@ export default {
     },
     toggle() {
       this.visible = !this.visible
-      if(this.visible){
-        this.$emit('visible')
-      }
     },
   },
 }
