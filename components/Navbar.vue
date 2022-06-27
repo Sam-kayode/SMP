@@ -42,6 +42,9 @@ export default {
     },
     toggle() {
       this.visible = !this.visible
+      if(this.visible){
+        this.$emit('visible')
+      }
     },
   },
 }
