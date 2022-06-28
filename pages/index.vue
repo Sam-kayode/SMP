@@ -71,27 +71,14 @@
         Benefits of Hiring a social media manager
       </p>
       <div class="benefits">
-        <div class="benefit">
-          <div class="number"><h1>01</h1></div>
-          <div class="content">
-            <h3>Credibility</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos
-              dolorum vel ratione. Temporibus, maiores distinctio, ea quaerat
-              iure repellendus autem delectus magnam nobis voluptas, ex et
-              eveniet illo rerum quia!
-            </p>
+        <div v-for="benefit in benefits" :key="benefit.number" class="benefit">
+          <div class="number">
+            <h1>{{ benefit.number }}</h1>
           </div>
-        </div>
-        <div class="benefit">
-          <div class="number"><h1>02</h1></div>
           <div class="content">
-            <h3>Credibility</h3>
+            <h3>{{ benefit.title }}</h3>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos
-              dolorum vel ratione. Temporibus, maiores distinctio, ea quaerat
-              iure repellendus autem delectus magnam nobis voluptas, ex et
-              eveniet illo rerum quia!
+              {{ benefit.content }}
             </p>
           </div>
         </div>
@@ -135,6 +122,32 @@ export default {
           title: 'Ads Management',
           content:
             'Exquisitely crafted content to attract your business audience and target market in response to your business needs',
+        },
+      ],
+      benefits: [
+        {
+          number: '01',
+          title: 'Understand Your Target Audience & Competition',
+          content:
+            '  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos  dolorum vel ratione. Temporibus, maiores distinctio, ea quaerat iure pellendus autem delectus magnam nobis voluptas, ex et eveniet illo rerum quia!',
+        },
+        {
+          number: '02',
+          title: 'Fresh perspective and inspiration',
+          content:
+            '  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos  dolorum vel ratione. Temporibus, maiores distinctio, ea quaerat iure pellendus autem delectus magnam nobis voluptas, ex et eveniet illo rerum quia!',
+        },
+        {
+          number: '03',
+          title: 'Amplification',
+          content:
+            '  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos  dolorum vel ratione. Temporibus, maiores distinctio, ea quaerat iure pellendus autem delectus magnam nobis voluptas, ex et eveniet illo rerum quia!',
+        },
+        {
+          number: '04',
+          title: 'Customer-Centric',
+          content:
+            '  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos  dolorum vel ratione. Temporibus, maiores distinctio, ea quaerat iure pellendus autem delectus magnam nobis voluptas, ex et eveniet illo rerum quia!',
         },
       ],
     }
@@ -241,7 +254,7 @@ export default {
 }
 
 .second {
-  margin-top: 15vh;
+  margin-top: 100px;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   align-items: center;
@@ -303,7 +316,7 @@ export default {
 }
 
 .third {
-  margin-top: 15vh;
+  margin-top: 100px;
   padding: 0px 10%;
   background: url('~/static/images/services/curvy-bg.svg');
   background-size: contain;
@@ -348,7 +361,7 @@ export default {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-gap: 6%;
+      gap: 50px;
       margin-top: 40px;
 
       @include mobile {
@@ -399,7 +412,7 @@ export default {
 }
 
 .fourth {
-  margin-top: 20vh;
+  margin-top: 100px;
   padding: 0px 10%;
 
   @include bg-tablet {
@@ -426,31 +439,38 @@ export default {
   .benefits {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 7vw;
 
     .benefit {
       display: flex;
-      align-items: center;
+      align-items: top;
 
       .number h1 {
         font-size: 150px;
-        padding: 20px 0px 0px;
+        padding: 0px 20px 0px 0px;
         font-family: 'josefin sans', sans-serif;
         font-weight: bolder;
         margin: 0;
         color: #a966c8;
+        display:flex;
+        align-items:top;
       }
 
       .content {
         padding: 0;
         p {
           margin: 0;
+          font-size:16px;
+          font-weight:nor100px
         }
 
         h3 {
           font-family: 'josefin sans', sans-serif;
           font-weight: bolder;
-          font-size: 32px;
+          font-size: 36px;
           margin: 0;
+          padding-top:20px;
         }
       }
     }
