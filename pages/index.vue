@@ -440,8 +440,10 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 7vw;
-
+    gap: 6vw;
+    @include bg-tablet {
+      display: block;
+    }
     @include mobile {
       display: block;
     }
@@ -450,6 +452,9 @@ export default {
       display: flex;
       align-items: top;
 
+      @include bg-tablet {
+        margin-bottom: 40px;
+      }
       @include mobile {
         margin-bottom: 50px;
       }
@@ -463,9 +468,11 @@ export default {
         color: #a966c8;
         display: flex;
         align-items: top;
+        min-width: 194px;
 
         @include mobile {
           font-size: 90px;
+          min-width: 0;
         }
       }
 
