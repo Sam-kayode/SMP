@@ -442,9 +442,17 @@ export default {
     grid-template-rows: 1fr 1fr 1fr;
     gap: 7vw;
 
+    @include mobile {
+      display: block;
+    }
+
     .benefit {
       display: flex;
       align-items: top;
+
+      @include mobile {
+        margin-bottom: 50px;
+      }
 
       .number h1 {
         font-size: 150px;
@@ -453,16 +461,22 @@ export default {
         font-weight: bolder;
         margin: 0;
         color: #a966c8;
-        display:flex;
-        align-items:top;
+        display: flex;
+        align-items: top;
+
+        @include mobile {
+          font-size: 90px;
+        }
       }
 
       .content {
         padding: 0;
         p {
           margin: 0;
-          font-size:16px;
-          font-weight:nor100px
+          font-size: 18px;
+          @include mobile {
+            font-size: 16px;
+          }
         }
 
         h3 {
@@ -470,7 +484,11 @@ export default {
           font-weight: bolder;
           font-size: 36px;
           margin: 0;
-          padding-top:20px;
+          padding-top: 20px;
+
+          @include mobile {
+            font-size: 28px;
+          }
         }
       }
     }

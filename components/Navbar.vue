@@ -120,7 +120,7 @@ export default {
     @include mobile {
       position: fixed;
       z-index: 5;
-      background: #f6eaff;
+      background: #f7f0fd;
       width: 100vw;
       height: 100vh;
       top: 0px;
