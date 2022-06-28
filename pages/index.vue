@@ -63,17 +63,39 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <p class="mt-5">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad iste
-        corrupti excepturi ullam harum repudiandae dolorum exercitationem rerum
-        id dolor voluptatum impedit, error eius quo aperiam sunt blanditiis
-        nobis optio? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Ad iste corrupti excepturi ullam harum repudiandae dolorum
-        exercitationem rerum id dolor voluptatum impedit, error eius quo aperiam
-        sunt blanditiis nobis optio? Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Ad iste corrupti
+    <div class="fourth">
+      <h2>Why me ?</h2>
+      <p class="why-desc text-center font-weight-bolder">
+        Benefits of Hiring a social media manager
       </p>
+      <div class="benefits">
+        <div class="benefit">
+          <div class="number"><h1>01</h1></div>
+          <div class="content">
+            <h3>Credibility</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos
+              dolorum vel ratione. Temporibus, maiores distinctio, ea quaerat
+              iure repellendus autem delectus magnam nobis voluptas, ex et
+              eveniet illo rerum quia!
+            </p>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="number"><h1>02</h1></div>
+          <div class="content">
+            <h3>Credibility</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos
+              dolorum vel ratione. Temporibus, maiores distinctio, ea quaerat
+              iure repellendus autem delectus magnam nobis voluptas, ex et
+              eveniet illo rerum quia!
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -307,10 +329,6 @@ export default {
     @include mobile {
       font-size: 32px;
     }
-
-    span {
-      color: #a966c8;
-    }
   }
 
   .features {
@@ -329,6 +347,7 @@ export default {
     .cards {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
       grid-gap: 6%;
       margin-top: 40px;
 
@@ -344,7 +363,7 @@ export default {
         background-color: #ffffff;
         border-radius: 10px;
         box-shadow: rgba(118, 62, 153, 0.15) 0px 5px 15px;
-       
+
         .card-img {
           height: 130px;
           width: auto;
@@ -373,6 +392,65 @@ export default {
           background-color: darken(#a966c8, 10%);
           padding: 22px 42px;
           transition: 0.15s ease-out;
+        }
+      }
+    }
+  }
+}
+
+.fourth {
+  margin-top: 20vh;
+  padding: 0px 10%;
+
+  @include bg-tablet {
+    margin-top: 12vh;
+
+    padding: 0px 5%;
+  }
+
+  h2 {
+    font-family: 'josefin sans', sans-serif;
+    font-size: 64px;
+    font-weight: bolder;
+    letter-spacing: 0.1px;
+    text-align: center;
+
+    @include bg-tablet {
+      font-size: 48px;
+    }
+    @include mobile {
+      font-size: 32px;
+    }
+  }
+
+  .benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .benefit {
+      display: flex;
+      align-items: center;
+
+      .number h1 {
+        font-size: 150px;
+        padding: 20px 0px 0px;
+        font-family: 'josefin sans', sans-serif;
+        font-weight: bolder;
+        margin: 0;
+        color: #a966c8;
+      }
+
+      .content {
+        padding: 0;
+        p {
+          margin: 0;
+        }
+
+        h3 {
+          font-family: 'josefin sans', sans-serif;
+          font-weight: bolder;
+          font-size: 32px;
+          margin: 0;
         }
       }
     }
