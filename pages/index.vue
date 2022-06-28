@@ -139,7 +139,7 @@ export default {
         },
         {
           number: '03',
-          title: 'Amplification',
+          title: 'Reputation management',
           content:
             '  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos  dolorum vel ratione. Temporibus, maiores distinctio, ea quaerat iure pellendus autem delectus magnam nobis voluptas, ex et eveniet illo rerum quia!',
         },
