@@ -129,7 +129,7 @@ export default {
           number: '01',
           title: 'Understand Your Target Audience & Competition',
           content:
-            '  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos  dolorum vel ratione. Temporibus, maiores distinctio, ea quaerat iure pellendus autem delectus magnam nobis voluptas, ex et eveniet illo rerum quia!',
+            'It’s of essence to carefully think about what you feed your audience. I do the needful by conducting a preliminary audit of your social media presence, your company as a whole, your competitors, and your target market.',
         },
         {
           number: '02',
@@ -340,7 +340,7 @@ export default {
       font-size: 48px;
     }
     @include mobile {
-      font-size: 32px;
+      font-size: 36px;
     }
   }
 
@@ -385,11 +385,19 @@ export default {
 
         .title {
           font-weight: bolder;
-          font-size: 18px;
+          font-size: 24px;
+
+          @include tablet {
+            font-size: 20px;
+          }
         }
         .content {
-          font-size: 16px;
+          font-size: 18px;
           padding: 0;
+
+          @include tablet {
+            font-size: 16px;
+          }
         }
       }
 
@@ -432,7 +440,17 @@ export default {
       font-size: 48px;
     }
     @include mobile {
-      font-size: 32px;
+      font-size: 36px;
+    }
+  }
+  .why-desc {
+    font-family: 'open sans', sans-serif;
+    font-size: 18px;
+    color: #86878c;
+    margin-bottom:30px;
+    @include tablet {
+      font-size: 16px;
+      width: 100%;
     }
   }
 
@@ -440,7 +458,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 6vw;
+    gap: 4vw;
     @include bg-tablet {
       display: block;
     }
@@ -472,7 +490,7 @@ export default {
 
         @include mobile {
           font-size: 90px;
-          min-width: 0;
+          min-width: 123px;
         }
       }
 
@@ -494,7 +512,9 @@ export default {
           padding-top: 20px;
 
           @include mobile {
-            font-size: 28px;
+            font-size: 24px;
+          padding-top: 10px;
+
           }
         }
       }
