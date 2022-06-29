@@ -67,8 +67,8 @@
 
     <div class="fourth">
       <h2>Why me ?</h2>
-      <p class="why-desc text-center font-weight-bolder">
-        Benefits of Hiring a social media manager
+      <p class="why-desc text-center">
+        Benefits of Hiring the Social Media Princess
       </p>
       <div class="benefits">
         <div v-for="benefit in benefits" :key="benefit.number" class="benefit">
@@ -348,7 +348,6 @@ export default {
   .features {
     font-family: 'open sans', sans-serif;
     font-size: 18px;
-    color: #86878c;
     width: 60%;
     margin: auto;
     @include tablet {
@@ -463,7 +462,7 @@ export default {
   .why-desc {
     font-family: 'open sans', sans-serif;
     font-size: 18px;
-    color: #86878c;
+    font-weight:normal;
     margin-bottom: 30px;
     @include tablet {
       font-size: 16px;
