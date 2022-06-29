@@ -59,21 +59,32 @@
             </p>
           </div>
           <div class="d-flex justify-content-center align-items-center">
-            <button>More services &#x2192;</button>
+            <Button>More services &#x2192;</Button>
           </div>
         </div>
       </div>
+    </div>
 
-      <p class="mt-5">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad iste
-        corrupti excepturi ullam harum repudiandae dolorum exercitationem rerum
-        id dolor voluptatum impedit, error eius quo aperiam sunt blanditiis
-        nobis optio? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Ad iste corrupti excepturi ullam harum repudiandae dolorum
-        exercitationem rerum id dolor voluptatum impedit, error eius quo aperiam
-        sunt blanditiis nobis optio? Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Ad iste corrupti 
+    <div class="fourth">
+      <h2>Why me ?</h2>
+      <p class="why-desc text-center">
+        Benefits of Hiring the Social Media Princess
       </p>
+      <div class="benefits">
+        <div v-for="benefit in benefits" :key="benefit.number" class="benefit">
+          <div class="number">
+            <h1>{{ benefit.number }}</h1>
+          </div>
+          <div class="content">
+            <h3>{{ benefit.title }}</h3>
+            <p>
+              {{ benefit.content }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <Button>Contact me </Button>
+      <img src="~/static/images/shape8.svg" alt="" class="blob-4" />
     </div>
   </div>
 </template>
@@ -113,6 +124,32 @@ export default {
           title: 'Ads Management',
           content:
             'Exquisitely crafted content to attract your business audience and target market in response to your business needs',
+        },
+      ],
+      benefits: [
+        {
+          number: '01',
+          title: 'Understand Your Target Audience & Competition',
+          content:
+            'It’s of essence to carefully think about what you feed your audience. I do the needful by conducting a preliminary audit of your social media presence, your company as a whole, your competitors, and your target market.',
+        },
+        {
+          number: '02',
+          title: 'Fresh perspective and inspiration',
+          content:
+            'Understanding how quickly social media changes and evolves, I always provide a fresh perspective on ideas to ensure that your social media content, presence and engagements are up to par.',
+        },
+        {
+          number: '03',
+          title: 'Reputation management',
+          content:
+            'Listening to your audience and customers feedback, in addition to strategically acting on the information derived is one of the many ways I increase your brand reputation positively.',
+        },
+        {
+          number: '04',
+          title: 'Customer-Centric',
+          content:
+            'Exhibiting a culture of doing business that focuses on creating the best experience for your customers is my core strength in increasing brand loyalty in the industry. ',
         },
       ],
     }
@@ -219,7 +256,7 @@ export default {
 }
 
 .second {
-  margin-top: 15vh;
+  margin-top: 150px;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   align-items: center;
@@ -227,7 +264,7 @@ export default {
   padding: 0px 10%;
 
   @include bg-tablet {
-    margin-top: 12vh;
+    margin-top: 14vh;
     padding: 0px 5%;
   }
   @include tablet {
@@ -256,12 +293,11 @@ export default {
         font-weight: bolder;
         letter-spacing: 0.1px;
 
-        @include mobile {
-          font-size: 30px;
-        }
-
         @include bg-tablet {
           font-size: 36px;
+        }
+        @include mobile {
+          font-size: 32px;
         }
 
         span {
@@ -282,7 +318,7 @@ export default {
 }
 
 .third {
-  margin-top: 15vh;
+  margin-top: 150px;
   padding: 0px 10%;
   background: url('~/static/images/services/curvy-bg.svg');
   background-size: contain;
@@ -290,7 +326,7 @@ export default {
   background-position-y: center;
 
   @include bg-tablet {
-    margin-top: 12vh;
+    margin-top: 13vh;
 
     padding: 0px 5%;
   }
@@ -306,18 +342,13 @@ export default {
       font-size: 48px;
     }
     @include mobile {
-      font-size: 30px;
-    }
-
-    span {
-      color: #a966c8;
+      font-size: 36px;
     }
   }
 
   .features {
     font-family: 'open sans', sans-serif;
     font-size: 18px;
-    color: #86878c;
     width: 60%;
     margin: auto;
     @include tablet {
@@ -330,7 +361,8 @@ export default {
     .cards {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 6%;
+      grid-template-rows: 1fr 1fr;
+      gap: 50px;
       margin-top: 40px;
 
       @include mobile {
@@ -345,9 +377,7 @@ export default {
         background-color: #ffffff;
         border-radius: 10px;
         box-shadow: rgba(118, 62, 153, 0.15) 0px 5px 15px;
-        @include mobile {
-          margin-bottom: 20px;
-        }
+
         .card-img {
           height: 130px;
           width: auto;
@@ -356,27 +386,139 @@ export default {
 
         .title {
           font-weight: bolder;
-          font-size: 18px;
+          font-size: 24px;
+
+          @include tablet {
+            font-size: 20px;
+          }
         }
         .content {
-          font-size: 16px;
+          font-size: 18px;
           padding: 0;
+
+          @include tablet {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fourth {
+  margin-top: 170px;
+  padding: 0px 10%;
+  position: relative;
+
+  @include bg-tablet {
+    margin-top: 15vh;
+
+    padding: 0px 5%;
+  }
+
+  .blob-4 {
+    position: absolute;
+    right: 0;
+    top: 10vh;
+    width: 20vw;
+    z-index: -1;
+
+    @include bg-tablet {
+      width: 30vw;
+    }
+    @include mobile {
+      width: 50vw;
+    }
+  }
+
+  h2 {
+    font-family: 'josefin sans', sans-serif;
+    font-size: 64px;
+    font-weight: bolder;
+    letter-spacing: 0.1px;
+    text-align: center;
+
+    @include bg-tablet {
+      font-size: 48px;
+    }
+    @include mobile {
+      font-size: 36px;
+    }
+  }
+  .why-desc {
+    font-family: 'open sans', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    @include tablet {
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+
+  .benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 4vw;
+    margin-bottom: 70px;
+
+    @include bg-tablet {
+      display: block;
+    }
+    @include mobile {
+      display: block;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: top;
+
+      @include bg-tablet {
+        margin-bottom: 40px;
+      }
+      @include mobile {
+        margin-bottom: 50px;
+      }
+
+      .number h1 {
+        font-size: 150px;
+        padding: 0px 20px 0px 0px;
+        font-family: 'josefin sans', sans-serif;
+        font-weight: bolder;
+        margin: 0;
+        color: #a966c8;
+        display: flex;
+        align-items: top;
+        min-width: 194px;
+
+        @include mobile {
+          font-size: 90px;
+          min-width: 123px;
         }
       }
 
-      button {
-        border: none;
-        padding: 20px 40px;
-        border-radius: 10px;
-        background-color: #a966c8;
-        color: #ffffff;
-        font-size:16px;
+      .content {
+        padding: 0;
+        p {
+          margin: 0;
+          font-size: 18px;
+          @include mobile {
+            font-size: 16px;
+          }
+        }
 
-        &:hover {
-          background-color: darken(#a966c8,10%);
-        padding: 22px 42px;
-        transition: 0.15s ease-out;
+        h3 {
+          font-family: 'josefin sans', sans-serif;
+          font-weight: bolder;
+          font-size: 36px;
+          margin: 0;
+          padding-top: 20px;
 
+          @include mobile {
+            font-size: 24px;
+            padding-top: 10px;
+          }
         }
       }
     }

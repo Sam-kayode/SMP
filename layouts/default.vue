@@ -4,12 +4,23 @@
     <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
     <img src="~/static/images/shape5.svg" alt="" class="blob-2" />
     <img src="~/static/images/shape6.svg" alt="" class="blob-3" />
-    <div class="content"><Nuxt /></div>
+    <div class="content">
+      <Nuxt />
+    </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'Default',
+  data() {
+    return {
+    }
+  },
+  methods: {
+   
+  },
+}
 </script>
 
 <style lang="scss">
