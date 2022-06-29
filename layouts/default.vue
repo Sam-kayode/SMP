@@ -100,11 +100,13 @@ body {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 1s ease;
+  transition: opacity .3s ease;
+  margin-left: 0;
 }
 
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+  // margin-left: -100vw !important;
 }
 </style>

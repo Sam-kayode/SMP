@@ -1,5 +1,5 @@
 <template>
-    <div class="contain">
+<div class="body"> <div class="contain">
       <svg
         id="logo"
         width="114"
@@ -142,7 +142,8 @@
           stroke-width="1"
         />
       </svg>
-    </div>
+    </div></div>
+   
 </template>
 
 <script>
@@ -158,10 +159,11 @@ export default {
   box-sizing: border-box;
 }
 
-body {
+.body {
   /* background-color: rgb(35, 1, 33); */
   text-align: center;
-
+   height:100vh;
+   width:100vw;
   background: #ffffff !important;
 }
 
