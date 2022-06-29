@@ -263,7 +263,7 @@ export default {
   padding: 0px 10%;
 
   @include bg-tablet {
-    margin-top: 12vh;
+    margin-top: 14vh;
     padding: 0px 5%;
   }
   @include tablet {
@@ -325,7 +325,7 @@ export default {
   background-position-y: center;
 
   @include bg-tablet {
-    margin-top: 12vh;
+    margin-top: 13vh;
 
     padding: 0px 5%;
   }
@@ -425,7 +425,7 @@ export default {
   position: relative;
 
   @include bg-tablet {
-    margin-top: 12vh;
+    margin-top: 15vh;
 
     padding: 0px 5%;
   }
