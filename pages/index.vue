@@ -59,13 +59,14 @@
             </p>
           </div>
           <div class="d-flex justify-content-center align-items-center">
-            <button>More services &#x2192;</button>
+            <Button>More services &#x2192;</Button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="fourth">
+    <div class="fourth">    margin-bottom:20px;
+
       <h2>Why me ?</h2>
       <p class="why-desc text-center">
         Benefits of Hiring the Social Media Princess
@@ -84,6 +85,7 @@
         </div>
       </div>
       <img src="~/static/images/shape8.svg" alt="" class="blob-4" />
+      <Button >Contact me </Button>
     </div>
   </div>
 </template>
@@ -400,21 +402,6 @@ export default {
           }
         }
       }
-
-      button {
-        border: none;
-        padding: 20px 40px;
-        border-radius: 10px;
-        background-color: #a966c8;
-        color: #ffffff;
-        font-size: 16px;
-
-        &:hover {
-          background-color: darken(#a966c8, 10%);
-          padding: 22px 42px;
-          transition: 0.15s ease-out;
-        }
-      }
     }
   }
 }
@@ -462,7 +449,7 @@ export default {
   .why-desc {
     font-family: 'open sans', sans-serif;
     font-size: 18px;
-    font-weight:normal;
+    font-weight: normal;
     margin-bottom: 30px;
     @include tablet {
       font-size: 16px;
