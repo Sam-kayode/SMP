@@ -1,11 +1,17 @@
 <template>
   <div class="body">
-    <Navbar />
-    <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
-    <img src="~/static/images/shape5.svg" alt="" class="blob-2" />
-    <img src="~/static/images/shape6.svg" alt="" class="blob-3" />
-    <div class="content">
-      <Nuxt />
+    <Transition name="fade" appear>
+      <SplashScreen v-if="show" />
+    </Transition>
+
+    <div v-if="!show" class="">
+      <Navbar />
+      <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
+      <img src="~/static/images/shape5.svg" alt="" class="blob-2" />
+      <img src="~/static/images/shape6.svg" alt="" class="blob-3" />
+      <div class="content">
+        <Nuxt />
+      </div>
     </div>
   </div>
 </template>
@@ -15,11 +21,15 @@ export default {
   name: 'Default',
   data() {
     return {
+      show: true,
     }
   },
-  methods: {
-   
+  beforeCreate() {
+    setTimeout(() => {
+      this.show = false
+    }, 5000)
   },
+  methods: {},
 }
 </script>
 
@@ -86,5 +96,17 @@ body {
       padding-top: 2vh;
     }
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .3s ease;
+  margin-left: 0;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  // margin-left: -100vw !important;
 }
 </style>
