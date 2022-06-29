@@ -83,6 +83,7 @@
           </div>
         </div>
       </div>
+      <img src="~/static/images/shape8.svg" alt="" class="blob-4" />
     </div>
   </div>
 </template>
@@ -420,13 +421,29 @@ export default {
 }
 
 .fourth {
-  margin-top: 200px;
+  margin-top: 170px;
   padding: 0px 10%;
+  position: relative;
 
   @include bg-tablet {
     margin-top: 12vh;
 
     padding: 0px 5%;
+  }
+
+  .blob-4 {
+    position: absolute;
+    right: 0;
+    top: 10vh;
+    width: 20vw;
+    z-index: -1;
+
+    @include bg-tablet {
+      width: 30vw;
+    }
+    @include mobile {
+      width: 50vw;
+    }
   }
 
   h2 {
@@ -457,7 +474,7 @@ export default {
   .benefits {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
     gap: 4vw;
     @include bg-tablet {
       display: block;
