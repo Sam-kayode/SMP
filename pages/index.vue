@@ -65,8 +65,7 @@
       </div>
     </div>
 
-    <div class="fourth">    margin-bottom:20px;
-
+    <div class="fourth">
       <h2>Why me ?</h2>
       <p class="why-desc text-center">
         Benefits of Hiring the Social Media Princess
@@ -84,8 +83,8 @@
           </div>
         </div>
       </div>
+      <Button>Contact me </Button>
       <img src="~/static/images/shape8.svg" alt="" class="blob-4" />
-      <Button >Contact me </Button>
     </div>
   </div>
 </template>
@@ -462,6 +461,8 @@ export default {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 4vw;
+    margin-bottom: 70px;
+
     @include bg-tablet {
       display: block;
     }
