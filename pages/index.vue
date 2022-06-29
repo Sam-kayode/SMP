@@ -148,7 +148,7 @@ export default {
           number: '04',
           title: 'Customer-Centric',
           content:
-            'Exhibiting a culture of doing business that focuses on creating the best experience for customers is my core strength in building brand loyalty. ',
+            'Exhibiting a culture of doing business that focuses on creating the best experience for your customers is my core strength in increasing brand loyalty in the industry. ',
         },
       ],
     }
