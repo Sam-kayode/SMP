@@ -254,7 +254,7 @@ export default {
 }
 
 .second {
-  margin-top: 100px;
+  margin-top: 150px;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   align-items: center;
@@ -316,7 +316,7 @@ export default {
 }
 
 .third {
-  margin-top: 100px;
+  margin-top: 150px;
   padding: 0px 10%;
   background: url('~/static/images/services/curvy-bg.svg');
   background-size: contain;
@@ -420,7 +420,7 @@ export default {
 }
 
 .fourth {
-  margin-top: 100px;
+  margin-top: 200px;
   padding: 0px 10%;
 
   @include bg-tablet {
@@ -447,7 +447,7 @@ export default {
     font-family: 'open sans', sans-serif;
     font-size: 18px;
     color: #86878c;
-    margin-bottom:30px;
+    margin-bottom: 30px;
     @include tablet {
       font-size: 16px;
       width: 100%;
@@ -457,7 +457,7 @@ export default {
   .benefits {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
     gap: 4vw;
     @include bg-tablet {
       display: block;
@@ -513,8 +513,7 @@ export default {
 
           @include mobile {
             font-size: 24px;
-          padding-top: 10px;
-
+            padding-top: 10px;
           }
         }
       }
