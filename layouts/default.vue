@@ -1,11 +1,14 @@
 <template>
   <div class="body">
-    <Navbar />
-    <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
-    <img src="~/static/images/shape5.svg" alt="" class="blob-2" />
-    <img src="~/static/images/shape6.svg" alt="" class="blob-3" />
-    <div class="content">
-      <Nuxt />
+    <SplashScreen />
+    <div v-if="!show" class="">
+      <Navbar />
+      <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
+      <img src="~/static/images/shape5.svg" alt="" class="blob-2" />
+      <img src="~/static/images/shape6.svg" alt="" class="blob-3" />
+      <div class="content">
+        <Nuxt />
+      </div>
     </div>
   </div>
 </template>
@@ -15,11 +18,13 @@ export default {
   name: 'Default',
   data() {
     return {
+      show: true,
     }
   },
-  methods: {
-   
+  beforeCreate() {
+    setTimeout()
   },
+  methods: {},
 }
 </script>
 
