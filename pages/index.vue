@@ -136,19 +136,19 @@ export default {
           number: '02',
           title: 'Fresh perspective and inspiration',
           content:
-            '  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos  dolorum vel ratione. Temporibus, maiores distinctio, ea quaerat iure pellendus autem delectus magnam nobis voluptas, ex et eveniet illo rerum quia!',
+            'Understanding how quickly social media changes and evolves, I always provide a fresh perspective on ideas to ensure that your social media content, presence and engagements are up to par.',
         },
         {
           number: '03',
           title: 'Reputation management',
           content:
-            '  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos  dolorum vel ratione. Temporibus, maiores distinctio, ea quaerat iure pellendus autem delectus magnam nobis voluptas, ex et eveniet illo rerum quia!',
+            'Listening to your audience and customers feedback, in addition to strategically acting on the information derived is one of the many ways I increase your brand reputation positively.',
         },
         {
           number: '04',
           title: 'Customer-Centric',
           content:
-            '  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos  dolorum vel ratione. Temporibus, maiores distinctio, ea quaerat iure pellendus autem delectus magnam nobis voluptas, ex et eveniet illo rerum quia!',
+            'Exhibiting a culture of doing business that focuses on creating the best experience for customers is my core strength in building brand loyalty. ',
         },
       ],
     }
