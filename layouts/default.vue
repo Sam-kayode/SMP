@@ -1,6 +1,9 @@
 <template>
   <div class="body">
-    <SplashScreen />
+    <Transition name="fade" appear>
+      <SplashScreen v-if="show" />
+    </Transition>
+
     <div v-if="!show" class="">
       <Navbar />
       <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
@@ -22,7 +25,9 @@ export default {
     }
   },
   beforeCreate() {
-    setTimeout()
+    setTimeout(() => {
+      this.show = false
+    }, 5000)
   },
   methods: {},
 }
@@ -91,5 +96,15 @@ body {
       padding-top: 2vh;
     }
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

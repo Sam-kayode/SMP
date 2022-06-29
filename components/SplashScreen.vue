@@ -162,7 +162,7 @@ body {
   /* background-color: rgb(35, 1, 33); */
   text-align: center;
 
-  background: #f7f4ff !important;
+  background: #ffffff !important;
 }
 
 .contain{
