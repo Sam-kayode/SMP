@@ -4,7 +4,7 @@
       <SplashScreen v-if="show" />
     </Transition>
 
-    <div v-if="!show" class="">
+    <div :style="{ display: show ? 'none' : 'block' }" class="">
       <Navbar />
       <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
       <img src="~/static/images/shape5.svg" alt="" class="blob-2" />
@@ -27,7 +27,7 @@ export default {
   beforeCreate() {
     setTimeout(() => {
       this.show = false
-    }, 5000)
+    }, 3500)
   },
   methods: {},
 }
@@ -100,7 +100,7 @@ body {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
   margin-left: 0;
 }
 
