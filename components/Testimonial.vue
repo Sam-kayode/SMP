@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel-conatiner">
+  <div class="carousel-container">
     <VueSlickCarousel
       :arrows="true"
       :dots="true"
@@ -48,7 +48,7 @@ export default {
 
 <style lang="scss" scoped>
 .item {
-  width: 60% !important;
+  width: 60vw !important;
   height: 300px;
   font-size: 150px;
   text-align: center;
@@ -57,6 +57,8 @@ export default {
 }
 
 .carousel-container{
-    // width:60vw !important;
+    overflow:hidden;
 }
+
+
 </style>
