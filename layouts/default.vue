@@ -42,6 +42,7 @@ export default {
 html {
   font-size: 16px;
   font: sans-serif;
+  overflow-x: hidden !important;
 
   @include mobile {
     font-size: 8px;
@@ -55,7 +56,6 @@ html {
 }
 
 body {
-  overflow-x: hidden;
   font-family: 'open sans', sans-serif;
 
   .blob-1 {

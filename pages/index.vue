@@ -4,6 +4,7 @@
     <SecondSection />
     <ThirdSection />
     <FourthSection />
+    <Testimonial/>
   </div>
 </template>
 
