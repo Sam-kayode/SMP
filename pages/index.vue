@@ -3,8 +3,8 @@
     <FirstSection />
     <SecondSection />
     <ThirdSection />
-    <FourthSection />
-    <Testimonial/>
+    <FourthSection /> 
+  <Testimonial/>
   </div>
 </template>
 

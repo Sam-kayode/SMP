@@ -43,6 +43,7 @@ html {
   font-size: 16px;
   font: sans-serif;
   overflow-x: hidden !important;
+  width: 100vw !important;
 
   @include mobile {
     font-size: 8px;
@@ -96,6 +97,10 @@ body {
       padding-top: 2vh;
     }
   }
+}
+
+.body {
+  width: 100vw !important;
 }
 
 .fade-enter-active,

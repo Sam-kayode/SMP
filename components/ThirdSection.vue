@@ -24,7 +24,7 @@
 
 <script>
 export default {
-   name: 'ThirdSection',
+  name: 'ThirdSection',
   data() {
     return {
       cards: [
@@ -59,7 +59,6 @@ export default {
             'Exquisitely crafted content to attract your business audience and target market in response to your business needs',
         },
       ],
-     
     }
   },
 }
@@ -73,6 +72,8 @@ export default {
   background-size: contain;
   background-repeat: no-repeat;
   background-position-y: center;
+  width: 100vw;
+  overflow-x: hidden;
 
   @include bg-tablet {
     margin-top: 13vh;

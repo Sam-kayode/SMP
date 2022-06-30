@@ -29,8 +29,9 @@ export default {}
   display: grid;
   grid-template-columns: 1fr 1.3fr;
   align-items: center;
-  width: 100%;
   padding: 0px 10%;
+    width: 100vw;
+  overflow-x: hidden;
 
   @include mobile {
     grid-template-columns: 1fr;

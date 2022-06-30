@@ -62,6 +62,8 @@ export default {
   margin-top: 170px;
   padding: 0px 10%;
   position: relative;
+  width: 100vw;
+  overflow-x: hidden;
 
   @include bg-tablet {
     margin-top: 15vh;

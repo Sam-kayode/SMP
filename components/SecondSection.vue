@@ -34,7 +34,9 @@ export default {}
   align-items: center;
   width: 100%;
   padding: 0px 10%;
-
+  width: 100vw;
+  overflow-x: hidden;
+  
   @include bg-tablet {
     margin-top: 14vh;
     padding: 0px 5%;
