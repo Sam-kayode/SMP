@@ -418,7 +418,7 @@ export default {
 
   .blob-4 {
     position: absolute;
-    right: 0;
+    right: -2px;
     top: 10vh;
     width: 20vw;
     z-index: -1;

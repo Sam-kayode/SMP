@@ -15,7 +15,7 @@ export default {
 <style lang="scss" scoped>
 button {
   border: none;
-  padding: 15px 40px;
+  padding: 15px 45px;
   border: 2px solid #a966c8;
   font-size: 18px;
   transition: 0.3s ease-out;
