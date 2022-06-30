@@ -56,9 +56,14 @@ export default {
   margin: 0 auto !important;
 }
 
-.carousel-container{
-    overflow:hidden;
+.carousel-container {
+  overflow: hidden;
+   margin: 170px auto 40px auto;
+  width: 60vw;
+
+  @include bg-tablet {
+    margin-top: 15vh;
+  }
+
 }
-
-
 </style>
