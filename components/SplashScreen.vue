@@ -1,5 +1,6 @@
 <template>
-<div class="body"> <div class="contain">
+  <div class="body">
+    <div class="contain">
       <svg
         id="logo"
         width="114"
@@ -142,17 +143,15 @@
           stroke-width="1"
         />
       </svg>
-    </div></div>
-   
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 * {
   padding: 0;
   margin: 0;
@@ -162,15 +161,17 @@ export default {
 .body {
   /* background-color: rgb(35, 1, 33); */
   text-align: center;
-   height:100vh;
-   width:100vw;
+  height: 100vh;
+  width: 100vw;
   background: #ffffff !important;
   overflow: hidden !important;
 
-
+  @include mobile {
+    height: 95vh;
+  }
 }
 
-.contain{
+.contain {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -204,7 +205,7 @@ export default {
 
 #main path {
   stroke-dasharray: 200px;
-  stroke-dashoffset:200px;
+  stroke-dashoffset: 200px;
   animation: line-anim 10s ease-out forwards;
 }
 /* #logo path:nth-child(2) {
@@ -258,16 +259,15 @@ export default {
   }
 }
 
-@media(max-width:400px){
-  #logo{
-   width:90px;
-   margin-bottom:0px !important;
+@media (max-width: 400px) {
+  #logo {
+    width: 90px;
+    margin-bottom: 0px !important;
   }
 
-  #main{
-    margin-top:-20px;
-    width:75vw;
+  #main {
+    margin-top: -20px;
+    width: 75vw;
   }
 }
-
 </style>
