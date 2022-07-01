@@ -11,6 +11,7 @@
         </p>
         <p class="name">Sam-kayode marvellous</p>
         <p class="title">Senior developer</p>
+        <img src="~/static/images/quote.svg" alt="" class="quote" />
       </div>
     </VueSlickCarousel>
     <div class="controls">
@@ -160,24 +161,26 @@ export default {
           font-family: 'open sans', sans-serif;
           text-align: center;
           font-size: 18px;
-          background: url('~/static/images/quote.svg');
-          background-size: cover;
-          background-repeat: none;
           @include tablet {
             font-size: 16px;
           }
         }
-        // .quote {
-        //   font-size: 540px;
-        //   font-family: 'Times New Roman', Times, serif;
-        //   position: absolute;
-        //   z-index: -3;
-        //   text-align: center;
-        //   color: rgb(231, 212, 252);
-        //   right: 25%;
-        //   bottom: 15px;
-        //   background: rgb(255, 0, 0);
-        // }
+        .quote {
+          position: absolute;
+          z-index: -3;
+          top: 150px;
+          width: 70%;
+          right: 15%;
+          margin: auto;
+          text-align: center;
+          color: rgb(231, 212, 252);
+
+          @include bg-tablet {
+            width: 80%;
+            top: 180px;
+            right: 10%;
+          }
+        }
 
         .name {
           font-family: 'josefin sans', sans-serif;
@@ -201,14 +204,14 @@ export default {
   }
 
   .controls {
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     .dash {
       height: 2px;
       width: 30px;
       background: rgb(181, 181, 181);
-      margin:2px;
+      margin: 2px;
     }
   }
 }
