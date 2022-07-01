@@ -18,7 +18,6 @@
       </div>
     </div>
     <Button>Contact me </Button>
-    <img src="~/static/images/shape8.svg" alt="" class="blob-4" />
   </div>
 </template>
 
@@ -63,7 +62,7 @@ export default {
   padding: 0px 10%;
   position: relative;
   width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
 
   @include bg-tablet {
     margin-top: 15vh;
@@ -71,20 +70,7 @@ export default {
     padding: 0px 5%;
   }
 
-  .blob-4 {
-    position: absolute;
-    right: -2px;
-    top: 10vh;
-    width: 20vw;
-    z-index: -1;
-
-    @include bg-tablet {
-      width: 30vw;
-    }
-    @include mobile {
-      width: 50vw;
-    }
-  }
+ 
 
   h2 {
     font-family: 'josefin sans', sans-serif;
