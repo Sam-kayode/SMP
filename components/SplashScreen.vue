@@ -167,6 +167,7 @@ export default {
   background: #ffffff !important;
   overflow: hidden !important;
 
+
 }
 
 .contain{
