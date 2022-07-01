@@ -1,7 +1,7 @@
 <template>
   <div class="my-5 carousel-container">
     <h2>What do my clients say ?</h2>
-    <VueSlickCarousel v-bind="settings">
+    <VueSlickCarousel v-bind="settings" @beforeChange="beforeChange">
       <div v-for="n in 5" :key="n" class="review">
         <div class="rev-img"><img src="" alt="" /></div>
         <p class="statement">
@@ -15,7 +15,13 @@
       </div>
     </VueSlickCarousel>
     <div class="controls">
-      <div v-for="n in 5" :key="n" class="dash"></div>
+      <div
+        v-for="n in 5"
+        :key="n"
+        class="dash"
+        :class="{ active: index === n-1 }"
+        @click="push(n)"
+      ></div>
     </div>
     <div class="right"><p>&#x2190;</p></div>
     <div class="left"><p>&#x2192;</p></div>
@@ -32,6 +38,7 @@ export default {
   components: { VueSlickCarousel },
   data() {
     return {
+      index: null,
       settings: {
         dots: false,
         focusOnSelect: true,
@@ -62,9 +69,11 @@ export default {
     }
   },
   methods: {
-    handleChange(lop, val) {
+    beforeChange(index) {
+      this.index = index
+    },
+    push(val) {
       console.log(val)
-      this.index = val
     },
   },
 }
@@ -208,10 +217,14 @@ export default {
     align-items: center;
     justify-content: center;
     .dash {
-      height: 2px;
-      width: 30px;
+      height: 1px;
+      border-radius: 10%;
+      width: 35px;
       background: rgb(181, 181, 181);
       margin: 2px;
+    }
+    .active {
+      background: rgb(113, 63, 161);
     }
   }
 }
