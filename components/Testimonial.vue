@@ -14,19 +14,21 @@
     <div class="left"><p>&#x2192;</p></div>
   </div> -->
   <div class="my-5 carousel-container">
+    <h2>What do my clients say ?</h2>
     <VueSlickCarousel v-bind="settings">
       <div v-for="n in 5" :key="n" class="review">
         <div class="rev-img"><img src="" alt="" /></div>
         <p class="statement">
-          <span>"</span> "Lorem ipsum dolor sit, amet consectetur adipisicing
-          elit. Molestias earum ex ullam harum sed, aspernatur porro deleniti
-          nostrum quas impedit qui exusantium fuga maiores? Facilis, aperiam?"
-          <span>"</span>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias
+          earum ex ullam harum sed, aspernatur porro deleniti nostrum quas
+          <span class="quote">&#x201D;</span>
+          impedit qui exusantium fuga maiores? Facilis, aperiam
         </p>
         <p class="name">Sam-kayode marvellous</p>
         <p class="title">Senior developer</p>
       </div>
     </VueSlickCarousel>
+    <div class="controls"></div>
     <div class="right"><p>&#x2190;</p></div>
     <div class="left"><p>&#x2192;</p></div>
   </div>
@@ -146,6 +148,27 @@ export default {
   position: relative;
   width: 90vw;
   margin: 0 auto;
+  padding-top: 170px;
+
+  @include bg-tablet {
+    margin-top: 15vh !important;
+    padding-top: 0;
+  }
+
+  h2 {
+    font-family: 'josefin sans', sans-serif;
+    font-size: 64px;
+    font-weight: bolder;
+    letter-spacing: 0.1px;
+    text-align: center;
+
+    @include bg-tablet {
+      font-size: 48px;
+    }
+    @include mobile {
+      font-size: 36px;
+    }
+  }
   .right,
   .left {
     display: flex;
@@ -193,13 +216,14 @@ export default {
         // border: 1px solid red;
         padding: 10%;
         text-align: center;
+        position: relative;
         @include mobile {
           padding: 13%;
         }
 
         .rev-img {
-          width: 90px;
-          height: 90px;
+          width: 110px;
+          height: 110px;
           border-radius: 50%;
           border: 1px solid purple;
           margin: 0 auto 30px auto;
@@ -213,6 +237,17 @@ export default {
           @include tablet {
             font-size: 16px;
           }
+        }
+        .quote {
+          font-size: 540px;
+          line-height: 160px;
+          font-family: 'Times New Roman', Times, serif;
+          position: absolute;
+          z-index: -3;
+          text-align: center;
+          color: rgb(231, 212, 252);
+          right: 25%;
+          bottom: 15px;
         }
 
         .name {
