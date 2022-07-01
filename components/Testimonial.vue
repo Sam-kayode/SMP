@@ -16,14 +16,15 @@
   <div class="my-5 carousel-container">
     <VueSlickCarousel v-bind="settings">
       <div v-for="n in 5" :key="n" class="review">
-        <div class="rev-img"><img src="" alt=""></div>
-        <h3>
-          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias
-          earum ex ullam harum sed, aspernatur porro deleniti nostrum quas
-          impedit qui exusantium fuga maiores? Facilis, aperiam?"
-        </h3>
-        <p>Sam-kayode marvellous</p>
-        <p>Senior developer</p>
+        <div class="rev-img"><img src="" alt="" /></div>
+        <p class="statement">
+          <span>"</span> "Lorem ipsum dolor sit, amet consectetur adipisicing
+          elit. Molestias earum ex ullam harum sed, aspernatur porro deleniti
+          nostrum quas impedit qui exusantium fuga maiores? Facilis, aperiam?"
+          <span>"</span>
+        </p>
+        <p class="name">Sam-kayode marvellous</p>
+        <p class="title">Senior developer</p>
       </div>
     </VueSlickCarousel>
     <div class="right"><p>&#x2190;</p></div>
@@ -42,7 +43,7 @@ export default {
   data() {
     return {
       settings: {
-        dots: true,
+        dots: false,
         focusOnSelect: true,
         infinite: true,
         speed: 500,
@@ -144,7 +145,7 @@ export default {
 .carousel-container {
   position: relative;
   width: 90vw;
-  margin:0 auto;
+  margin: 0 auto;
   .right,
   .left {
     display: flex;
@@ -185,24 +186,51 @@ export default {
   .slick-slider {
     width: 90vw;
     margin: 0 auto;
-    background: rgb(135, 135, 135);
+    // background: rgb(135, 135, 135);
 
     .slick-slide {
       .review {
-        border: 1px solid red;
+        // border: 1px solid red;
         padding: 10%;
-
+        text-align: center;
         @include mobile {
           padding: 13%;
         }
 
-        h3 {
-          text-align: center;
-          font-size: 18px;
+        .rev-img {
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          border: 1px solid purple;
+          margin: 0 auto 30px auto;
         }
 
-        p {
+        .statement {
+          font-family: 'open sans', sans-serif;
           text-align: center;
+          font-size: 18px;
+
+          @include tablet {
+            font-size: 16px;
+          }
+        }
+
+        .name {
+          font-family: 'josefin sans', sans-serif;
+          font-size: 18px;
+          margin: 40px 0px 0px 0px;
+
+          @include tablet {
+            font-size: 16px;
+          }
+        }
+        .title {
+          font-family: 'josefin sans', sans-serif;
+          font-size: 16px;
+          font-weight: bolder;
+          @include tablet {
+            font-size: 16px;
+          }
         }
       }
     }
