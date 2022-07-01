@@ -16,6 +16,7 @@
   <div class="my-5 carousel-container">
     <VueSlickCarousel v-bind="settings">
       <div v-for="n in 5" :key="n" class="review">
+        <div class="rev-img"><img src="" alt=""></div>
         <h3>
           "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias
           earum ex ullam harum sed, aspernatur porro deleniti nostrum quas
@@ -142,7 +143,8 @@ export default {
 // }
 .carousel-container {
   position: relative;
-  width: 100vw;
+  width: 90vw;
+  margin:0 auto;
   .right,
   .left {
     display: flex;
@@ -171,14 +173,14 @@ export default {
     position: absolute;
     z-index: 50;
     top: 0;
-    right: -5px;
+    right: -30px;
   }
 
   .right {
     position: absolute;
     z-index: 50;
     top: 0;
-    left: -5px;
+    left: -30px;
   }
   .slick-slider {
     width: 90vw;
