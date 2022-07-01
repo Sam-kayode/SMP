@@ -167,7 +167,7 @@ export default {}
   overflow: hidden !important;
 
   @include mobile {
-    height: 95vh;
+    height: 100vh;
   }
 }
 

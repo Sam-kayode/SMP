@@ -1,18 +1,4 @@
 <template>
-  <!-- <div class="carousel-containr">
-    <VueSlickCarousel v-bind="settings" @beforeChange="handleChange">
-      <div class="item">1
-        <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel sequi, mollitia possimus dolores debitis reprehenderit distinctio, quod ex consequuntur explicabo quis ut vero dolorum quae necessitatibus voluptas provident saepe itaque!
-      </div>
-      <div class="item">2</div>
-      <div class="item">3</div>
-      <div class="item">4</div>
-      <div class="item">5</div>
-      <div class="item">6</div>
-    </VueSlickCarousel>
-    <div class="right"><p>&#x2190;</p></div>
-    <div class="left"><p>&#x2192;</p></div>
-  </div> -->
   <div class="my-5 carousel-container">
     <h2>What do my clients say ?</h2>
     <VueSlickCarousel v-bind="settings">
@@ -21,14 +7,15 @@
         <p class="statement">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias
           earum ex ullam harum sed, aspernatur porro deleniti nostrum quas
-          <span class="quote">&#x201D;</span>
           impedit qui exusantium fuga maiores? Facilis, aperiam
         </p>
         <p class="name">Sam-kayode marvellous</p>
         <p class="title">Senior developer</p>
       </div>
     </VueSlickCarousel>
-    <div class="controls"></div>
+    <div class="controls">
+      <div v-for="n in 5" :key="n" class="dash"></div>
+    </div>
     <div class="right"><p>&#x2190;</p></div>
     <div class="left"><p>&#x2192;</p></div>
   </div>
@@ -83,67 +70,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .item {
-//   height: 50vh;
-//   font-size: 16px;
-//   max-width:180px;
-//   text-align: center;
-//   background: rgb(234, 177, 253);
-//   margin: 0 auto !important;
-
-//   @include mobile {
-//   }
-// }
-
-// .carousel-container {
-//   margin: 170px auto 200px auto;
-//   z-index: 30;
-//   position: relative;
-//   height: 50vh;
-//   @include bg-tablet {
-//   }
-//   @include mobile {
-//   }
-
-//   .right,
-//   .left {
-//     display: flex;
-//     align-items: center;
-//     width: 50px;
-//     background: rgba(101, 68, 68, 0);
-//     height: 50vh;
-
-//     p {
-//       font-size: 30px;
-//       background: rgb(117, 65, 148);
-//       text-align: center;
-//       font-weight: bold;
-//       padding: 0px 10px 5px 10px;
-//       color: rgb(255, 255, 255);
-//       transition: 0.2s ease-in;
-
-//       cursor: pointer;
-//       &:hover {
-//         transform: scale(1.05);
-//         transition: 0.2s ease-out;
-//       }
-//     }
-//   }
-
-//   .left {
-//     position: absolute;
-//     z-index: 50;
-//     top: 0;
-//     right: -30px;
-//   }
-
-//   .right {
-//     position: absolute;
-//     z-index: 50;
-//     top: 0;
-//     left: -30px;
-//   }
-// }
 .carousel-container {
   position: relative;
   width: 90vw;
@@ -197,14 +123,14 @@ export default {
     position: absolute;
     z-index: 50;
     top: 0;
-    right: -30px;
+    right: -10px;
   }
 
   .right {
     position: absolute;
     z-index: 50;
     top: 0;
-    left: -30px;
+    left: -10px;
   }
   .slick-slider {
     width: 90vw;
@@ -217,6 +143,7 @@ export default {
         padding: 10%;
         text-align: center;
         position: relative;
+
         @include mobile {
           padding: 13%;
         }
@@ -233,22 +160,24 @@ export default {
           font-family: 'open sans', sans-serif;
           text-align: center;
           font-size: 18px;
-
+          background: url('~/static/images/quote.svg');
+          background-size: cover;
+          background-repeat: none;
           @include tablet {
             font-size: 16px;
           }
         }
-        .quote {
-          font-size: 540px;
-          line-height: 160px;
-          font-family: 'Times New Roman', Times, serif;
-          position: absolute;
-          z-index: -3;
-          text-align: center;
-          color: rgb(231, 212, 252);
-          right: 25%;
-          bottom: 15px;
-        }
+        // .quote {
+        //   font-size: 540px;
+        //   font-family: 'Times New Roman', Times, serif;
+        //   position: absolute;
+        //   z-index: -3;
+        //   text-align: center;
+        //   color: rgb(231, 212, 252);
+        //   right: 25%;
+        //   bottom: 15px;
+        //   background: rgb(255, 0, 0);
+        // }
 
         .name {
           font-family: 'josefin sans', sans-serif;
@@ -268,6 +197,18 @@ export default {
           }
         }
       }
+    }
+  }
+
+  .controls {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    .dash {
+      height: 2px;
+      width: 30px;
+      background: rgb(181, 181, 181);
+      margin:2px;
     }
   }
 }
