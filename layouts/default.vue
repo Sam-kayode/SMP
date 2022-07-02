@@ -1,10 +1,10 @@
 <template>
-  <div class="body">
+  <div>
     <Transition name="fade" appear>
       <SplashScreen v-if="show" />
     </Transition>
 
-    <div :style="{ display: show ? 'none' : 'block' }" class="">
+    <div :style="{ display: show ? 'none' : '' }" class="">
       <Navbar />
       <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
       <img src="~/static/images/shape5.svg" alt="" class="blob-2" />
@@ -43,7 +43,6 @@ export default {
 html {
   font-size: 16px;
   font: sans-serif;
-  overflow-x: hidden !important;
   width: 100vw !important;
 
   @include mobile {
@@ -59,8 +58,8 @@ html {
 
 body {
   font-family: 'open sans', sans-serif;
-  overflow-x:hidden !important;
-
+  overflow-x: hidden !important;
+  position: relative;
   .blob-1 {
     left: -7vw;
     top: -6vw;
@@ -103,13 +102,13 @@ body {
     }
     @include mobile {
       width: 50vw;
-    top: 490vh;
-
+      top: 490vh;
     }
   }
 
   .content {
-    padding-top: 7vh;
+    margin-top: 7vh;
+    overflow-x: clip;
 
     @include mobile {
       padding-top: 2vh;
@@ -118,7 +117,6 @@ body {
 }
 
 .body {
-  width: 100vw !important;
 }
 
 .fade-enter-active,

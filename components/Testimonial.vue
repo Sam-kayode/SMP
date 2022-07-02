@@ -28,7 +28,7 @@
       ></div>
     </div>
     <div class="right" @click="showPrev"><p>&#x2190;</p></div>
-    <div class="left"  @click="showNext"><p>&#x2192;</p></div>
+    <div class="left" @click="showNext"><p>&#x2192;</p></div>
   </div>
 </template>
 
@@ -45,6 +45,7 @@ export default {
       index: null,
       settings: {
         dots: false,
+        arrows: false,
         focusOnSelect: true,
         infinite: true,
         speed: 500,
@@ -83,7 +84,6 @@ export default {
     },
     showPrev() {
       this.$refs.carousel.prev()
-
     },
     goTo(index) {
       this.$refs.carousel.goTo(index)
@@ -111,6 +111,7 @@ export default {
     font-weight: bolder;
     letter-spacing: 0.1px;
     text-align: center;
+    margin-bottom: 40px;
 
     @include bg-tablet {
       font-size: 48px;
@@ -124,8 +125,8 @@ export default {
     display: flex;
     align-items: center;
     width: 50px;
+    height: 140%;
     background: rgba(168, 12, 12, 0);
-    height: 100%;
     cursor: pointer;
     p {
       font-size: 30px;

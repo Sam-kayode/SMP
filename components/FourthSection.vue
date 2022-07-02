@@ -62,15 +62,12 @@ export default {
   padding: 0px 10%;
   position: relative;
   width: 100vw;
-  overflow: hidden;
 
   @include bg-tablet {
     margin-top: 15vh;
 
     padding: 0px 5%;
   }
-
- 
 
   h2 {
     font-family: 'josefin sans', sans-serif;
@@ -102,7 +99,7 @@ export default {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 4vw;
-    margin-bottom: 70px;
+    overflow: hidden !important;
 
     @include bg-tablet {
       display: block;
@@ -113,8 +110,7 @@ export default {
 
     .benefit {
       display: flex;
-      align-items: top;
-
+      align-items:top;
       @include bg-tablet {
         margin-bottom: 40px;
       }
@@ -141,6 +137,7 @@ export default {
 
       .content {
         padding: 0;
+        margin:0;
         p {
           margin: 0;
           font-size: 18px;
