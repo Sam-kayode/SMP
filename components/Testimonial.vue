@@ -27,8 +27,8 @@
         @click="goTo(i)"
       ></div>
     </div>
-    <div class="right" @click="showNext"><p>&#x2190;</p></div>
-    <div class="left" @click="showPrev"><p>&#x2192;</p></div>
+    <div class="right" @click="showPrev"><p>&#x2190;</p></div>
+    <div class="left"  @click="showNext"><p>&#x2192;</p></div>
   </div>
 </template>
 
@@ -83,6 +83,7 @@ export default {
     },
     showPrev() {
       this.$refs.carousel.prev()
+
     },
     goTo(index) {
       this.$refs.carousel.goTo(index)
