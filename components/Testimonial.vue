@@ -27,8 +27,8 @@
         @click="goTo(i)"
       ></div>
     </div>
-    <div class="right"><p>&#x2190;</p></div>
-    <div class="left"><p>&#x2192;</p></div>
+    <div class="right" @click="showNext"><p>&#x2190;</p></div>
+    <div class="left" @click="showPrev"><p>&#x2192;</p></div>
   </div>
 </template>
 
@@ -78,6 +78,12 @@ export default {
       console.log(index)
       this.index = index
     },
+    showNext() {
+      this.$refs.carousel.next()
+    },
+    showPrev() {
+      this.$refs.carousel.prev()
+    },
     goTo(index) {
       this.$refs.carousel.goTo(index)
       console.log(index)
@@ -119,6 +125,7 @@ export default {
     width: 50px;
     background: rgba(168, 12, 12, 0);
     height: 100%;
+    cursor: pointer;
     p {
       font-size: 30px;
       background: rgb(205, 166, 228);
