@@ -7,7 +7,7 @@
       @beforeChange="beforeChange"
     >
       <div v-for="(review, n) in reviews" :key="n" class="review">
-        <div class="rev-img"><img src="" alt="" /></div>
+        <div class="rev-img"><img :src="review.picture" alt="" /></div>
         <p class="statement">{{ review.review }}</p>
         <p class="name">{{ review.name }}</p>
         <p class="title">{{ review.title }}</p>
@@ -91,18 +91,18 @@ export default {
           title: 'Importation and Logistics firm',
         },
         {
-          picture: require('~/static/images/firms/aa.png'),
+          picture: require('~/static/images/firms/wristwatch.png'),
           review:
             'She-s one of the best Social media managers you can work with. Impecable service likeno other',
           name: 'Ademakinwa Ademiluyi Driving and Co Services',
-          title: 'logistics company',
+          title: 'Luxury Wristwear Store',
         },
         {
-          picture: require('~/static/images/firms/aa.png'),
+          picture: require('~/static/images/firms/mbi.png'),
           review:
             'She-s one of the best Social media managers you can work with. Impecable service likeno other',
           name: 'Ademakinwa Ademiluyi Driving and Co Services',
-          title: 'logistics company',
+          title: 'Financial Services firm',
         },
       ],
     }
@@ -214,7 +214,7 @@ export default {
           width: 110px;
           height: 110px;
           border-radius: 50%;
-          border: 1px solid purple;
+          // border: 1px solid purple;
           margin: 0 auto 30px auto;
 
           img {
