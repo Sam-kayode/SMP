@@ -87,7 +87,11 @@ body {
     z-index: -3;
     height: 70vh;
     @include mobile {
-      top: 100vh;
+      top: 210vh;
+    height: 80vh;
+    width:40vw;
+    transform:scale(3)
+
     }
   }
   .blob-4 {
