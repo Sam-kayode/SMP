@@ -1,7 +1,11 @@
 <template>
   <div class="my-5 carousel-container">
     <h2>What do my clients say ?</h2>
-    <VueSlickCarousel v-bind="settings" @beforeChange="beforeChange">
+    <VueSlickCarousel
+      v-bind="settings"
+      ref="carousel"
+      @beforeChange="beforeChange"
+    >
       <div v-for="n in 5" :key="n" class="review">
         <div class="rev-img"><img src="" alt="" /></div>
         <p class="statement">
@@ -16,11 +20,11 @@
     </VueSlickCarousel>
     <div class="controls">
       <div
-        v-for="n in 5"
+        v-for="(n, i) in 5"
         :key="n"
         class="dash"
-        :class="{ active: index === n-1 }"
-        @click="push(n)"
+        :class="{ active: index == i }"
+        @click="goTo(i)"
       ></div>
     </div>
     <div class="right"><p>&#x2190;</p></div>
@@ -44,6 +48,7 @@ export default {
         focusOnSelect: true,
         infinite: true,
         speed: 500,
+        autoplay: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         touchThreshold: 5,
@@ -69,11 +74,13 @@ export default {
     }
   },
   methods: {
-    beforeChange(index) {
+    beforeChange(_, index) {
+      console.log(index)
       this.index = index
     },
-    push(val) {
-      console.log(val)
+    goTo(index) {
+      this.$refs.carousel.goTo(index)
+      console.log(index)
     },
   },
 }
@@ -217,14 +224,18 @@ export default {
     align-items: center;
     justify-content: center;
     .dash {
-      height: 1px;
-      border-radius: 10%;
+      height: 4px;
+      border-radius: 1px;
       width: 35px;
-      background: rgb(181, 181, 181);
-      margin: 2px;
+      background: rgb(225, 193, 255);
+      margin: 3px;
+      transition: 0.3s ease-out;
+      display: inline-block;
+      cursor: pointer;
     }
     .active {
-      background: rgb(113, 63, 161);
+      background: rgb(148, 110, 184);
+      transition: 0.3s ease-out;
     }
   }
 }
