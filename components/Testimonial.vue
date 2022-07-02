@@ -120,13 +120,29 @@ export default {
       font-size: 36px;
     }
   }
+  .slick-list {
+    position: relative;
+  }
+  .left {
+    position: absolute;
+    z-index: 50;
+    top: 15%;
+    right: -10px;
+  }
+
+  .right {
+    position: absolute;
+    z-index: 50;
+    top: 15%;
+    left: -10px;
+  }
   .right,
   .left {
     display: flex;
     align-items: center;
     width: 50px;
-    height: 140%;
-    background: rgba(168, 12, 12, 0);
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
     cursor: pointer;
     p {
       font-size: 30px;
@@ -145,19 +161,6 @@ export default {
     }
   }
 
-  .left {
-    position: absolute;
-    z-index: 50;
-    top: 0;
-    right: -10px;
-  }
-
-  .right {
-    position: absolute;
-    z-index: 50;
-    top: 0;
-    left: -10px;
-  }
   .slick-slider {
     width: 90vw;
     margin: 0 auto;

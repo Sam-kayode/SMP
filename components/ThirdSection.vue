@@ -10,7 +10,7 @@
         <div v-for="(card, index) in cards" :key="index" class="card">
           <img :src="card.picture" alt="" class="card-img" />
           <p class="title">{{ card.title }}</p>
-          <p class="content">
+          <p class="contents">
             {{ card.content }}
           </p>
         </div>
@@ -114,7 +114,11 @@ export default {
       grid-template-rows: 1fr 1fr;
       gap: 50px;
       margin-top: 40px;
-
+       
+       @include tablet{
+        grid-template-columns:1fr 1fr;
+        
+       }
       @include mobile {
         grid-template-columns: 1fr;
         margin-top: 40px;
@@ -142,7 +146,7 @@ export default {
             font-size: 20px;
           }
         }
-        .content {
+        .contents {
           font-size: 18px;
           padding: 0;
 
