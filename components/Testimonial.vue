@@ -72,6 +72,43 @@ export default {
           },
         ],
       },
+      reviews: [
+        {
+          picture: require('~/static/images/firms/aa.png'),
+          review:
+            'She-s one of the best Social media managers you can work with. Impecable service likeno other',
+          name: 'Ademakinwa Ademiluyi Driving and Co Services',
+          title: 'Logistics company',
+        },
+        {
+          picture: require('~/static/images/firms/mydee.png'),
+          review:
+            'She-s one of the best Social media managers you can work with. Impecable service likeno other',
+          name: 'Ademakinwa Ademiluyi Driving and Co Services',
+          title: 'Hair Care Product company',
+        },
+        {
+          picture: require('~/static/images/firms/gobuyhub.png'),
+          review:
+            'She-s one of the best Social media managers you can work with. Impecable service likeno other',
+          name: 'Ademakinwa Ademiluyi Driving and Co Services',
+          title: 'Importation and Logistics firm',
+        },
+        {
+          picture: require('~/static/images/firms/aa.png'),
+          review:
+            'She-s one of the best Social media managers you can work with. Impecable service likeno other',
+          name: 'Ademakinwa Ademiluyi Driving and Co Services',
+          title: 'logistics company',
+        },
+        {
+          picture: require('~/static/images/firms/aa.png'),
+          review:
+            'She-s one of the best Social media managers you can work with. Impecable service likeno other',
+          name: 'Ademakinwa Ademiluyi Driving and Co Services',
+          title: 'logistics company',
+        },
+      ],
     }
   },
   methods: {
