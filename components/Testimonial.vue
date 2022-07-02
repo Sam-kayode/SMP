@@ -6,15 +6,11 @@
       ref="carousel"
       @beforeChange="beforeChange"
     >
-      <div v-for="n in 5" :key="n" class="review">
+      <div v-for="(review, n) in reviews" :key="n" class="review">
         <div class="rev-img"><img src="" alt="" /></div>
-        <p class="statement">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias
-          earum ex ullam harum sed, aspernatur porro deleniti nostrum quas
-          impedit qui exusantium fuga maiores? Facilis, aperiam
-        </p>
-        <p class="name">Sam-kayode marvellous</p>
-        <p class="title">Senior developer</p>
+        <p class="statement">{{ review.review }}</p>
+        <p class="name">{{ review.name }}</p>
+        <p class="title">{{ review.title }}</p>
         <img src="~/static/images/quote.svg" alt="" class="quote" />
       </div>
     </VueSlickCarousel>
@@ -83,7 +79,7 @@ export default {
         {
           picture: require('~/static/images/firms/mydee.png'),
           review:
-            'She-s one of the best Social media managers you can work with. Impecable service likeno other',
+            'She-s one of the best Social media managers you can work with. Impecable service likeno other. lorem ipsum loki fjfjutt kfifi jsuur apdoe dkdod ddiid djdor dkdoeoe',
           name: 'Ademakinwa Ademiluyi Driving and Co Services',
           title: 'Hair Care Product company',
         },
@@ -220,6 +216,10 @@ export default {
           border-radius: 50%;
           border: 1px solid purple;
           margin: 0 auto 30px auto;
+
+          img {
+            width: 100%;
+          }
         }
 
         .statement {
@@ -255,6 +255,10 @@ export default {
           @include tablet {
             font-size: 16px;
           }
+
+          @include mobile {
+            font-size: 14px;
+          }
         }
         .title {
           font-family: 'josefin sans', sans-serif;
@@ -262,6 +266,9 @@ export default {
           font-weight: bolder;
           @include tablet {
             font-size: 16px;
+          }
+          @include mobile {
+            font-size: 14px;
           }
         }
       }
