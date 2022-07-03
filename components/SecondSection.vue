@@ -16,6 +16,7 @@
             save time and easily manage your social media presence without any
             hassle.
           </p>
+          <Button class="text-left">Learn more</Button>
         </div>
       </div>
     </div>

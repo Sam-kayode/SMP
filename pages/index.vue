@@ -5,6 +5,7 @@
     <ThirdSection />
     <FourthSection />
     <Testimonial />
+    <ContactMe />
   </div>
 </template>
 

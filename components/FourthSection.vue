@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <Button>Contact me </Button>
+    <Button class="text-center">Contact me </Button>
   </div>
 </template>
 
@@ -110,7 +110,7 @@ export default {
 
     .benefit {
       display: flex;
-      align-items:top;
+      align-items: top;
       @include bg-tablet {
         margin-bottom: 40px;
       }
@@ -137,7 +137,7 @@ export default {
 
       .content {
         padding: 0;
-        margin:0;
+        margin: 0;
         p {
           margin: 0;
           font-size: 18px;
