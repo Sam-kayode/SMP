@@ -16,9 +16,22 @@ export default {
     return {}
   },
   mounted() {
-    this.$drift.show()
+    this.$drift.identify('--090ojjpp.000jj', {
+      name: 'marvellous',
+      email: 'marvelloussamkayode@gmail.com',
+    })
   },
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style lang="scss" scoped>
+#drift-frame-chat {
+  max-width: 400px !important;
+  margin-left: auto;
+  height: 60vh;
+  @include mobile {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+</style>
