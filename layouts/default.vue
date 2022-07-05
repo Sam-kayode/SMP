@@ -1,14 +1,15 @@
 <template>
-  <div class="body">
+  <div>
     <Transition name="fade" appear>
       <SplashScreen v-if="show" />
     </Transition>
 
-    <div v-if="!show" class="">
+    <div :style="{ display: show ? 'none' : '' }" class="">
       <Navbar />
       <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
       <img src="~/static/images/shape5.svg" alt="" class="blob-2" />
       <img src="~/static/images/shape6.svg" alt="" class="blob-3" />
+      <img src="~/static/images/shape8.svg" alt="" class="blob-4" />
       <div class="content">
         <Nuxt />
       </div>
@@ -27,7 +28,7 @@ export default {
   beforeCreate() {
     setTimeout(() => {
       this.show = false
-    }, 5000)
+    }, 3500)
   },
   methods: {},
 }
@@ -42,6 +43,7 @@ export default {
 html {
   font-size: 16px;
   font: sans-serif;
+  width: 100vw !important;
 
   @include mobile {
     font-size: 8px;
@@ -55,9 +57,9 @@ html {
 }
 
 body {
-  overflow-x: hidden;
   font-family: 'open sans', sans-serif;
-
+  overflow-x: hidden !important;
+  position: relative;
   .blob-1 {
     left: -7vw;
     top: -6vw;
@@ -85,12 +87,32 @@ body {
     z-index: -3;
     height: 70vh;
     @include mobile {
-      top: 100vh;
+      top: 210vh;
+    height: 80vh;
+    width:40vw;
+    transform:scale(3)
+
+    }
+  }
+  .blob-4 {
+    right: 0;
+    top: 300vh;
+    position: absolute;
+    z-index: -3;
+    width: 20vw;
+
+    @include bg-tablet {
+      width: 30vw;
+    }
+    @include mobile {
+      width: 50vw;
+      top: 490vh;
     }
   }
 
   .content {
-    padding-top: 7vh;
+    margin-top: 7vh;
+    overflow-x: clip;
 
     @include mobile {
       padding-top: 2vh;
@@ -98,9 +120,12 @@ body {
   }
 }
 
+.body {
+}
+
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
   margin-left: 0;
 }
 
