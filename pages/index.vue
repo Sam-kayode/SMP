@@ -15,9 +15,10 @@ export default {
   data() {
     return {}
   },
+  mounted() {
+    this.$drift.show()
+  },
 }
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
