@@ -114,14 +114,12 @@ export default {
       grid-template-rows: 1fr 1fr;
       gap: 50px;
       margin-top: 40px;
-       
-       @include tablet{
-        grid-template-columns:1fr 1fr;
-        
-       }
+
+      @include bg-tablet {
+        grid-template-columns: 1fr 1fr;
+      }
       @include mobile {
-        grid-template-columns: 1fr;
-        margin-top: 40px;
+        display: block;
       }
 
       .card {
@@ -132,6 +130,9 @@ export default {
         border-radius: 10px;
         box-shadow: rgba(118, 62, 153, 0.15) 0px 5px 15px;
 
+        @include mobile {
+          margin-bottom: 60px;
+        }
         .card-img {
           height: 130px;
           width: auto;
