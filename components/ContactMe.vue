@@ -27,7 +27,7 @@
         </div>
       </div>
     </div>
-    <div class="form"></div>
+    <div class="form"><ContactForm /></div>
   </div>
 </template>
 
