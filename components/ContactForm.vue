@@ -41,7 +41,7 @@ export default {}
 <style lang="scss" scoped>
 .contact-form {
   width: 90%;
-  margin: 0 auto;
+  margin-left: auto;
   background-color: rgb(249, 232, 255);
   border-radius: 10px;
   padding: 30px 10px;
