@@ -37,7 +37,7 @@ export default {}
   padding: 0px 10%;
   width: 100vw;
   overflow-x: hidden;
-  
+
   @include bg-tablet {
     margin-top: 14vh;
     padding: 0px 5%;
@@ -67,6 +67,7 @@ export default {}
         font-size: 64px;
         font-weight: bolder;
         letter-spacing: 0.1px;
+        margin-bottom: 20px;
 
         @include bg-tablet {
           font-size: 36px;
@@ -84,6 +85,7 @@ export default {}
         font-family: 'open sans', sans-serif;
         font-size: 18px;
         color: #000000;
+        margin-bottom: 30px;
         @include tablet {
           font-size: 16px;
         }
