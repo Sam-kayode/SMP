@@ -88,10 +88,9 @@ body {
     height: 70vh;
     @include mobile {
       top: 210vh;
-    height: 80vh;
-    width:40vw;
-    transform:scale(3)
-
+      height: 80vh;
+      width: 40vw;
+      transform: scale(3);
     }
   }
   .blob-4 {
@@ -111,11 +110,11 @@ body {
   }
 
   .content {
-    margin-top: 7vh;
+    padding-top: 7vh;
     overflow-x: clip;
 
-    @include mobile {
-      padding-top: 2vh;
+    @include tablet {
+      padding-top: 1vh;
     }
   }
 }
