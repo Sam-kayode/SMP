@@ -42,7 +42,7 @@ export default {}
 .contact-form {
   width: 90%;
   margin-left: auto;
-  background-color: rgb(249, 232, 255);
+  background-color: #f9eaff;
   border-radius: 10px;
   padding: 30px 10px;
 

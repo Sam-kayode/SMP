@@ -50,7 +50,7 @@ export default {
     padding: 0px 5%;
   }
 
-  @include tablet {
+  @include mobile{
     display: block;
   }
   .details {
@@ -98,6 +98,10 @@ export default {
     display: flex;
     align-items: center;
     margin-top: 20px;
+
+    @include mobile {
+      margin-bottom:70px;
+    }
     .avatar {
       width: 70px;
       border-radius: 50%;
