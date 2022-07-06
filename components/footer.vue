@@ -24,7 +24,17 @@
       <li><a href="">Blog</a></li>
     </div>
 
-    <div class="fourth"><p>FOLLOW ME ON</p></div>
+    <div class="fourth">
+      <p>FOLLOW ME ON</p>
+      <img
+        src="https://img.icons8.com/material/24/000000/youtube-play--v1.png"
+      />
+      <img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png" />
+      <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" />
+      <img
+        src="https://img.icons8.com/carbon-copy/100/000000/instagram-new--v2.png"
+      />
+    </div>
   </div>
 </template>
 
@@ -36,8 +46,8 @@ export default {}
 .footer {
   display: grid;
   padding: 50px 10%;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
   @include bg-tablet {
     padding: 0px 5%;
   }
@@ -51,6 +61,10 @@ export default {}
     margin-bottom: -10px;
   }
 
+  li {
+    list-style: none;
+    padding-bottom: 10px;
+  }
   .newsletter {
     border: 2px solid #a966c8;
     display: flex;
