@@ -54,8 +54,10 @@ export default {}
   padding: 50px 10%;
   grid-template-columns: 2fr 1fr 1fr 1.2fr;
   gap: 40px;
+  background-color: rgba(250, 224, 255, 0.507);
+  margin-top: 100px;
   @include bg-tablet {
-    padding: 0px 5%;
+    padding: 50px 5%;
   }
 
   .logo {
@@ -69,6 +71,7 @@ export default {}
 
   p {
     font-weight: bolder;
+    font-family: 'josefin sans', sans-serif;
   }
 
   li {
@@ -93,6 +96,7 @@ export default {}
       border: none;
       outline: none;
       width: 87%;
+      background: none;
     }
 
     .arrow {
