@@ -164,8 +164,7 @@ export default {}
   height: 100vh;
   width: 100vw;
   background: #ffffff !important;
-  overflow: hidden !important;
-
+  overflow: clip;
   @include mobile {
     height: 100vh;
   }
@@ -175,9 +174,9 @@ export default {}
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
   width: 100vw;
-  overflow: hidden;
+  overflow: clip;
   text-align: center;
 }
 #logo {

@@ -10,6 +10,7 @@
       <img src="~/static/images/shape5.svg" alt="" class="blob-2" />
       <img src="~/static/images/shape6.svg" alt="" class="blob-3" />
       <img src="~/static/images/shape8.svg" alt="" class="blob-4" />
+      <img src="~/static/images/shape9.svg" alt="" class="blob-5" />
       <div class="content">
         <Nuxt />
       </div>
@@ -95,7 +96,7 @@ body {
   }
   .blob-4 {
     right: 0;
-    top: 300vh;
+    bottom: 200vh;
     position: absolute;
     z-index: -3;
     width: 20vw;
@@ -105,7 +106,22 @@ body {
     }
     @include mobile {
       width: 50vw;
-      top: 490vh;
+      bottom: 400vh;
+    }
+  }  
+  
+  .blob-5 {
+    right: 0;
+    bottom:0 !important;
+    position: absolute;
+    z-index: -3;
+
+    @include bg-tablet {
+    }
+    @include mobile {
+      height:80vh;
+      bottom:90vh;
+
     }
   }
 
