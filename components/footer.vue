@@ -46,7 +46,7 @@
     </div>
     <div class="copyright">
       <hr />
-      copyright
+      &copy;<span class="pr-2">TheSocialMediaPrincess</span> 2022. All Rights Reserved
     </div>
   </div>
 </template>
@@ -61,8 +61,6 @@ export default {}
 
   hr {
     margin-top: 0;
-    
-    
   }
 
   .copyright {
