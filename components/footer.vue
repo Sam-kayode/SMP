@@ -9,8 +9,22 @@
         <span class="arrow">&#x2192;</span>
       </div>
     </div>
+    <div class="second">
+      <p>LINKS</p>
+      <li><a href="">Homes</a></li>
+      <li><a href="">Works</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Get in touch</a></li>
+    </div>
 
-   
+    <div class="third">
+      <p>RESOURCES</p>
+      <li><a href="">Services</a></li>
+      <li><a href="">E-books</a></li>
+      <li><a href="">Blog</a></li>
+    </div>
+
+    <div class="fourth"><p>FOLLOW ME ON</p></div>
   </div>
 </template>
 
