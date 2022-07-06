@@ -46,7 +46,7 @@
     </div>
     <div class="copyright">
       <hr />
-      &copy;<span class="pr-2">TheSocialMediaPrincess</span> 2022. All Rights Reserved
+      &copy;<span class="pr-2">TheSocialMediaPrincess</span>2022. All Rights Reserved
     </div>
   </div>
 </template>
