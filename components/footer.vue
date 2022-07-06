@@ -57,18 +57,25 @@ export default {}
 
 <style lang="scss" scoped>
 .footer-container {
+  background-color: rgba(250, 224, 255, 0.507);
+
   hr {
-    margin: 0;
+    margin-top: 0;
+    
+    
   }
 
   .copyright {
-    padding: 50px 10%;
+    padding: 0px 10% 50px 10%;
+
+    @include bg-tablet {
+      padding: 0px 5% 10px 5%;
+    }
   }
   .footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1.2fr;
     gap: 40px;
-    background-color: rgba(250, 224, 255, 0.507);
     margin-top: 100px;
     padding: 50px 10%;
 
