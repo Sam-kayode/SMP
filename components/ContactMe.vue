@@ -50,7 +50,7 @@ export default {
     padding: 0px 5%;
   }
 
-  @include mobile{
+  @include mobile {
     display: block;
   }
   .details {
@@ -75,7 +75,9 @@ export default {
 
   .feel,
   .mail,
-  .assure {
+  .assure,
+  .title,
+  .name {
     font-size: 18px;
     @include tablet {
       font-size: 16px;
@@ -100,7 +102,7 @@ export default {
     margin-top: 20px;
 
     @include mobile {
-      margin-bottom:70px;
+      margin-bottom: 70px;
     }
     .avatar {
       width: 70px;
@@ -108,8 +110,7 @@ export default {
     }
   }
 
-  .title,
-  .nam {
+  .title {
     color: #a966c8;
     font-weight: bold;
   }
