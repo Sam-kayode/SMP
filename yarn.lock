@@ -10541,6 +10541,11 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.1.0.tgz#1a67a47b8ecacfa86d75830173fffee3bf8a4ee3"
   integrity sha512-vKl1skEKn8EK9f8P2ZzhRnuaRHLHrlt1sbRmazlvsx6EiC3A8oWF8YCBrMJzoN+W3OnElwIGbVjsx6/xelY1AA==
 
+vue-drift@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/vue-drift/-/vue-drift-2.1.2.tgz#199b35dd0542c86090677631745c5d80f7b6077d"
+  integrity sha512-vN8UQ/lt8Pxvb4Thzee0fFFHw1bcoXz26vHXQABgDXjW7lFszB1CSHm+TQqJ+fZ09ANVPZmdKywi2J+yUh52LA==
+
 vue-eslint-parser@^8.0.1, vue-eslint-parser@^8.3.0:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-8.3.0.tgz#5d31129a1b3dd89c0069ca0a1c88f970c360bd0d"

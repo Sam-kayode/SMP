@@ -6,7 +6,7 @@
       ref="carousel"
       @beforeChange="beforeChange"
     >
-      <div v-for="(review, n) in reviews" :key="n" class="review" >
+      <div v-for="(review, n) in reviews" :key="n" class="review">
         <div class="rev-img"><img :src="review.picture" alt="" /></div>
         <p class="statement">{{ review.review }}</p>
         <p class="name">{{ review.name }}</p>
@@ -151,6 +151,7 @@ export default {
     }
     @include mobile {
       font-size: 36px;
+      margin-bottom: 0px;
     }
   }
   .slick-list {
@@ -208,7 +209,7 @@ export default {
 
         @include mobile {
           padding: 13%;
-          padding-bottom:20px;
+          padding-bottom: 20px;
         }
 
         .rev-img {

@@ -50,7 +50,7 @@ export default {
     padding: 0px 5%;
   }
 
-  @include tablet {
+  @include mobile {
     display: block;
   }
   .details {
@@ -75,7 +75,9 @@ export default {
 
   .feel,
   .mail,
-  .assure {
+  .assure,
+  .title,
+  .name {
     font-size: 18px;
     @include tablet {
       font-size: 16px;
@@ -98,14 +100,17 @@ export default {
     display: flex;
     align-items: center;
     margin-top: 20px;
+
+    @include mobile {
+      margin-bottom: 70px;
+    }
     .avatar {
       width: 70px;
       border-radius: 50%;
     }
   }
 
-  .title,
-  .nam {
+  .title {
     color: #a966c8;
     font-weight: bold;
   }
