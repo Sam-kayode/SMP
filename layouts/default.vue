@@ -135,8 +135,7 @@ body {
   }
 }
 
-.body {
-}
+
 
 .fade-enter-active,
 .fade-leave-active {

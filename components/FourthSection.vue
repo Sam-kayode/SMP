@@ -1,12 +1,12 @@
 <template>
   <div class="fourth">
     <h2>Why me ?</h2>
-    <p class="why-desc text-center">
+    <p class="why-desc text-center" data-aos="fade-up">
       Benefits of Hiring the Social Media Princess
     </p>
     <div class="benefits">
       <div v-for="benefit in benefits" :key="benefit.number" class="benefit">
-        <div class="number">
+        <div class="number" data-aos="fade-up">
           <h1>{{ benefit.number }}</h1>
         </div>
         <div class="content">
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -53,6 +54,7 @@ export default {
       ],
     }
   },
+
 }
 </script>
 

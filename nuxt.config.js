@@ -21,10 +21,16 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['@/assets/css/aos2.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["~/plugins/drift.client.js"],
+  plugins: [
+    '~/plugins/drift.client.js',
+    {
+      src: '~/plugins/aos.js',
+      mode: 'client',
+    },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -35,7 +41,6 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',
     '@nuxtjs/style-resources',
-
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -48,14 +53,14 @@ export default {
 
   styleResources: {
     scss: [
-      "~/assets/scss/abstracts/_variables.scss",
-      "~/assets/scss/abstracts/_mixins.scss",
-      "~/assets/scss/abstracts/_animations.scss",
+      '~/assets/scss/abstracts/_variables.scss',
+      '~/assets/scss/abstracts/_mixins.scss',
+      '~/assets/scss/abstracts/_animations.scss',
     ],
   },
   loading: {
-    color: "#aa3636",
-    height: "5px",
+    color: '#aa3636',
+    height: '5px',
     throttle: 0,
     continous: true,
     duration: 5000,
@@ -68,7 +73,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ["gsap"]
+    transpile: ['gsap'],
   },
   googleFonts: {
     families: {

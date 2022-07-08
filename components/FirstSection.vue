@@ -24,22 +24,20 @@
 
 <script>
 import { gsap } from 'gsap'
-import { CSSRulePlugin } from 'gsap/all'
+// import { CSSRulePlugin } from 'gsap/all'
 
 export default {
   name: 'FirstSection',
   mounted() {
-    const rule = CSSRulePlugin.getRule('.name:after')
+    // const rule = CSSRulePlugin.getRule('.name:after')
     const timeline = gsap.timeline({ defaults: { duration: 1 } })
-    console.log(timeline)
-
     timeline
-      .from('.intro', { y: -50, stagger: 0.4, opacity: 0 }, '+=4')
-      .from('.tumi', { x: 50, opacity: 0 }, '-=1')
-      .to(rule, {
-        duration: 1.8,
-        cssRule: { scaleY: 0, opacity: 0 },
-      })
+      .from(
+        '.intro',
+        { y: -50, stagger: 0.4, opacity: 0, duration: 0.8 },
+        '+=4'
+      )
+      .from('.tumi', { x: 50, opacity: 0 }, '-=0.5')
   },
 }
 </script>
@@ -52,9 +50,7 @@ export default {
   padding: 0px 10%;
   width: 100vw;
   overflow-x: hidden;
-
- 
-
+  --transformation: translate(0, 0);
   @include mobile {
     grid-template-columns: 1fr;
   }
@@ -143,15 +139,30 @@ export default {
       }
     }
   }
+
+  .intro {
+    z-index: 3;
+    position: relative;
+  }
+  .name {
+    overflow: clip;
+    line-height: 106%;
+    position: relative;
+    z-index: 1;
+
+  }
+
+  // .name:after {
+  //   content: ' ';
+  //   position: absolute;
+  //   left: 0;
+
+  //   width: 100%;
+  //   height: 100%;
+  //   background: rgb(255, 255, 255);
+  //   // z-index: 1;
+  //   transform-origin: 0 0;
+  //   transform: var(--transformation);
+  // }
 }
-//  .name:after {
-//     content: ' ';
-//     position: absolute;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background: red;
-//     z-index: 1;
-//     transform-origin: 100% 0;
-//   }
 </style>

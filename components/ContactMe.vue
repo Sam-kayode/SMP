@@ -53,8 +53,7 @@ export default {
   @include mobile {
     display: block;
   }
-  .details {
-  }
+ 
   h2 {
     font-family: 'josefin sans', sans-serif;
     font-size: 64px;
