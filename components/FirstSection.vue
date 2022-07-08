@@ -1,10 +1,10 @@
 <template>
   <div class="first">
     <div class="left">
-      <h4>Hi There, I am</h4>
-      <h1 class="p-0 m-0">Tum<span>il</span>ara</h1>
-      <h3 class=""><span>-</span> The Social Media Princess <span>-</span></h3>
-      <p>
+      <div class="intro"><h4>Hi There, I am</h4></div>
+      <h1 class="intro p-0 m-0">Tum<span>il</span>ara</h1>
+      <h3 class="intro"><span>-</span> The Social Media Princess <span>-</span></h3>
+      <p class="intro">
         I make your audience my <span>PRIORITY</span> by
         <span>INFLUENCING </span>them through
         <span>YOU</span>
@@ -21,7 +21,16 @@
 </template>
 
 <script>
-export default {}
+import { gsap } from 'gsap'
+
+export default {
+  name: 'FirstSection',
+  mounted() {
+    const timeline = gsap.timeline({ defaults: { duration: 1 } })
+ 
+    timeline.from('.intro', { y: -50,stagger: 0.4, opacity: 0 }, '+=4').from('.tumi',{x:50,opacity:0},'-=1')
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -30,7 +39,7 @@ export default {}
   grid-template-columns: 1fr 1.3fr;
   align-items: center;
   padding: 0px 10%;
-    width: 100vw;
+  width: 100vw;
   overflow-x: hidden;
 
   @include mobile {
