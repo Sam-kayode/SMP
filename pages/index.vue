@@ -17,10 +17,7 @@ export default {
     return {}
   },
   mounted() {
-    this.$drift.identify('--090ojjpp.000jj', {
-      name: 'marvellous',
-      email: 'marvelloussamkayode@gmail.com',
-    })
+      this.$drift.show()
   },
 }
 </script>

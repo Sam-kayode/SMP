@@ -109,7 +109,6 @@ export default {
   },
   methods: {
     beforeChange(_, index) {
-      console.log(index)
       this.index = index
     },
     showNext() {
@@ -120,7 +119,6 @@ export default {
     },
     goTo(index) {
       this.$refs.carousel.goTo(index)
-      console.log(index)
     },
   },
 }

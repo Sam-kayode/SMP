@@ -2,8 +2,10 @@
   <div class="first">
     <div class="left">
       <div class="intro"><h4>Hi There, I am</h4></div>
-      <h1 class="intro p-0 m-0">Tum<span>il</span>ara</h1>
-      <h3 class="intro"><span>-</span> The Social Media Princess <span>-</span></h3>
+      <h1 class="intro p-0 m-0 name">Tum<span>il</span>ara</h1>
+      <h3 class="intro">
+        <span>-</span> The Social Media Princess <span>-</span>
+      </h3>
       <p class="intro">
         I make your audience my <span>PRIORITY</span> by
         <span>INFLUENCING </span>them through
@@ -22,13 +24,22 @@
 
 <script>
 import { gsap } from 'gsap'
+import { CSSRulePlugin } from 'gsap/all'
 
 export default {
   name: 'FirstSection',
   mounted() {
+    const rule = CSSRulePlugin.getRule('.name:after')
     const timeline = gsap.timeline({ defaults: { duration: 1 } })
- 
-    timeline.from('.intro', { y: -50,stagger: 0.4, opacity: 0 }, '+=4').from('.tumi',{x:50,opacity:0},'-=1')
+    console.log(timeline)
+
+    timeline
+      .from('.intro', { y: -50, stagger: 0.4, opacity: 0 }, '+=4')
+      .from('.tumi', { x: 50, opacity: 0 }, '-=1')
+      .to(rule, {
+        duration: 1.8,
+        cssRule: { scaleY: 0, opacity: 0 },
+      })
   },
 }
 </script>
@@ -41,6 +52,8 @@ export default {
   padding: 0px 10%;
   width: 100vw;
   overflow-x: hidden;
+
+ 
 
   @include mobile {
     grid-template-columns: 1fr;
@@ -131,4 +144,14 @@ export default {
     }
   }
 }
+//  .name:after {
+//     content: ' ';
+//     position: absolute;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: red;
+//     z-index: 1;
+//     transform-origin: 100% 0;
+//   }
 </style>
