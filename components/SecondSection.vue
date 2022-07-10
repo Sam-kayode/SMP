@@ -1,7 +1,8 @@
 <template>
-  <div class="second">
-    <div class="left">
+  <div class="secondSection">
+    <div class="left" id="group">
       <img
+        class="help"
         src="https://res.cloudinary.com/sam-kay/image/upload/v1655414741/smp/picture1_oea911.png"
         alt=""
       />
@@ -26,16 +27,36 @@
 <script>
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-if (process.client) {
-  gsap.registerPlugin(ScrollTrigger)
-}
+gsap.registerPlugin(ScrollTrigger)
+
 export default {
-  name:"SecondSeection"
+  name: 'SecondSection',
+  beforeCreate() {
+    ScrollTrigger.refresh()
+  },
+  mounted() {
+   this.animate()
+  },
+  methods: {
+    animate() {
+      // ScrollTrigger.refresh() 
+      const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#group',
+        start: 'center bottom',
+        ease: 'power1.inOut',
+      },
+    })
+    tl.addLabel('start').from(
+      '#group .help',
+      { x: -200, opacity: 0, duration: 1 } )
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-.second {
+.secondSection {
   margin-top: 150px;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -44,7 +65,6 @@ export default {
   padding: 0px 10%;
   width: 100vw;
   overflow-x: hidden;
-
   @include bg-tablet {
     margin-top: 14vh;
     padding: 0px 5%;

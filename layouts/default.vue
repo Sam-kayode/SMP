@@ -1,10 +1,7 @@
 <template>
   <div>
-    <Transition name="fade" appear>
       <SplashScreen v-if="show" />
-    </Transition>
-
-    <div :style="{ display: show ? 'none' : '' }" class="">
+    <div v-if="!show">
       <Navbar />
       <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
       <img src="~/static/images/shape5.svg" alt="" class="blob-2" />

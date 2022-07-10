@@ -24,12 +24,10 @@
 
 <script>
 import { gsap } from 'gsap'
-// import { CSSRulePlugin } from 'gsap/all'
 
 export default {
   name: 'FirstSection',
   mounted() {
-    // const rule = CSSRulePlugin.getRule('.name:after')
     const timeline = gsap.timeline({ defaults: { duration: 1 } })
     timeline
       .from(
@@ -149,7 +147,6 @@ export default {
     line-height: 106%;
     position: relative;
     z-index: 1;
-
   }
 
   // .name:after {
