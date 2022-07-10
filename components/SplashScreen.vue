@@ -1,5 +1,5 @@
 <template>
-  <div class="body">
+  <div class="body fadeout" v-if="show">
     <div class="contain">
       <svg
         id="logo"
@@ -148,7 +148,19 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'SplashScreen',
+  data() {
+    return {
+      show: true,
+    }
+  },
+  beforeCreate() {
+    setTimeout(() => {
+      this.show = false
+    }, 3900)
+  },
+}
 </script>
 
 <style scoped lang="scss">
@@ -163,8 +175,10 @@ export default {}
   text-align: center;
   height: 100vh;
   width: 100vw;
+  position: fixed;
   background: #ffffff !important;
   overflow: clip;
+  z-index: 5;
   @include mobile {
     height: 100vh;
   }
@@ -267,6 +281,19 @@ export default {}
   #main {
     margin-top: -20px;
     width: 75vw;
+  }
+}
+
+.fadeout {
+  animation: fadeout 1s ease-out;
+  animation-delay: 3s;
+
+}
+
+@keyframes fadeout {
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 </style>

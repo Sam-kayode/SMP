@@ -31,9 +31,9 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default {
   name: 'SecondSection',
-  beforeCreate() {
-    ScrollTrigger.refresh()
-  },
+  // beforeCreate() {
+  //   ScrollTrigger.refresh()
+  // },
   mounted() {
    this.animate()
   },
