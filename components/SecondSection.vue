@@ -39,17 +39,17 @@ export default {
   },
   methods: {
     animate() {
-      // ScrollTrigger.refresh() 
+      ScrollTrigger.refresh() 
       const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '#group',
-        start: 'center bottom',
-        ease: 'power1.inOut',
+        trigger: '.help',
+        ease: 'power1',
+        start:150
       },
     })
     tl.addLabel('start').from(
       '#group .help',
-      { x: -200, opacity: 0, duration: 1 } )
+      { x: -200, opacity: 0, duration: 1.2 } )
     },
   },
 }
