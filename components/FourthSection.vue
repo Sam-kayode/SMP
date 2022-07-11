@@ -6,7 +6,7 @@
     </p>
     <div class="benefits">
       <div v-for="benefit in benefits" :key="benefit.number" class="benefit">
-        <div class="number">
+        <div class="number" >
           <h1>{{ benefit.number }}</h1>
         </div>
         <div class="content">
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -53,6 +54,7 @@ export default {
       ],
     }
   },
+
 }
 </script>
 

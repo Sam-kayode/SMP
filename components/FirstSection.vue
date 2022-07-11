@@ -1,10 +1,12 @@
 <template>
   <div class="first">
     <div class="left">
-      <h4>Hi There, I am</h4>
-      <h1 class="p-0 m-0">Tum<span>il</span>ara</h1>
-      <h3 class=""><span>-</span> The Social Media Princess <span>-</span></h3>
-      <p>
+      <div class="intro"><h4>Hi There, I am</h4></div>
+      <h1 class="intro p-0 m-0 name">Tum<span>il</span>ara</h1>
+      <h3 class="intro">
+        <span>-</span> The Social Media Princess <span>-</span>
+      </h3>
+      <p class="intro">
         I make your audience my <span>PRIORITY</span> by
         <span>INFLUENCING </span>them through
         <span>YOU</span>
@@ -21,7 +23,21 @@
 </template>
 
 <script>
-export default {}
+import { gsap } from 'gsap'
+
+export default {
+  name: 'FirstSection',
+  mounted() {
+    const timeline = gsap.timeline({ defaults: { duration: 1 } })
+    timeline
+      .from(
+        '.intro',
+        { y: -50, stagger: 0.4, opacity: 0, duration: 0.8 },
+        '+=4'
+      )
+      .from('.tumi', { x: 50, opacity: 0 }, '-=0.5')
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -30,9 +46,9 @@ export default {}
   grid-template-columns: 1fr 1.3fr;
   align-items: center;
   padding: 0px 10%;
-    width: 100vw;
+  width: 100vw;
   overflow-x: hidden;
-
+  --transformation: translate(0, 0);
   @include mobile {
     grid-template-columns: 1fr;
   }
@@ -121,5 +137,29 @@ export default {}
       }
     }
   }
+
+  .intro {
+    z-index: 3;
+    position: relative;
+  }
+  .name {
+    overflow: clip;
+    line-height: 106%;
+    position: relative;
+    z-index: 1;
+  }
+
+  // .name:after {
+  //   content: ' ';
+  //   position: absolute;
+  //   left: 0;
+
+  //   width: 100%;
+  //   height: 100%;
+  //   background: rgb(255, 255, 255);
+  //   // z-index: 1;
+  //   transform-origin: 0 0;
+  //   transform: var(--transformation);
+  // }
 }
 </style>

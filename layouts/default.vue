@@ -1,10 +1,8 @@
 <template>
   <div>
-    <Transition name="fade" appear>
-      <SplashScreen v-if="show" />
-    </Transition>
+    <SplashScreen />
 
-    <div :style="{ display: show ? 'none' : '' }" class="">
+    <div class="" :class="[{ visible: show }]">
       <Navbar />
       <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
       <img src="~/static/images/shape5.svg" alt="" class="blob-2" />
@@ -29,7 +27,7 @@ export default {
   beforeCreate() {
     setTimeout(() => {
       this.show = false
-    }, 3500)
+    }, 3900)
   },
   methods: {},
 }
@@ -59,7 +57,7 @@ html {
 
 body {
   font-family: 'open sans', sans-serif;
-  overflow-x: hidden !important;
+  overflow-x: clip;
   position: relative;
   .blob-1 {
     left: -7vw;
@@ -108,20 +106,19 @@ body {
       width: 50vw;
       bottom: 400vh;
     }
-  }  
-  
+  }
+
   .blob-5 {
     right: 0;
-    bottom:0 !important;
+    bottom: 0 !important;
     position: absolute;
     z-index: -3;
 
     @include bg-tablet {
     }
     @include mobile {
-      height:80vh;
-      bottom:90vh;
-
+      height: 80vh;
+      bottom: 90vh;
     }
   }
 
@@ -133,9 +130,14 @@ body {
       padding-top: 1vh;
     }
   }
-}
 
-.body {
+  .visible {
+    opacity: 0;
+    visibility: hidden;
+    height: 100vh;
+    overflow: clip !important;
+    position: fixed;
+  }
 }
 
 .fade-enter-active,
