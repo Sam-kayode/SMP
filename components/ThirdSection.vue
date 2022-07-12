@@ -80,8 +80,8 @@ export default {
       })
       tl2.from('.card', {
         y:150,
-        stagger: 0.4,
-        duration: 1,
+        stagger: 0.3,
+        duration: 0.8,
       })
     },
   },

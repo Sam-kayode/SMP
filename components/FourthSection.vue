@@ -6,7 +6,7 @@
     </p>
     <div class="benefits">
       <div v-for="benefit in benefits" :key="benefit.number" class="benefit">
-        <div class="number" >
+        <div class="number">
           <h1>{{ benefit.number }}</h1>
         </div>
         <div class="content">
@@ -22,7 +22,9 @@
 </template>
 
 <script>
-
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 export default {
   data() {
     return {
@@ -54,7 +56,26 @@ export default {
       ],
     }
   },
-
+  mounted() {
+    // this.animate()
+  },
+  methods: {
+    // animate() {
+    //   ScrollTrigger.refresh()
+    //   const tl3 = gsap.timeline({
+    //     scrollTrigger: {
+    //       trigger: '.card',
+    //       ease: 'expo',
+    //       start: 'top bottom',
+    //     },
+    //   })
+    //   tl3.from('.card', {
+    //     y: 150,
+    //     stagger: 0.4,
+    //     duration: 1,
+    //   })
+    // },
+  },
 }
 </script>
 

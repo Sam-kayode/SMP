@@ -44,7 +44,7 @@ export default {
         scrollTrigger: {
           trigger: '#group2 .left',
           ease: 'exp',
-          start: 'top bottom-=200px',
+          start: 'top bottom-=150px',
         },
       })
       tl.addLabel('start')
