@@ -71,17 +71,17 @@ export default {
   methods: {
     animate() {
       ScrollTrigger.refresh()
-      const tl = gsap.timeline({
+      const tl2 = gsap.timeline({
         scrollTrigger: {
           trigger: '.card',
           ease: 'expo',
           start: 'top bottom-=50px',
         },
       })
-      tl.from('.card', {
-        scale: 0,
-        stagger: 0.3,
-        duration: 1,
+      tl2.from('.card', {
+        y:150,
+        stagger: 0.6,
+        duration: 2,
       })
     },
   },
@@ -166,10 +166,10 @@ export default {
 
         .title {
           font-weight: bolder;
-          font-size: 24px;
+          font-size: 18px;
 
           @include tablet {
-            font-size: 20px;
+            font-size: 16px;
           }
         }
         .contents {
