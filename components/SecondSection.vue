@@ -43,13 +43,13 @@ export default {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: '#group2 .left',
-          ease: 'power1',
+          ease: 'exp',
           start: 'top bottom-=200px',
         },
       })
       tl.addLabel('start')
-        .from('#group2 .up', { y: 200, opacity: 0, duration: 1.2 })
-        .from('#group2 .right', { x: 200, opacity: 0, duration: 1.2 }, '-=.6')
+        .from('#group2 .up', { y: 200, opacity: 0, duration: 1 })
+        .from('#group2 .right', { x: 200, opacity: 0, duration: 1 }, '-=.6')
     },
   },
 }
