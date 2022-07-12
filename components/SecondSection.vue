@@ -1,8 +1,8 @@
 <template>
-  <div class="secondSection">
-    <div class="left" id="group">
+  <div class="secondSection" id="group2">
+    <div class="left">
       <img
-        class="help"
+        class="help up"
         src="https://res.cloudinary.com/sam-kay/image/upload/v1655414741/smp/picture1_oea911.png"
         alt=""
       />
@@ -35,21 +35,21 @@ export default {
   //   ScrollTrigger.refresh()
   // },
   mounted() {
-   this.animate()
+    this.animate()
   },
   methods: {
     animate() {
-      ScrollTrigger.refresh() 
+      ScrollTrigger.refresh()
       const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.help',
-        ease: 'power1',
-        start:150
-      },
-    })
-    tl.addLabel('start').from(
-      '#group .help',
-      { x: -200, opacity: 0, duration: 1.2 } )
+        scrollTrigger: {
+          trigger: '#group2 .left',
+          ease: 'power1',
+          start: 'top bottom-=200px',
+        },
+      })
+      tl.addLabel('start')
+        .from('#group2 .up', { y: 200, opacity: 0, duration: 1.2 })
+        .from('#group2 .right', { x: 200, opacity: 0, duration: 1.2 }, '-=.6')
     },
   },
 }
