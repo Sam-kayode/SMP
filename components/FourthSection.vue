@@ -71,6 +71,7 @@ export default {
       gsap.utils.toArray('.reveal').forEach(function (elem) {
         ScrollTrigger.create({
           trigger: elem,
+          duration:1,
           onEnter: () => {
             let xDir
 
