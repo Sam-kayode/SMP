@@ -75,13 +75,13 @@ export default {
         scrollTrigger: {
           trigger: '.card',
           ease: 'expo',
-          start: 'top bottom-=50px',
+          start: 'top bottom',
         },
       })
       tl2.from('.card', {
         y:150,
-        stagger: 0.6,
-        duration: 2,
+        stagger: 0.4,
+        duration: 1,
       })
     },
   },
