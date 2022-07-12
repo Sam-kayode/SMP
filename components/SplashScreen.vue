@@ -188,7 +188,7 @@ export default {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, -54%);
   width: 100vw;
   overflow: clip;
   text-align: center;
