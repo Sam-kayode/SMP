@@ -1,7 +1,7 @@
 <template>
   <div class="contact-form">
     <h4 class="text-center">Contact me</h4>
-    <form @submit="null">
+    <form @submit.prevent="">
       <div>
         <label for="name">Full Name</label>
         <br />

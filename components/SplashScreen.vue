@@ -1,5 +1,5 @@
 <template>
-  <div class="body fadeout" v-if="show">
+  <div v-if="show" class="body fadeout">
     <div class="contain">
       <svg
         id="logo"

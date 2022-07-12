@@ -1,5 +1,5 @@
 <template>
-  <div class="secondSection" id="group2">
+  <div id="group2" class="secondSection">
     <div class="left">
       <img
         class="help up"
