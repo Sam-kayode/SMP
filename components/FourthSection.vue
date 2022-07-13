@@ -66,8 +66,6 @@ export default {
   },
   methods: {
     animate() {
-      //   ScrollTrigger.refresh()
-
       gsap.utils.toArray('.reveal').forEach(function (elem) {
         gsap.set(elem, { autoAlpha: 0 })
         ScrollTrigger.create({
@@ -75,6 +73,8 @@ export default {
           duration: 2.5,
           start: 'top bottom+=15px',
           onEnter: () => {
+            ScrollTrigger.refresh()
+
             let xDir
 
             if (elem.classList.contains('revealLeft')) {
@@ -83,7 +83,11 @@ export default {
               xDir = 100
             }
 
-            gsap.fromTo(elem, { x: xDir, y: 0, autoAlpha: 0 },{ x: 0, y: 0, autoAlpha: 1 })
+            gsap.fromTo(
+              elem,
+              { x: xDir, y: 0, autoAlpha: 0 },
+              { x: 0, y: 0, autoAlpha: 1 }
+            )
           },
         })
       })
