@@ -128,7 +128,10 @@ export default {
       padding: 5px;
     }
   }
-
+  .question {
+    position:relative;
+    z-index: 1;
+  }
   .assure {
     position: relative;
     .quote {
