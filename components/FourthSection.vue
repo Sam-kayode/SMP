@@ -73,7 +73,7 @@ export default {
         ScrollTrigger.create({
           trigger: elem,
           duration: 2.5,
-          start: 'top bottom+=10px',
+          start: 'top bottom+=15px',
           onEnter: () => {
             let xDir
 
