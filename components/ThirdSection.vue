@@ -14,9 +14,9 @@
             {{ card.content }}
           </p>
         </div>
-        <div class="d-flex justify-content-center align-items-center">
-          <Button>More services &#x2192;</Button>
-        </div>
+      </div>
+      <div class="text-center mt-5">
+        <Button>More services &#x2192;</Button>
       </div>
     </div>
   </div>
@@ -79,7 +79,7 @@ export default {
         },
       })
       tl2.from('.card', {
-        y:150,
+        y: 150,
         stagger: 0.3,
         duration: 0.8,
       })
