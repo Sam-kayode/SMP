@@ -72,6 +72,9 @@ export default {
       order: 1;
       margin-top: 50px;
     }
+    @include mobile{
+      text-align:center;
+    }
     h4 {
       font-family: 'open sans', sans-serif;
       font-size: 16px;
