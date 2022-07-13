@@ -72,8 +72,8 @@ export default {
         gsap.set(elem, { autoAlpha: 0 })
         ScrollTrigger.create({
           trigger: elem,
-          duration: 1.5,
-          start: 'top bottom+=5px',
+          duration: 2.5,
+          start: 'top bottom+=10px',
           onEnter: () => {
             let xDir
 
