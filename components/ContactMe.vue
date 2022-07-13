@@ -5,16 +5,17 @@
         <span> Ready </span> to reach out to your <span> target </span>audience
         ?
       </h2>
-      <div class="reveal revealRight">
+      <div class="reveal revealRight assure">
         <p class="feel mb-2">
           Feel free to book a session and contact me, your audience awaits a
           princess touch.
         </p>
 
-        <p class="assure">
-          "I am always there to help you define you. You can safely count on me
-          to give your social media presence a sprinkle of royalty"
+        <p class="">
+          I am always there to help you define you. You can safely count on me
+          to give your social media presence a sprinkle of royalty
         </p>
+        <img src="~/static/images/quote.svg" alt="" class="quote" />
       </div>
 
       <div class="owner reveal revealLeft">
@@ -125,6 +126,26 @@ export default {
       background: rgb(255, 255, 255);
       border-radius: 50%;
       padding: 5px;
+    }
+  }
+
+  .assure {
+    position: relative;
+    .quote {
+      position: absolute;
+      z-index: -3;
+      top: -100%;
+      width: 60%;
+      right: 25%;
+      margin: auto;
+      text-align: center;
+      color: rgb(231, 212, 252);
+
+      @include bg-tablet {
+        width: 90%;
+        top: -40px;
+        right: 5%;
+      }
     }
   }
 
