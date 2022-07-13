@@ -5,8 +5,13 @@
       Benefits of Hiring the Social Media Princess
     </p>
     <div class="benefits">
-      <div v-for="benefit in benefits" :key="benefit.number" class="benefit">
-        <div class="number" >
+      <div
+        v-for="(benefit, index) in benefits"
+        :key="index"
+        class="benefit reveal"
+        :class="[(index + 2) % 2 == 0 ? 'revealLeft' : 'revealRight']"
+      >
+        <div class="number">
           <h1>{{ benefit.number }}</h1>
         </div>
         <div class="content">
@@ -22,7 +27,9 @@
 </template>
 
 <script>
-
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 export default {
   data() {
     return {
@@ -54,7 +61,34 @@ export default {
       ],
     }
   },
+  mounted() {
+    this.animate()
+  },
+  methods: {
+    animate() {
+      //   ScrollTrigger.refresh()
 
+      gsap.utils.toArray('.reveal').forEach(function (elem) {
+        gsap.set(elem, { autoAlpha: 0 })
+        ScrollTrigger.create({
+          trigger: elem,
+          duration: 2.5,
+          start: 'top bottom+=10px',
+          onEnter: () => {
+            let xDir
+
+            if (elem.classList.contains('revealLeft')) {
+              xDir = -100
+            } else if (elem.classList.contains('revealRight')) {
+              xDir = 100
+            }
+
+            gsap.fromTo(elem, { x: xDir, y: 0, autoAlpha: 0 },{ x: 0, y: 0, autoAlpha: 1 })
+          },
+        })
+      })
+    },
+  },
 }
 </script>
 

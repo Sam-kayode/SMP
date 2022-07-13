@@ -7,7 +7,7 @@
     </p>
     <div class="services">
       <div class="cards">
-        <div v-for="(card, index) in cards" :key="index" class="card">
+        <div v-for="(card, index) in cards" :key="index" class="card noli">
           <img :src="card.picture" alt="" class="card-img" />
           <p class="title">{{ card.title }}</p>
           <p class="contents">
@@ -23,6 +23,10 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
+
 export default {
   name: 'ThirdSection',
   data() {
@@ -60,6 +64,26 @@ export default {
         },
       ],
     }
+  },
+  mounted() {
+    this.animate()
+  },
+  methods: {
+    animate() {
+      ScrollTrigger.refresh()
+      const tl2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.card',
+          ease: 'expo',
+          start: 'top bottom',
+        },
+      })
+      tl2.from('.card', {
+        y:150,
+        stagger: 0.3,
+        duration: 0.8,
+      })
+    },
   },
 }
 </script>
@@ -114,6 +138,7 @@ export default {
       grid-template-rows: 1fr 1fr;
       gap: 50px;
       margin-top: 40px;
+      padding-bottom: 30px;
 
       @include bg-tablet {
         grid-template-columns: 1fr 1fr;
@@ -141,10 +166,10 @@ export default {
 
         .title {
           font-weight: bolder;
-          font-size: 24px;
+          font-size: 18px;
 
           @include tablet {
-            font-size: 20px;
+            font-size: 16px;
           }
         }
         .contents {

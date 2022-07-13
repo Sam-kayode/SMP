@@ -1,5 +1,5 @@
 <template>
-  <div class="body fadeout" v-if="show">
+  <div v-if="show" class="body fadeout">
     <div class="contain">
       <svg
         id="logo"
@@ -188,7 +188,7 @@ export default {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -54%);
   width: 100vw;
   overflow: clip;
   text-align: center;

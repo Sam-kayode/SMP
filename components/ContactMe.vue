@@ -1,25 +1,23 @@
 <template>
   <div class="contact-me">
     <div class="details">
-      <h2 class="question">
+      <h2 class="question reveal revealLeft">
         <span> Ready </span> to reach out to your <span> target </span>audience
         ?
       </h2>
-      <p class="feel mb-2">
-        Feel free to book a session and contact me, your audience awaits a
-        princess touch.
-      </p>
-      <!-- <span class="msg-icon">
-        <img
-          src="https://img.icons8.com/external-others-anggara-putra/64/000000/external-social-social-media-basic-others-anggara-putra-34.png"
-        />
-      </span> -->
-      <!-- <span class="mail">tsocialmediaprincess@gmail.com</span> -->
-      <p class="assure">
-        "I am always there to help you define you. You can safely count on me to
-        give your social media presence a sprinkle of royalty"
-      </p>
-      <div class="owner">
+      <div class="reveal revealRight">
+        <p class="feel mb-2">
+          Feel free to book a session and contact me, your audience awaits a
+          princess touch.
+        </p>
+
+        <p class="assure">
+          "I am always there to help you define you. You can safely count on me
+          to give your social media presence a sprinkle of royalty"
+        </p>
+      </div>
+
+      <div class="owner reveal revealLeft">
         <div><img src="~/static/images/tumi.png" alt="" class="avatar" /></div>
         <div>
           <div class="name font-weight-bolder">Ifebogun Tumilara</div>
@@ -27,13 +25,48 @@
         </div>
       </div>
     </div>
-    <div class="form"><ContactForm /></div>
+    <div class="form reveal revealRight"><ContactForm /></div>
   </div>
 </template>
 
 <script>
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 export default {
   name: 'ContactMe',
+  mounted() {
+    this.animate()
+  },
+  methods: {
+    animate() {
+      //   ScrollTrigger.refresh()
+
+      gsap.utils.toArray('.reveal').forEach(function (elem) {
+        gsap.set(elem, { autoAlpha: 0 })
+        ScrollTrigger.create({
+          trigger: elem,
+          duration: 2.5,
+          start: 'top bottom+=15px',
+          onEnter: () => {
+            let xDir
+
+            if (elem.classList.contains('revealLeft')) {
+              xDir = -100
+            } else if (elem.classList.contains('revealRight')) {
+              xDir = 100
+            }
+
+            gsap.fromTo(
+              elem,
+              { x: xDir, y: 0, autoAlpha: 0 },
+              { x: 0, y: 0, autoAlpha: 1 }
+            )
+          },
+        })
+      })
+    },
+  },
 }
 </script>
 
@@ -53,7 +86,7 @@ export default {
   @include mobile {
     display: block;
   }
- 
+
   h2 {
     font-family: 'josefin sans', sans-serif;
     font-size: 64px;
