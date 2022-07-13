@@ -87,88 +87,92 @@ export default {
   @include mobile {
     display: block;
   }
-
-  h2 {
-    font-family: 'josefin sans', sans-serif;
-    font-size: 64px;
-    font-weight: bolder;
-    letter-spacing: 0.1px;
-    text-align: left;
-    margin-bottom: 20px;
-    span {
-      color: #a966c8;
-    }
-    @include bg-tablet {
-      font-size: 48px;
-    }
-    @include mobile {
-      font-size: 36px;
-    }
-  }
-
-  .feel,
-  .mail,
-  .assure,
-  .title,
-  .name {
-    font-size: 18px;
-    @include tablet {
-      font-size: 16px;
-    }
-  }
-  .mail {
-    font-weight: bolder;
-  }
-
-  .msg-icon {
-    img {
-      width: 40px;
-      background: rgb(255, 255, 255);
-      border-radius: 50%;
-      padding: 5px;
-    }
-  }
-  .question {
-    position:relative;
-    z-index: 1;
-  }
-  .assure {
-    position: relative;
-    .quote {
-      position: absolute;
-      z-index: -3;
-      top: -100%;
-      width: 60%;
-      right: 25%;
-      margin: auto;
-      text-align: center;
-      color: rgb(231, 212, 252);
-
+  .details {
+    text-align: center;
+    h2 {
+      font-family: 'josefin sans', sans-serif;
+      font-size: 64px;
+      font-weight: bolder;
+      letter-spacing: 0.1px;
+      text-align: left;
+      margin-bottom: 20px;
+      span {
+        color: #a966c8;
+      }
       @include bg-tablet {
-        width: 90%;
-        top: -40px;
-        right: 5%;
+        font-size: 48px;
+      }
+      @include mobile {
+        font-size: 36px;
       }
     }
-  }
 
-  .owner {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-
-    @include mobile {
-      margin-bottom: 70px;
+    .feel,
+    .mail,
+    .assure,
+    .title,
+    .name {
+      font-size: 18px;
+      @include tablet {
+        font-size: 16px;
+      }
     }
-    .avatar {
-      width: 70px;
-      border-radius: 50%;
+    .mail {
+      font-weight: bolder;
     }
-  }
 
-  .title {
-    color: #a966c8;
-    font-weight: bold;
+    .msg-icon {
+      img {
+        width: 40px;
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
+        padding: 5px;
+      }
+    }
+    .question {
+      position: relative;
+      z-index: 1;
+    }
+    .assure {
+      position: relative;
+      .quote {
+        position: absolute;
+        z-index: -3;
+        top: -100%;
+        width: 60%;
+        right: 25%;
+        margin: auto;
+        text-align: center;
+        color: rgb(231, 212, 252);
+
+        @include bg-tablet {
+          width: 90%;
+          top: -40px;
+          right: 5%;
+        }
+      }
+    }
+
+    .owner {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+
+      @include mobile {
+        margin-bottom: 70px;
+        display: block;
+        margin-top: 30px;
+      }
+      .avatar {
+        width: 70px;
+        border-radius: 50%;
+      }
+    }
+
+    .title {
+      color: #a966c8;
+      font-weight: bold;
+    }
   }
 }
 </style>
