@@ -9,7 +9,7 @@
         v-for="(benefit, index) in benefits"
         :key="index"
         class="benefit reveal"
-        :class="[(index +2) % 2 == 0 ? 'revealLeft' : 'revealRight']"
+        :class="[(index + 2) % 2 == 0 ? 'revealLeft' : 'revealRight']"
       >
         <div class="number">
           <h1>{{ benefit.number }}</h1>
@@ -69,9 +69,11 @@ export default {
       //   ScrollTrigger.refresh()
 
       gsap.utils.toArray('.reveal').forEach(function (elem) {
+        gsap.set(elem, { autoAlpha: 0 })
         ScrollTrigger.create({
           trigger: elem,
-          duration:1,
+          duration: 1.5,
+          start: 'top bottom+=5px',
           onEnter: () => {
             let xDir
 
@@ -81,11 +83,10 @@ export default {
               xDir = 100
             }
 
-            gsap.from(elem, { x: xDir, y: 0 })
+            gsap.fromTo(elem, { x: xDir, y: 0, autoAlpha: 0 },{ x: 0, y: 0, autoAlpha: 1 })
           },
         })
       })
-
     },
   },
 }

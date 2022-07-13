@@ -1,7 +1,7 @@
 <template>
   <div class="contact-me">
     <div class="details">
-      <h2 class="question">
+      <h2 class="question reveal revealLeft">
         <span> Ready </span> to reach out to your <span> target </span>audience
         ?
       </h2>
@@ -32,6 +32,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'ContactMe',
 }
