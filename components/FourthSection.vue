@@ -98,7 +98,7 @@ export default {
 
 <style lang="scss" scoped>
 .fourth {
-  margin-top: 170px;
+  margin-top: 90px;
   padding: 0px 10%;
   position: relative;
   width: 100vw;

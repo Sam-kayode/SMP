@@ -57,7 +57,7 @@ export default {
       content: '' ;
       width: 101% ;
       height: 490% ;
-      background: rgb(253, 239, 255) ;
+      background: rgb(252, 247, 253) ;
       border-radius: 40% ;
       position: absolute ;
       left: -1px ;

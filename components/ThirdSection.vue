@@ -1,24 +1,28 @@
 <template>
-  <div class="third">
-    <h2>My Services</h2>
-    <p class="features text-center">
-      Together we can take your business and Social media presence to the next
-      level with premium features that are benefcial to the your success
-    </p>
-    <div class="services">
-      <div class="cards">
-        <div v-for="(card, index) in cards" :key="index" class="card noli">
-          <img :src="card.picture" alt="" class="card-img" />
-          <p class="title">{{ card.title }}</p>
-          <p class="contents">
-            {{ card.content }}
-          </p>
+  <div>
+    <img src="~/static/images/top.png" alt="" class="top" />
+    <div class="third">
+      <h2>My Services</h2>
+      <p class="features text-center">
+        Together we can take your business and Social media presence to the next
+        level with premium features that are benefcial to the your success
+      </p>
+      <div class="services">
+        <div class="cards">
+          <div v-for="(card, index) in cards" :key="index" class="card noli">
+            <img :src="card.picture" alt="" class="card-img" />
+            <p class="title">{{ card.title }}</p>
+            <p class="contents">
+              {{ card.content }}
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <Button>More services &#x2192;</Button>
         </div>
       </div>
-      <div class="text-center mt-5">
-        <Button>More services &#x2192;</Button>
-      </div>
     </div>
+    <img src="~/static/images/bottom.png" alt="" class="bottom" />
   </div>
 </template>
 
@@ -79,9 +83,10 @@ export default {
         },
       })
       tl2.from('.card', {
-        y: 150,
+        y: 70,
         stagger: 0.3,
         duration: 0.8,
+        scale: 0.95,
       })
     },
   },
@@ -89,20 +94,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.top {
+  margin-top: 100px;
+  width: 100vw;
+  @include bg-tablet {
+    margin-top: 13vh;
+  }
+}
+
+.bottom {
+  width: 100vw;
+}
 .third {
-  margin-top: 150px;
-  padding: 0px 10%;
-  background: url('~/static/images/services/curvy-bg.svg');
+  padding: 50px 10% 50px 10%;
+  // background: url('~/static/images/services/curvy-bg.svg');
+  background: #f9eaff;
   background-size: contain;
   background-repeat: no-repeat;
   background-position-y: center;
   width: 100vw;
   overflow-x: hidden;
+  position:relative;
+  z-index:1;
 
   @include bg-tablet {
-    margin-top: 13vh;
-
-    padding: 0px 5%;
+  padding: 50px 5% 50px 5%;
   }
 
   h2 {
@@ -138,7 +154,6 @@ export default {
       grid-template-rows: 1fr 1fr;
       gap: 50px;
       margin-top: 40px;
-      padding-bottom: 30px;
 
       @include bg-tablet {
         grid-template-columns: 1fr 1fr;
