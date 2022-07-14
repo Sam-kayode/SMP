@@ -50,7 +50,7 @@ export default {
 
   &:hover {
     color: #a966c8;
-    transition: 0.5s ease-in;
+    transition: 0.5s ease-out;
     box-shadow: none;
 
     &::after {
@@ -62,7 +62,7 @@ export default {
       position: absolute ;
       left: -1px ;
       bottom: -200% ;
-      transition: 0.5s ease-in ;
+      transition: 0.5s ease-out ;
       z-index: -1 ;
     }
   }

@@ -88,7 +88,9 @@ export default {
     display: block;
   }
   .details {
-    text-align: center;
+    @include mobile {
+      text-align: center;
+    }
     h2 {
       font-family: 'josefin sans', sans-serif;
       font-size: 64px;
@@ -138,7 +140,7 @@ export default {
       .quote {
         position: absolute;
         z-index: -3;
-        top: -100%;
+        top: -90%;
         width: 60%;
         right: 25%;
         margin: auto;
