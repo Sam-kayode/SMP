@@ -97,8 +97,10 @@ export default {
 .top {
   margin-top: 100px;
   width: 100vw;
+  height: 200px;
   @include bg-tablet {
     margin-top: 13vh;
+    height: auto;
   }
 }
 
@@ -114,11 +116,11 @@ export default {
   background-position-y: center;
   width: 100vw;
   overflow-x: hidden;
-  position:relative;
-  z-index:1;
+  position: relative;
+  z-index: 1;
 
   @include bg-tablet {
-  padding: 50px 5% 50px 5%;
+    padding: 50px 5% 50px 5%;
   }
 
   h2 {

@@ -134,6 +134,10 @@ export default {
     .question {
       position: relative;
       z-index: 1;
+
+      @include mobile {
+        text-align: center;
+      }
     }
     .assure {
       position: relative;
