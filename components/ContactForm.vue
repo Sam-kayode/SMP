@@ -28,7 +28,6 @@
         <br />
         <textarea name="message" required></textarea>
       </div>
-
       <Button class="button">Send Message</Button>
     </form>
   </div>
@@ -58,6 +57,8 @@ export default {}
 
   form {
     padding: 5%;
+    position:relative;
+    z-index: 1;
     label {
       font-size: 16px;
       font-weight: bold;

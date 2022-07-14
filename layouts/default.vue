@@ -85,10 +85,12 @@ body {
     position: absolute;
     z-index: -3;
     height: 70vh;
+    transform: scale(2);
+
     @include mobile {
-      top: 210vh;
+      top: 70vh;
       height: 80vh;
-      width: 40vw;
+      width: 20vw;
       transform: scale(3);
     }
   }

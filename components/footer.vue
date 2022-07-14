@@ -121,6 +121,7 @@ export default {}
     }
 
     .newsletter {
+      background-color: rgb(255, 255, 255);
       border: 2px solid #a966c8;
       display: flex;
       align-items: center;
@@ -133,6 +134,9 @@ export default {}
         outline: none;
         width: 87%;
         background: none;
+        &::placeholder {
+          color: #bf86da;
+        }
       }
 
       .arrow {
@@ -145,7 +149,7 @@ export default {}
         padding-bottom: 5px;
         cursor: pointer;
         &:hover {
-          background-color: rgb(243, 219, 253);
+          background-color: rgb(235, 202, 249);
           transition: 0.5s ease-out;
         }
       }

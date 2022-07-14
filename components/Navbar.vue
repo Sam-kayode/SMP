@@ -22,16 +22,16 @@
         <li><a href="">Home</a></li>
         <li><a href="">Works</a></li>
         <li><a href="">Services</a></li>
+        <li><a href="">About</a></li>
         <li><a href="">Get in touch</a></li>
-        <li><a href="">Portfolio</a></li>
       </ul>
       <transition name="fade">
         <ul v-if="visible">
           <li><a href="">Home</a></li>
           <li><a href="">Works</a></li>
           <li><a href="">Services</a></li>
+          <li><a href="">About</a></li>
           <li><a href="">Get in touch</a></li>
-          <li><a href="">Portfolio</a></li>
         </ul>
       </transition>
 
@@ -140,6 +140,37 @@ export default {
       a {
         color: #a966c8;
         font-family: 'open sans', sans-serif;
+        text-decoration: none;
+        position: relative;
+            transition:0.5s ease-out;
+
+
+        &::after {
+          content: '';
+          width: 0%;
+          height: 3px;
+          bottom: -5px;
+          position: absolute;
+          border-radius: 20px;
+          background: #a966c8;
+          left: 0;
+        }
+
+        &:hover {
+            transition:0.5s ease-out;
+
+          &::after {
+            content: '';
+            width: 60%;
+            height: 3px;
+            bottom: -5px;
+            position: absolute;
+            border-radius: 20px;
+            background: #a966c8;
+            left: 0;
+            transition:0.3s ease-out;
+          }
+        }
       }
       @include mobile {
         display: block;

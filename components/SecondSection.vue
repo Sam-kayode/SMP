@@ -17,7 +17,7 @@
             save time and easily manage your social media presence without any
             hassle.
           </p>
-          <Button class="text-left">Learn more</Button>
+          <Button class="text-md-left">Learn more</Button>
         </div>
       </div>
     </div>
@@ -31,9 +31,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default {
   name: 'SecondSection',
-  // beforeCreate() {
-  //   ScrollTrigger.refresh()
-  // },
+ 
   mounted() {
     this.animate()
   },
@@ -87,6 +85,7 @@ export default {
 
       @include mobile {
         padding: 0;
+        text-align: center;
       }
 
       h2 {
