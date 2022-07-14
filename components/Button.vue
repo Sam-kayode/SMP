@@ -15,11 +15,11 @@ export default {
 <style lang="scss" scoped>
 .sq-btn {
   border: none ;
-  padding: 15px 45px;
+  padding: 14px 45px;
   border: 1px solid #a966c8;
   box-shadow: inset 1px 1px 1px #a966c8;
   font-size: 18px;
-  background: #a966c800;
+  background: #ffffff00;
   color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -40,11 +40,11 @@ export default {
   &::before {
     content: '';
     width: 121% ;
-    height: 400%;
+    height: 100%;
     background: #a966c8 ;
     position: absolute;
     left: -20px;
-    bottom: -200%;
+    bottom: 0;
     z-index: -3;
   }
 
@@ -57,7 +57,7 @@ export default {
       content: '' ;
       width: 101% ;
       height: 490% ;
-      background: rgb(252, 247, 253) ;
+      background: rgb(194, 60, 220) ;
       border-radius: 40% ;
       position: absolute ;
       left: -1px ;

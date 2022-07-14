@@ -170,7 +170,7 @@ export default {
         padding: 20px 10px;
         background-color: #ffffff;
         border-radius: 10px;
-        box-shadow: rgba(118, 62, 153, 0.15) 0px 5px 15px;
+        box-shadow: rgba(118, 62, 153, 0.1) 0px 5px 15px;
 
         @include mobile {
           margin-bottom: 60px;
