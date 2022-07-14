@@ -83,9 +83,9 @@ export default {
         },
       })
       tl2.from('.card', {
-        y: 70,
+        y: 50,
         stagger: 0.3,
-        duration: 0.8,
+        duration: 1,
         scale: 0.95,
       })
     },
