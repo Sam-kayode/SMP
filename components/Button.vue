@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss" scoped>
 .sq-btn {
-  border: none ;
+  border: none;
   padding: 14px 45px;
   border: 1px solid #a966c8;
   box-shadow: inset 1px 1px 1px #a966c8;
@@ -28,7 +28,8 @@ export default {
     content: '';
     width: 101%;
     height: 0%;
-    background: #801887 ;
+    background: #8a53a5;
+
     border-radius: 50%;
     position: absolute;
     transition: 0.5s ease-out;
@@ -39,9 +40,9 @@ export default {
 
   &::before {
     content: '';
-    width: 121% ;
+    width: 121%;
     height: 100%;
-    background: #a966c8 ;
+    background: #a966c8;
     position: absolute;
     left: -20px;
     bottom: 0;
@@ -49,21 +50,20 @@ export default {
   }
 
   &:hover {
-    color: #a966c8;
+    // color: #a966c8;
     transition: 0.5s ease-out;
-    box-shadow: none;
 
     &::after {
-      content: '' ;
-      width: 101% ;
-      height: 490% ;
-      background: rgb(194, 60, 220) ;
-      border-radius: 40% ;
-      position: absolute ;
-      left: -1px ;
-      bottom: -200% ;
-      transition: 0.5s ease-out ;
-      z-index: -1 ;
+      content: '';
+      width: 101%;
+      height: 490%;
+      background: #8a53a5;
+      border-radius: 40%;
+      position: absolute;
+      left: -1px;
+      bottom: -200%;
+      transition: 0.5s ease-out;
+      z-index: -1;
     }
   }
 }
