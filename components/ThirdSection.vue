@@ -86,7 +86,7 @@ export default {
         y: 50,
         stagger: 0.3,
         duration: 1,
-        scale: 0.95,
+        scale: 0.85,
       })
     },
   },

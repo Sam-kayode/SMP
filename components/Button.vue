@@ -15,7 +15,7 @@ export default {
 <style lang="scss" scoped>
 .sq-btn {
   border: none;
-  padding: 14px 45px;
+  padding: 14px 43px;
   border: 1px solid #a966c8;
   box-shadow: inset 1px 1px 1px #a966c8;
   font-size: 18px;
