@@ -115,7 +115,7 @@ export default {
     .title,
     .name {
       font-size: 18px;
-      @include tablet {
+      @include bg-tablet {
         font-size: 16px;
       }
     }

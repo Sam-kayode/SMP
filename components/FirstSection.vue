@@ -72,8 +72,8 @@ export default {
       order: 1;
       margin-top: 50px;
     }
-    @include mobile{
-      text-align:center;
+    @include mobile {
+      text-align: center;
     }
     h4 {
       font-family: 'open sans', sans-serif;
@@ -129,14 +129,12 @@ export default {
         color: #a966c8;
         font-weight: bolder;
       }
-
+      @include bg-tablet {
+        font-size: 16px;
+      }
       @include mobile {
         font-size: 16px;
         width: 90%;
-      }
-
-      @include bg-tablet {
-        font-size: 16px;
       }
     }
   }

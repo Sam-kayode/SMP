@@ -143,7 +143,7 @@ export default {
     font-size: 18px;
     width: 60%;
     margin: auto;
-    @include tablet {
+    @include bg-tablet {
       font-size: 16px;
       width: 100%;
     }
@@ -185,7 +185,7 @@ export default {
           font-weight: bolder;
           font-size: 18px;
 
-          @include tablet {
+          @include bg-tablet {
             font-size: 16px;
           }
         }
