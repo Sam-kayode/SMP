@@ -72,35 +72,35 @@ export default {
         {
           picture: require('~/static/images/firms/aa.png'),
           review:
-            'She-s one of the best Social media managers you can work with. Impecable service likeno other',
+            'She is one of the best Social media managers you can work with. Impecable service like no other',
           name: 'Ademakinwa Ademiluyi Driving and Co Services',
           title: 'Logistics company',
         },
         {
           picture: require('~/static/images/firms/mydee.png'),
           review:
-            'She-s one of the best Social media managers you can work with. Impecable service likeno other. lorem ipsum loki fjfjutt kfifi jsuur apdoe dkdod ddiid djdor dkdoeoe',
+            'She is one of the best Social media managers you can work with. Impecable service like no other.',
           name: 'Ademakinwa Ademiluyi Driving and Co Services',
           title: 'Hair Care Product company',
         },
         {
           picture: require('~/static/images/firms/gobuyhub.png'),
           review:
-            'She-s one of the best Social media managers you can work with. Impecable service likeno other',
+            'She is one of the best Social media managers you can work with. Impecable service like no other',
           name: 'Ademakinwa Ademiluyi Driving and Co Services',
           title: 'Importation and Logistics firm',
         },
         {
           picture: require('~/static/images/firms/wristwatch.png'),
           review:
-            'She-s one of the best Social media managers you can work with. Impecable service likeno other',
+            'She is one of the best Social media managers you can work with. Impecable service like no other',
           name: 'Ademakinwa Ademiluyi Driving and Co Services',
           title: 'Luxury Wristwear Store',
         },
         {
           picture: require('~/static/images/firms/mbi.png'),
           review:
-            'She-s one of the best Social media managers you can work with. Impecable service likeno other',
+            'She-s one of the best Social media managers you can work with. Impecable service like no other',
           name: 'Ademakinwa Ademiluyi Driving and Co Services',
           title: 'Financial Services firm',
         },
@@ -226,7 +226,7 @@ export default {
           font-family: 'open sans', sans-serif;
           text-align: center;
           font-size: 18px;
-          @include tablet {
+          @include bg-tablet {
             font-size: 16px;
           }
         }
@@ -249,25 +249,20 @@ export default {
 
         .name {
           font-family: 'josefin sans', sans-serif;
-          font-size: 18px;
+          font-size: 16px;
           margin: 40px 0px 0px 0px;
 
-          @include tablet {
-            font-size: 16px;
-          }
-
-          @include mobile {
+          @include bg-tablet {
             font-size: 14px;
           }
+
         }
         .title {
           font-family: 'josefin sans', sans-serif;
           font-size: 16px;
           font-weight: bolder;
-          @include tablet {
-            font-size: 16px;
-          }
-          @include mobile {
+         
+          @include bg-tablet {
             font-size: 14px;
           }
         }

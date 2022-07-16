@@ -83,10 +83,10 @@ export default {
         },
       })
       tl2.from('.card', {
-        y: 70,
+        y: 50,
         stagger: 0.3,
-        duration: 0.8,
-        scale: 0.95,
+        duration: 1,
+        scale: 0.85,
       })
     },
   },
@@ -143,7 +143,7 @@ export default {
     font-size: 18px;
     width: 60%;
     margin: auto;
-    @include tablet {
+    @include bg-tablet {
       font-size: 16px;
       width: 100%;
     }
@@ -185,7 +185,7 @@ export default {
           font-weight: bolder;
           font-size: 18px;
 
-          @include tablet {
+          @include bg-tablet {
             font-size: 16px;
           }
         }
@@ -193,7 +193,7 @@ export default {
           font-size: 18px;
           padding: 0;
 
-          @include tablet {
+          @include bg-tablet {
             font-size: 16px;
           }
         }

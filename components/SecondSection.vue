@@ -112,7 +112,7 @@ export default {
         font-size: 18px;
         color: #000000;
         margin-bottom: 30px;
-        @include tablet {
+        @include bg-tablet {
           font-size: 16px;
         }
       }

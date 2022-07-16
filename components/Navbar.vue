@@ -26,7 +26,7 @@
         <li><a href="">Get in touch</a></li>
       </ul>
       <transition name="fade">
-        <ul v-if="visible">
+        <ul v-show="visible" class="mobLink" :class="[visible ? mob : '']">
           <li><a href="">Home</a></li>
           <li><a href="">Works</a></li>
           <li><a href="">Services</a></li>
@@ -52,7 +52,19 @@ export default {
     return {
       windowTop: null,
       visible: false,
+      mob: '',
     }
+  },
+  watch: {
+    visible() {
+      if (this.visible) {
+        setTimeout(() => {
+          this.mob = 'mob'
+        }, 100)
+      } else {
+        this.mob = ''
+      }
+    },
   },
   mounted() {
     window.addEventListener('scroll', this.onScroll)
@@ -129,7 +141,6 @@ export default {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      // display: none;
     }
 
     li {
@@ -142,8 +153,7 @@ export default {
         font-family: 'open sans', sans-serif;
         text-decoration: none;
         position: relative;
-            transition:0.5s ease-out;
-
+        transition: 0.5s ease-out;
 
         &::after {
           content: '';
@@ -157,7 +167,7 @@ export default {
         }
 
         &:hover {
-            transition:0.5s ease-out;
+          transition: 0.5s ease-out;
 
           &::after {
             content: '';
@@ -168,7 +178,7 @@ export default {
             border-radius: 20px;
             background: #a966c8;
             left: 0;
-            transition:0.3s ease-out;
+            transition: 0.3s ease-out;
           }
         }
       }
@@ -194,12 +204,51 @@ export default {
   display: flex !important;
 }
 
+.anim {
+  animation-duration: 0.5s;
+  animation-name: slidein;
+}
+
+.mobLink li {
+  transform: translateY(-60px);
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+
+@for $i from 0 through 6 {
+  .mob li:nth-child(#{$i + 1}) {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.09s * $i;
+    margin-top: 20px;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-top: -40px;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.5s ease-out;
+
 }
-.fade-enter,
+
+.fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+  transition: 0.5s;
+}
+
+.fade-leave-to {
+  transition-delay: 0.2s;
 }
 </style>
