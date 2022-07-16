@@ -181,7 +181,7 @@ export default {
         p {
           margin: 0;
           font-size: 18px;
-          @include mobile {
+          @include bg-tablet {
             font-size: 16px;
           }
         }
