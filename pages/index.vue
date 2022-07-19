@@ -11,14 +11,18 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 export default {
   name: 'IndexPage',
   data() {
     return {}
   },
   mounted() {
-      this.$drift.show()
+    this.$drift.show()
   },
+  beforeDestroy() {},
 }
 </script>
 

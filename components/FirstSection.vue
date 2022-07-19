@@ -28,7 +28,9 @@ import { gsap } from 'gsap'
 export default {
   name: 'FirstSection',
   mounted() {
-    const timeline = gsap.timeline({})
+    const timeline = gsap.timeline({
+          once:true,
+    })
     timeline
       .from(
         '.intro',

@@ -27,11 +27,11 @@
       </ul>
       <transition name="fade">
         <ul v-show="visible" class="mobLink" :class="[visible ? mob : '']">
-          <li><a href="">Home</a></li>
-          <li><a href="">Works</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Get in touch</a></li>
+          <li> <nuxt-link to="/">Home</nuxt-link></li>
+          <li> <nuxt-link to="/works">Works</nuxt-link></li>
+          <li> <nuxt-link to="/services">Services</nuxt-link></li>
+          <li> <nuxt-link to="/about">About</nuxt-link></li>
+          <li> <nuxt-link to="/contact">Get in touch</nuxt-link></li>
         </ul>
       </transition>
 
