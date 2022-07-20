@@ -27,11 +27,15 @@
       </ul>
       <transition name="fade">
         <ul v-show="visible" class="mobLink" :class="[visible ? mob : '']">
-          <li> <nuxt-link to="/">Home</nuxt-link></li>
-          <li> <nuxt-link to="/works">Works</nuxt-link></li>
-          <li> <nuxt-link to="/services">Services</nuxt-link></li>
-          <li> <nuxt-link to="/about">About</nuxt-link></li>
-          <li> <nuxt-link to="/contact">Get in touch</nuxt-link></li>
+          <li @click="toggle"><nuxt-link to="/">Home</nuxt-link></li>
+          <li @click="toggle"><nuxt-link to="/works">Works</nuxt-link></li>
+          <li @click="toggle">
+            <nuxt-link to="/services">Services</nuxt-link>
+          </li>
+          <li @click="toggle"><nuxt-link to="/about">About</nuxt-link></li>
+          <li @click="toggle">
+            <nuxt-link to="/contact">Get in touch</nuxt-link>
+          </li>
         </ul>
       </transition>
 
@@ -39,7 +43,7 @@
         :style="[
           visible ? { position: 'fixed', top: '5px', right: '5px' } : '',
         ]"
-        @click.native="toggle"
+        @click.native="toggleNav"
       />
     </div>
   </div>
@@ -77,6 +81,11 @@ export default {
       this.windowTop = window.top.scrollY
     },
     toggle() {
+      this.visible = !this.visible
+      this.$nuxt.$emit('toggle')
+    },
+
+    toggleNav() {
       this.visible = !this.visible
     },
   },
@@ -239,7 +248,6 @@ export default {
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease-out;
-
 }
 
 .fade-enter-from,
