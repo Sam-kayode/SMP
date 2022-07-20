@@ -43,6 +43,8 @@ export default {
           trigger: '#group2 .left',
           ease: 'exp',
           start: 'top bottom-=150px',
+          once:true,
+
         },
       })
       tl.addLabel('start')

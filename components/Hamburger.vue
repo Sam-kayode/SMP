@@ -28,6 +28,9 @@ export default {
   created() {
     this.$nuxt.$on('toggle', this.toggle)
   },
+  beforeDestroy() {
+    this.$nuxt.$off('toggle')
+  },
 
   methods: {
     toggle() {
@@ -45,10 +48,10 @@ export default {
   padding: 0;
   position: relative;
   z-index: 40;
-  display:none;
+  display: none;
 
-  @include mobile{
-    display:block;
+  @include mobile {
+    display: block;
   }
 }
 
@@ -89,7 +92,6 @@ export default {
     stroke-dashoffset: -134;
     stroke-width: 8;
   }
-
 }
 button {
   outline: none !important;

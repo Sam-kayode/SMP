@@ -81,11 +81,16 @@ body {
 
   .blob-3 {
     left: -5px;
-    top: 50vh;
+    top: 40vh;
     position: absolute;
     z-index: -3;
     height: 70vh;
     transform: scale(2);
+
+    @include bg-tablet {
+      top: 20vh ;
+      height: 40vh;
+    }
 
     @include mobile {
       top: 70vh;
@@ -103,6 +108,7 @@ body {
 
     @include bg-tablet {
       width: 30vw;
+      bottom:170vh;
     }
     @include mobile {
       width: 50vw;
@@ -117,6 +123,8 @@ body {
     z-index: -3;
 
     @include bg-tablet {
+      
+
     }
     @include mobile {
       height: 80vh;

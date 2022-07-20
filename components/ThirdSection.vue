@@ -80,6 +80,7 @@ export default {
           trigger: '.card',
           ease: 'expo',
           start: 'top bottom',
+          once:true,
         },
       })
       tl2.from('.card', {
