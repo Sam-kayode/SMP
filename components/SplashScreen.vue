@@ -158,6 +158,7 @@ export default {
   beforeCreate() {
     setTimeout(() => {
       this.show = false
+      this.$nuxt.$emit('loaded')
     }, 3900)
   },
 }

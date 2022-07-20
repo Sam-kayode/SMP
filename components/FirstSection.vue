@@ -28,16 +28,23 @@ import { gsap } from 'gsap'
 export default {
   name: 'FirstSection',
   mounted() {
-    const timeline = gsap.timeline({
-          once:true,
-    })
-    timeline
-      .from(
-        '.intro',
-        { y: -50, stagger: 0.4, opacity: 0, duration: 0.6 },
-        '+=0.5'
-      )
-      .from('.tumi', { x: 50, opacity: 0 }, '-=0.4')
+  },
+  created() {
+    this.$nuxt.$on('loaded', this.animate)
+  },
+  methods: {
+    animate() {
+      const timeline = gsap.timeline({
+        once: true,
+      })
+      timeline
+        .from(
+          '.intro',
+          { y: -50, stagger: 0.4, opacity: 0, duration: 0.6 },
+          '+=0.2'
+        )
+        .from('.tumi', { x: 50, opacity: 0 }, '-=0.4')
+    },
   },
 }
 </script>
