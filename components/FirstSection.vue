@@ -27,10 +27,13 @@ import { gsap } from 'gsap'
 
 export default {
   name: 'FirstSection',
-  mounted() {
-  },
+  mounted() {},
   created() {
     this.$nuxt.$on('loaded', this.animate)
+  },
+  beforeDestroy() {
+    // removes event listener
+    this.$nuxt.$off('loaded')
   },
   methods: {
     animate() {
