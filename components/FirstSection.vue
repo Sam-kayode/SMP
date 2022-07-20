@@ -35,7 +35,7 @@ export default {
       .from(
         '.intro',
         { y: -50, stagger: 0.4, opacity: 0, duration: 0.6 },
-        '+=4'
+        '+=0.5'
       )
       .from('.tumi', { x: 50, opacity: 0 }, '-=0.4')
   },
