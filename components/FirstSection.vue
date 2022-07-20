@@ -32,7 +32,6 @@ export default {
     this.$nuxt.$on('loaded', this.animate)
   },
   beforeDestroy() {
-    // removes event listener
     this.$nuxt.$off('loaded')
   },
   methods: {
