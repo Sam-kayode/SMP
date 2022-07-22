@@ -22,7 +22,6 @@ export default {
   mounted() {
     this.$drift.show()
   },
-  beforeDestroy() {},
 }
 </script>
 
