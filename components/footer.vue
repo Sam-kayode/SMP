@@ -25,7 +25,6 @@
           <li><a href="">E-books</a></li>
           <li><a href="">Blog</a></li>
         </div>
-
         <div class="fourth">
           <p>FOLLOW ME ON</p>
           <a href=""
