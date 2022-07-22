@@ -83,7 +83,6 @@ export default {
             } else if (elem.classList.contains('revealRight')) {
               xDir = 100
             }
-
             gsap.fromTo(
               elem,
               { x: xDir, y: 0, autoAlpha: 0 },
