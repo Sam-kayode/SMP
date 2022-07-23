@@ -110,7 +110,6 @@ export default {
 }
 .third {
   padding: 50px 10% 50px 10%;
-  // background: url('~/static/images/services/curvy-bg.svg');
   background: #f9eaff;
   background-size: contain;
   background-repeat: no-repeat;

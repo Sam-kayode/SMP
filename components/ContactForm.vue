@@ -34,7 +34,10 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name:"ContactForm",
+  
+}
 </script>
 
 <style lang="scss" scoped>
