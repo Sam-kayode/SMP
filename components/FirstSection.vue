@@ -68,7 +68,7 @@ export default {
   @include bg-tablet {
     padding: 0px 5%;
   }
-  
+
   .right {
     .tumi {
       width: 100% !important;
@@ -81,14 +81,17 @@ export default {
       margin-top: 50px;
     }
   }
+
   .left {
     @include tablet {
       order: 1;
       margin-top: 50px;
     }
+
     @include mobile {
       text-align: center;
     }
+
     h4 {
       font-family: 'open sans', sans-serif;
       font-size: 16px;
@@ -97,6 +100,7 @@ export default {
       @include bg-tablet {
         font-size: 16px;
       }
+
     }
 
     h1 {
@@ -143,9 +147,11 @@ export default {
         color: #a966c8;
         font-weight: bolder;
       }
+
       @include bg-tablet {
         font-size: 16px;
       }
+
       @include mobile {
         font-size: 16px;
         width: 90%;
@@ -157,6 +163,7 @@ export default {
     z-index: 3;
     position: relative;
   }
+  
   .name {
     overflow: clip;
     line-height: 106%;
