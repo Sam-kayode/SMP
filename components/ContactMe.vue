@@ -137,6 +137,7 @@ export default {
         display: block;
         margin-top: 30px;
       }
+
       .avatar {
         width: 70px;
         border-radius: 50%;
