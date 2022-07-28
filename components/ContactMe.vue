@@ -109,6 +109,7 @@ export default {
     }
     .assure {
       position: relative;
+      
       .quote {
         position: absolute;
         z-index: -3;
