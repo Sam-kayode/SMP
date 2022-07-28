@@ -60,12 +60,15 @@ export default {
   width: 100vw;
   overflow-x: hidden;
   --transformation: translate(0, 0);
+
   @include mobile {
     grid-template-columns: 1fr;
   }
+
   @include bg-tablet {
     padding: 0px 5%;
   }
+  
   .right {
     .tumi {
       width: 100% !important;
