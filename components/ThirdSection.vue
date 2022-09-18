@@ -8,6 +8,7 @@
         level with premium features that are benefcial to the your success
       </p>
       <div class="services">
+        <img src="" alt="">
         <div class="cards">
           <div v-for="(card, index) in cards" :key="index" class="card noli">
             <img :src="card.picture" alt="" class="card-img" />
@@ -61,7 +62,7 @@ export default {
             'Exquisitely crafted content to attract your business audience and target market in response to your business needs',
         },
         {
-          picture: require('~/static/images/services/ads.png'),
+          picture: require('~/static/images/services/advert (copy).png'),
           title: 'Ads Management',
           content:
             'Exquisitely crafted content to attract your business audience and target market in response to your business needs',

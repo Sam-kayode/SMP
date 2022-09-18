@@ -154,7 +154,7 @@ export default {
 
       @include mobile {
         font-size: 16px;
-        width: 90%;
+        width: 100%;
       }
     }
   }
