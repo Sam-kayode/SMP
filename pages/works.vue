@@ -1,7 +1,6 @@
 <template>
   <div class="services">
     <h1 class="intro p-0 m-0 name">Works</h1>
-
     <div class="projects">
       <div class="project">
         <div class="info">
@@ -88,6 +87,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -95,10 +95,11 @@
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import Projects from '~/static/js/projects.js'
 
 export default {
   name: 'Works',
-  components: { VueSlickCarousel },
+  components: { VueSlickCarousel},
   data() {
     return {
       settings: {
@@ -130,8 +131,16 @@ export default {
           },
         ],
       },
+      projects:[
+
+      ]
     }
   },
+  computed:{
+    allProjects(){
+      return Projects.projects
+    }
+  }
 }
 </script>
 
