@@ -173,7 +173,7 @@ export default {
       font-family: 'open sans', sans-serif;
       display: grid;
       grid-template-columns: 50% 50%;
-      grid-gap:40px;
+      grid-gap: 40px;
       border-top: 1px solid #7949a7;
       padding-top: 40px;
       margin-bottom: 100px;
@@ -212,6 +212,7 @@ export default {
           .desc {
             font-weight: 700;
             font-size: 28px;
+            margin: 5px 0 20px 0;
             @include bg-tablet {
               font-size: 24px;
             }

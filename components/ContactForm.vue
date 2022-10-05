@@ -5,12 +5,17 @@
       <div>
         <label for="name">Full Name</label>
         <br />
-        <input type="text" placeholder="Your Full Name" name="name" required />
+        <input type="text" placeholder="e.g John Doe" name="name" required />
       </div>
       <div>
         <label for="email">Email</label>
         <br />
-        <input type="mail" placeholder="E-mail address" name="email" required />
+        <input
+          type="mail"
+          placeholder="e.g johndoe@gmail.com"
+          name="email"
+          required
+        />
       </div>
       <div>
         <label for="subject">Subject</label>
@@ -18,7 +23,7 @@
 
         <input
           type="text"
-          placeholder="Subject of mail"
+          placeholder="e.g Service Enquiry"
           name="subject"
           required
         />
@@ -35,8 +40,7 @@
 
 <script>
 export default {
-  name:"ContactForm",
-  
+  name: 'ContactForm',
 }
 </script>
 
@@ -60,7 +64,7 @@ export default {
 
   form {
     padding: 5%;
-    position:relative;
+    position: relative;
     z-index: 1;
     label {
       font-size: 16px;
@@ -96,7 +100,7 @@ export default {
     }
 
     .button {
-      text-align: center;
+      text-align: left;
     }
   }
 }
