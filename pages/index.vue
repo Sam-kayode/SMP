@@ -31,15 +31,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#drift-frame-chat {
-  max-width: 400px !important;
-  margin-left: auto;
-  height: 60vh;
-  @include mobile {
-    height: 100vh;
-    width: 100vw;
-  }
-}
+// #drift-frame-chat {
+//   // max-width: 400px !important;
+//   // margin-left: auto;
+//   // height: 60vh;
+//   @include mobile {
+//     // height: 100vh;
+//     // width: 100vw;
+//   }
+// }
 body {
   font-family: 'open sans', sans-serif;
   overflow-x: clip;
