@@ -300,14 +300,22 @@ export default {
 
           .arrow-elem {
             transition: 0.4s ease-out;
+            display: none;
           }
 
-          &:hover {
+          @include desktop {
+            &:hover {
+              .arrow-elem {
+                transform: translateY(-27.5px);
+                transition: 0.4s ease-out;
+              }
+            }
+
             .arrow-elem {
-              transform: translateY(-27.5px);
-              transition: 0.4s ease-out;
+              display: block;
             }
           }
+
         }
 
         .graphic {}
