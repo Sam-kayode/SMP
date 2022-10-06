@@ -264,11 +264,15 @@ export default {
         .header {
           a {
             text-decoration: none;
-            display: flex;
-            align-items: center;
             margin: -3px 0 20px 0;
-            align-items: flex-start;
             color: #7949a7;
+
+            @include desktop {
+              display: flex;
+              align-items: flex-start;
+
+
+            }
 
           }
 
@@ -294,13 +298,13 @@ export default {
             padding-right: 40px;
             height: 27px;
             overflow: hidden;
+            display: none;
 
 
           }
 
           .arrow-elem {
             transition: 0.4s ease-out;
-            display: none;
           }
 
           @include desktop {
@@ -311,7 +315,7 @@ export default {
               }
             }
 
-            .arrow-elem {
+            .arrow {
               display: block;
             }
           }
