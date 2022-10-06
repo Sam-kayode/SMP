@@ -90,12 +90,13 @@ export default {
     }
   },
   mounted() {
-    this.animate()
+    this.animate('.title')
+    this.animate('.desc')
     this.animate2()
   },
   methods: {
-    animate() {
-      gsap.utils.toArray('.title').forEach(function (elem) {
+    animate(value) {
+      gsap.utils.toArray(value).forEach(function (elem) {
         gsap.set(elem, { autoAlpha: 0 })
         ScrollTrigger.create({
           trigger: elem,
