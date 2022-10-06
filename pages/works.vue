@@ -4,7 +4,9 @@
     <div class="projects">
       <div v-for="(project,i) in allProjects" :key="i" class="project">
         <div class="info">
-          <h2 class="title">{{project.company}}</h2>
+          <nuxt-link to="/">
+            <h2 class="title">{{project.company}}</h2>
+          </nuxt-link>
           <ul class="list">
             <h3>Service Rendered</h3>
             <li v-for="(service,j) in project.services" :key="j">{{service}}</li>
@@ -12,7 +14,9 @@
         </div>
         <div class="scope">
           <div class="header">
-            <div class="desc">{{project.about}}</div>
+            <nuxt-link to="/">
+              <div class="desc">{{project.about}}</div>
+            </nuxt-link>
             <div class="arrow"></div>
           </div>
           <div class="graphic">
@@ -118,7 +122,7 @@ export default {
                 x: 0, y: 50, autoAlpha: 0,
               },
               {
-                x: 0, y: 0, autoAlpha: 1, duration: 1,delay:0.5,
+                x: 0, y: 0, autoAlpha: 1, duration: 1, delay: 0.5,
               }
             )
           },
@@ -148,7 +152,7 @@ export default {
                 x: 0, y: -30, autoAlpha: 0,
               },
               {
-                x: 0, y: 0, autoAlpha: 1, duration: 1,delay:0.5
+                x: 0, y: 0, autoAlpha: 1, duration: 1, delay: 0.5
               }
             )
           },
@@ -208,6 +212,11 @@ export default {
       }
 
       .info {
+        a {
+          text-decoration-color: #7949a7;
+
+        }
+
         h2 {
           font-family: 'josefin sans', sans-serif;
           font-weight: 700;
@@ -249,6 +258,11 @@ export default {
 
       .scope {
         .header {
+
+          a {
+            text-decoration: none;
+          }
+
           .desc {
             font-family: 'josefin sans', sans-serif;
             font-weight: 500;
