@@ -114,10 +114,10 @@ export default {
             gsap.fromTo(
               elem,
               {
-                x: 0, y: 120, autoAlpha: 0,
+                x: 0, y: 50, autoAlpha: 0,
               },
               {
-                x: 0, y: 0, autoAlpha: 1, duration: 1,
+                x: 0, y: 0, autoAlpha: 1, duration: 1,delay:0.5,
               }
             )
           },
@@ -144,10 +144,10 @@ export default {
             gsap.fromTo(
               elem,
               {
-                x: 0, y: -20, autoAlpha: 0,
+                x: 0, y: -30, autoAlpha: 0,
               },
               {
-                x: 0, y: 0, autoAlpha: 1, duration: 1,delay:.5
+                x: 0, y: 0, autoAlpha: 1, duration: 1,delay:0.5
               }
             )
           },
