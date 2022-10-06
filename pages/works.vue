@@ -2,10 +2,10 @@
   <div class="services">
     <h1 class="intro p-0 m-0 name">Works</h1>
     <div class="projects">
-      <div class="project" v-for="(project,i) in allProjects" :key="i">
+      <div v-for="(project,i) in allProjects" :key="i" class="project">
         <div class="info">
           <h2 class="title">{{project.company}}</h2>
-          <ul>
+          <ul class="list">
             <h3>Service Rendered</h3>
             <li v-for="(service,j) in project.services" :key="j">{{service}}</li>
           </ul>
@@ -36,10 +36,14 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import Projects from '~/static/js/projects.js'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default {
   name: 'Works',
@@ -84,7 +88,73 @@ export default {
     allProjects() {
       return Projects.projects
     }
-  }
+  },
+  mounted() {
+    this.animate()
+    this.animate2()
+  },
+  methods: {
+    animate() {
+      gsap.utils.toArray('.title').forEach(function (elem) {
+        gsap.set(elem, { autoAlpha: 0 })
+        ScrollTrigger.create({
+          trigger: elem,
+          once: false,
+          start: 'top bottom+=105px',
+          onEnter: () => {
+            ScrollTrigger.refresh()
+
+            // let xDir
+
+            // if (elem.classList.contains('revealLeft')) {
+            //   xDir = -100
+            // } else if (elem.classList.contains('revealRight')) {
+            //   xDir = 100
+            // }
+            gsap.fromTo(
+              elem,
+              {
+                x: 0, y: 120, autoAlpha: 0,
+              },
+              {
+                x: 0, y: 0, autoAlpha: 1, duration: 1,
+              }
+            )
+          },
+        })
+      })
+    },
+    animate2() {
+      gsap.utils.toArray('.list').forEach(function (elem) {
+        gsap.set(elem, { autoAlpha: 0 })
+        ScrollTrigger.create({
+          trigger: elem,
+          once: false,
+          start: 'top bottom+=105px',
+          onEnter: () => {
+            ScrollTrigger.refresh()
+
+            // let xDir
+
+            // if (elem.classList.contains('revealLeft')) {
+            //   xDir = -100
+            // } else if (elem.classList.contains('revealRight')) {
+            //   xDir = 100
+            // }
+            gsap.fromTo(
+              elem,
+              {
+                x: 0, y: -20, autoAlpha: 0,
+              },
+              {
+                x: 0, y: 0, autoAlpha: 1, duration: 1,delay:.5
+              }
+            )
+          },
+        })
+      })
+    },
+  },
 }
 </script>
 
@@ -162,8 +232,8 @@ export default {
             font-family: 'josefin sans', sans-serif;
             font-weight: 700;
             font-size: 24px;
-    color: #7949a7;
-            margin-top:40px;
+            color: #7949a7;
+            margin-top: 40px;
           }
 
           li {
@@ -182,7 +252,7 @@ export default {
             font-family: 'josefin sans', sans-serif;
             font-weight: 500;
             font-size: 28px;
-    color: #7949a7;
+            color: #7949a7;
             margin: 5px 0 20px 0;
 
             @include bg-tablet {

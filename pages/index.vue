@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
      <img src="~/static/images/shape1.svg" alt="" class="blob-1" />
       <img src="~/static/images/shape5.svg" alt="" class="blob-2" />
       <img src="~/static/images/shape6.svg" alt="" class="blob-3" />
