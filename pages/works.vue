@@ -16,8 +16,12 @@
           <div class="header">
             <nuxt-link to="/">
               <div class="desc">{{project.about}}</div>
+              <div class="arrow">
+                <div class="arrow-elem">&rarr; </div>
+                <div class="arrow-elem">&rarr; </div>
+              </div>
+
             </nuxt-link>
-            <div class="arrow"></div>
           </div>
           <div class="graphic">
             <VueSlickCarousel v-bind="settings" ref="carousel">
@@ -95,7 +99,7 @@ export default {
   },
   mounted() {
     this.animate('.title')
-    this.animate('.desc')
+    this.animate('.header')
     this.animate2()
   },
   methods: {
@@ -105,7 +109,7 @@ export default {
         ScrollTrigger.create({
           trigger: elem,
           once: false,
-          start: 'top bottom+=105px',
+          start: 'top bottom+=80px',
           onEnter: () => {
             ScrollTrigger.refresh()
 
@@ -258,17 +262,20 @@ export default {
 
       .scope {
         .header {
-
           a {
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin: -3px 0 20px 0;
+            align-items: flex-start;
+            color: #7949a7;
+
           }
 
           .desc {
             font-family: 'josefin sans', sans-serif;
             font-weight: 500;
             font-size: 28px;
-            color: #7949a7;
-            margin: 5px 0 20px 0;
 
             @include bg-tablet {
               font-size: 24px;
@@ -277,6 +284,28 @@ export default {
             @include mobile {
               font-size: 18px;
               text-align: center;
+            }
+          }
+
+          .arrow {
+            font-size: 50px;
+            line-height: 25px;
+            margin-left: auto;
+            padding-right: 40px;
+            height: 27px;
+            overflow: hidden;
+
+
+          }
+
+          .arrow-elem {
+            transition: 0.4s ease-out;
+          }
+
+          &:hover {
+            .arrow-elem {
+              transform: translateY(-27.5px);
+              transition: 0.4s ease-out;
             }
           }
         }
