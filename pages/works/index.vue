@@ -2,20 +2,23 @@
   <div class="services">
     <h1 class="intro p-0 m-0 name">Works</h1>
     <div class="projects">
-      <div v-for="(project,i) in allProjects" :key="i" class="project">
+      <div v-for="(project, i) in allProjects" :key="i" class="project">
         <div class="info">
-          <nuxt-link to="/">
-            <h2 class="title">{{project.company}}</h2>
-          </nuxt-link>
-          <ul class="list">
-            <h3>Service Rendered</h3>
-            <li v-for="(service,j) in project.services" :key="j">{{service}}</li>
-          </ul>
+          <div class="sticky">
+            <nuxt-link to="/works/work">
+              <h2 class="title">{{ project.company }}</h2>
+            </nuxt-link>
+            <ul class="list">
+              <h3>Service Rendered</h3>
+              <li v-for="(service, j) in project.services" :key="j">{{ service }}</li>
+            </ul>
+          </div>
+
         </div>
         <div class="scope">
           <div class="header">
-            <nuxt-link to="/">
-              <div class="desc">{{project.about}}</div>
+            <nuxt-link to="/works/work">
+              <div class="desc">{{ project.about }}</div>
               <div class="arrow">
                 <div class="arrow-elem">&rarr; </div>
                 <div class="arrow-elem">&rarr; </div>
@@ -136,7 +139,7 @@ export default {
     },
     animate2() {
       gsap.utils.toArray('.list').forEach(function (elem) {
-        gsap.set(elem, { autoAlpha: 0 })
+        // gsap.set(elem, { autoAlpha: 0 })
         ScrollTrigger.create({
           trigger: elem,
           once: true,
@@ -176,9 +179,10 @@ export default {
     padding: 0px 5%;
   }
 
- .intro{
-  margin-top:20px !important;
- }
+  .intro {
+    margin-top: 20px !important;
+  }
+
   h1 {
     font-family: 'josefin sans', sans-serif;
     font-size: 99px;
@@ -213,17 +217,25 @@ export default {
       grid-gap: 40px;
       border-top: 1px solid #7949a7;
       padding-top: 40px;
-      margin-bottom:50px;
+      margin-bottom: 50px;
+
       @include mobile {
         display: block;
       }
+
       .info {
+        .sticky {
+          position: sticky !important;
+          top: 80px;
+        }
+
         a {
           text-decoration-color: #7949a7;
 
         }
 
         h2 {
+
           font-family: 'josefin sans', sans-serif;
           font-weight: 700;
           color: #7949a7;
@@ -325,11 +337,12 @@ export default {
         }
 
         .graphic {
-          display:flex;
+          display: flex;
           align-items: center;
           justify-content: center;
-          img{
-          width:70%;
+
+          img {
+            width: 70%;
           }
         }
       }
