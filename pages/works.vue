@@ -139,7 +139,7 @@ export default {
         gsap.set(elem, { autoAlpha: 0 })
         ScrollTrigger.create({
           trigger: elem,
-          once: false,
+          once: true,
           start: 'top bottom+=105px',
           onEnter: () => {
             ScrollTrigger.refresh()
@@ -157,7 +157,7 @@ export default {
                 x: 0, y: -30, autoAlpha: 0,
               },
               {
-                x: 0, y: 0, autoAlpha: 1, duration: 1, delay: 0.5
+                x: 0, y: 0, autoAlpha: 1, duration: 1, delay: 0.3
               }
             )
           },
