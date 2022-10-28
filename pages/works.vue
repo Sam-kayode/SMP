@@ -24,7 +24,8 @@
             </nuxt-link>
           </div>
           <div class="graphic">
-            <VueSlickCarousel v-bind="settings" ref="carousel">
+            <img :src="require(`~/static/images/logos/${project.logo}.png`)" alt="">
+            <!-- <VueSlickCarousel v-bind="settings" ref="carousel">
               <div class="review">
                 <img src="~/static/images/mockups/mock1.png" alt="" class="quote" />
               </div>
@@ -34,7 +35,7 @@
               <div class="review">
                 <img src="~/static/images/mockups/mock3.png" alt="" class="quote" />
               </div>
-            </VueSlickCarousel>
+            </VueSlickCarousel> -->
           </div>
         </div>
       </div>
@@ -46,7 +47,7 @@
 <script>
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import VueSlickCarousel from 'vue-slick-carousel'
+// import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import Projects from '~/static/js/projects.js'
@@ -55,7 +56,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default {
   name: 'Works',
-  components: { VueSlickCarousel },
+  // components: { VueSlickCarousel },
   data() {
     return {
       settings: {
@@ -209,12 +210,10 @@ export default {
       grid-gap: 40px;
       border-top: 1px solid #7949a7;
       padding-top: 40px;
-      margin-bottom: 100px;
-
+      margin-bottom:50px;
       @include mobile {
         display: block;
       }
-
       .info {
         a {
           text-decoration-color: #7949a7;
@@ -322,7 +321,11 @@ export default {
 
         }
 
-        .graphic {}
+        .graphic {
+          img{
+          width:70%;
+          }
+        }
       }
     }
 

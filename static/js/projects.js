@@ -3,6 +3,7 @@ export default {
     {
       company: 'Mokago Business International',
       about: 'Financial Services',
+      logo: 'hv',
       services: [
         'Social media management',
         'Target audience magnetization',
@@ -27,6 +28,7 @@ export default {
     {
       company: 'Go buy hub',
       about: 'Service based business- Importation',
+      logo: 'aco',
       services: [
         'Social media management',
         'Content creation and design',
@@ -50,6 +52,7 @@ export default {
     },
     {
       company: 'Ademakinwa Ademiluyi Driving and logistics company',
+      logo: 'aco',
       about: 'Driving and logistics company',
       services: [
         'Social media management',
@@ -87,6 +90,7 @@ export default {
     },
     {
       company: 'Mydee Naturals',
+      logo: 'watch',
       about: 'Hair care - Product based',
       services: [
         'Social media management',
@@ -113,6 +117,8 @@ export default {
     {
       company: 'Top watches NG',
       about: 'Product based business - Wristwatch sales',
+      logo: 'watch',
+
       services: [
         'Social media management',
         'Profile audit and optimisation',
@@ -142,6 +148,8 @@ export default {
     {
       company: 'Wristwatches land Nigeria',
       about: 'Product based - Wrist watches sales',
+      logo: 'watch',
+
       services: [
         'Social media management',
         'Content strategy development',
@@ -171,6 +179,7 @@ export default {
     {
       company: 'Healthi Avenue',
       about: 'Health and wellness care – Product Based',
+      logo: 'hv',
       services: [
         'Social media management',
         'Growth strategy guidance',
