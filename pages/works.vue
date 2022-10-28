@@ -176,7 +176,9 @@ export default {
     padding: 0px 5%;
   }
 
- 
+ .intro{
+  margin-top:20px !important;
+ }
   h1 {
     font-family: 'josefin sans', sans-serif;
     font-size: 99px;
@@ -192,7 +194,7 @@ export default {
   }
 
   .projects {
-    margin-top: 60px;
+    margin-top: 50px;
 
     .review {
       img {
