@@ -24,6 +24,12 @@ export default {
         'Generated 45 new leads within that month and closed up to 10 investment sales in the DM without running Sponsored Ads',
         'Exponential growth from 0-130+ followers through an effective growth strategy developed by my expertise',
       ],
+      stats: [
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/mbi-4_p7icyz.png',
+      ],
+      review: [
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/mbi-5_husuox.png',
+      ],
     },
     {
       company: 'Go buy hub',
@@ -48,6 +54,12 @@ export default {
       results: [
         'Increase in growth leading to increased profile visits and Impressions via effective content strategy implementation',
         'Increased engagement and growth rate by 70% which also helped generate leads for the business',
+      ],
+      stats: [
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/gob-5_rwzsuj.png',
+      ],
+      review: [
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/gob-6_doefxx.png',
       ],
     },
     {
@@ -87,6 +99,16 @@ export default {
         'Generated close to 70 leads within a month via a highly effective strategy which helped to close a number of deals with various clients.',
         'This reel strategy helped us reach up to 10k+ accounts, 500+ likes, 150+ Shares and 100+ saves on just a single post.',
       ],
+      stats: [
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/aco-5_zwfxgs.png',
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/aco-7_kvlpit.png',
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/aco-6_yi7m3r.png',
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/aco-8_nceugb.png',
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/aco-9_hkxop9.png',
+      ],
+      review: [
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/aco-10_iyxi75.png',
+      ],
     },
     {
       company: 'Mydee Naturals',
@@ -112,6 +134,12 @@ export default {
       results: [
         'Reached more than 10k accounts with an account having less than 200 followers',
         'The business made consistent sales with the implementation of a working strategy put in place',
+      ],
+      stats: [
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/myd-4_xq9jvk.png',
+      ],
+      review: [
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/myd-5_x8yrze.png',
       ],
     },
     {

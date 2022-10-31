@@ -129,12 +129,7 @@ body {
   }
 
   .content {
-    padding-top: 7vh;
     overflow-x: clip;
-
-    @include tablet {
-      padding-top: 1vh;
-    }
   }
 
   .visible {

@@ -14,7 +14,7 @@
     </div>
     <div class="right">
       <img
-        src="https://res.cloudinary.com/sam-kay/image/upload/v1655297755/smp/Group_1_1_2_mxfflk.png"
+        src="https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/Group_1_1_2_mxfflk.png"
         alt=""
         class="tumi"
       />
