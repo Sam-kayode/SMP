@@ -1,27 +1,27 @@
 <template>
     <div class="work">
-        <div class="logo"> <img :src="require(`~/static/images/logos/${allProjects[1].logo}.png`)" class="logo" alt="">
+        <div class="logo"> <img :src="require(`~/static/images/logos/${project.logo}.png`)" class="logo" alt="">
         </div>
-        <h1 class="intro p-0 m-0 name">{{ allProjects[1].company }}</h1>
-        <p class="about">{{ allProjects[1].about }}</p>
+        <h1 class="intro p-0 m-0 name">{{ project.company }}</h1>
+        <p class="about">{{ project.about }}</p>
 
-        <div class="row mt-5 mt-md-2">
+        <div class="row info">
             <div class="left col-lg-6 order-2 order-lg-1">
                 <h3>Client Details</h3>
                 <div class="d-md-flex">
                     <ul class="mr-md-5">
                         <h4>Industry</h4>
-                        <li>{{ allProjects[1].about }}</li>
+                        <li>{{ project.about }}</li>
                     </ul>
                     <ul>
                         <h4>Service rendered</h4>
-                        <li v-for="(service, i) in allProjects[1].services" :key="i">{{ service }}</li>
+                        <li v-for="(service, i) in project.services" :key="i">{{ service }}</li>
                     </ul>
                 </div>
                 <ul>
                     <h4>Objectives</h4>
 
-                    <li v-for="(objective, i) in allProjects[1].objectives" :key="i">{{ objective }}</li>
+                    <li v-for="(objective, i) in project.objectives" :key="i">{{ objective }}</li>
                 </ul>
             </div>
             <div class="right col-lg-6 order-1 order-lg-2">
@@ -40,26 +40,33 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-7">
+            <div class="col-lg-9">
                 <ul class="w-done">
                     <h3>Work Done</h3>
 
-                    <li v-for="(work, i) in allProjects[1].work_done" :key="i">{{ work }}</li>
+                    <li v-for="(work, i) in project.work_done" :key="i">{{ work }}</li>
                 </ul>
                 <ul class="results">
                     <h3>Results</h3>
-                    <li v-for="(result, i) in allProjects[1].results" :key="i">{{ result }}</li>
+                    <li v-for="(result, i) in project.results" :key="i">{{ result }}</li>
                 </ul>
             </div>
-            <div class="col-lg">
-                <div class="col"></div>
+            <div class="col-12 gallery">
+                <div class="gallery-in">
+                    <div class="stat " v-for="(stat, idx) in project.stats" :key="idx">
+                        <img :src="stat" alt="">
+                    </div>
+                </div>
+                {{ $route.params.work }}
 
             </div>
         </div>
 
+        <!-- <h3 class="r-head">Client Review</h3> -->
 
 
-        <!-- {{allProjects}} -->
+
+        <!-- {{                                   allProjects                                   }} -->
     </div>
 </template>
   
@@ -106,9 +113,9 @@ export default {
         }
     },
     computed: {
-        allProjects() {
+        project() {
             console.log(Projects.projects)
-            return Projects.projects
+            return Projects.projects[this.$route.params.work]
         }
     }
 }
@@ -116,11 +123,16 @@ export default {
   
 <style lang="scss" scoped>
 .work {
-    overflow: clip;
+    overflow-x: hidden;
     padding: 0px 7%;
     background: url("~/static/images/mob-1.svg");
     background-size: cover;
     background-repeat: no-repeat;
+
+
+    @include mobile {
+        padding: 0 5%;
+    }
 
     .logo {
         width: 150px;
@@ -196,6 +208,11 @@ export default {
 
     }
 
+    .info {
+        margin-top: 50px;
+    }
+
+
     .left {}
 
     .review {
@@ -209,6 +226,61 @@ export default {
     .w-done,
     .results {
         margin-top: 50px;
+    }
+
+    .stat {
+        height: 300px;
+        cursor: pointer;
+
+        // position: relative;
+        // flex: 1 1 auto;
+        img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+            max-width: 340px;
+
+            @include tablet {
+                min-width: 300px;
+            }
+        }
+
+    }
+
+    .gallery {}
+
+    .gallery-in {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 0 !important;
+        gap: 1px;
+
+        @include mobile {
+            flex-wrap: nowrap;
+            width: 100%;
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar {
+                height: 5px
+            }
+
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 6px rgba(33, 33, 33, 0.3);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #7949a7;
+                border-radius: 35px;
+            }
+        }
+
+
+    }
+
+    .r-head {
+        margin-top: 80px;
     }
 }
 </style>
