@@ -30,7 +30,8 @@ export default {
       review: [
         'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/mbi-5_husuox.png',
       ],
-      mockup:""
+      mockup:
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/reviews/mbi1_bipjvx.png',
     },
     {
       company: 'Go buy hub',
@@ -62,6 +63,8 @@ export default {
       review: [
         'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/gob-6_doefxx.png',
       ],
+      mockup:
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/reviews/gob1_m6cpaw.png',
     },
     {
       company: 'Ademakinwa Ademiluyi Driving and logistics company',
@@ -110,6 +113,8 @@ export default {
       review: [
         'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/aco-10_iyxi75.png',
       ],
+      mockup:
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/reviews/gob1_m6cpaw.png',
     },
     {
       company: 'Mydee Naturals',
@@ -142,6 +147,8 @@ export default {
       review: [
         'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/myd-5_x8yrze.png',
       ],
+      mockup:
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/reviews/myd-1_gv3hld.png',
     },
     {
       company: 'Top watches NG',
@@ -173,6 +180,8 @@ export default {
         'Made sales and closed pending sales in the DMs through effective customer communication',
         'Engagements skyrocketed up to about +3,688% accounts in 7 days',
       ],
+      mockup:
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/reviews/top1_alnnzf.png',
     },
     {
       company: 'Wristwatches land Nigeria',
@@ -204,6 +213,8 @@ export default {
         'The content designs attracted the attention of our target audience resulting in an increase in conversion',
         'The engagement and growth strategy lead to a 95% increase in oranic followers',
       ],
+      mockup:
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/reviews/top1_alnnzf.png',
     },
     {
       company: 'Healthi Avenue',
@@ -235,6 +246,8 @@ export default {
         'By incorporating the right content strategy to this business page, I was able to help them reach up to 4400+ non follower accounts',
         'These results were achieved  using a consistent content strategy format of ReelS, posts and stories.',
       ],
+      mockup:
+        'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/reviews/hv-1_koyf6h.png',
     },
   ],
 }

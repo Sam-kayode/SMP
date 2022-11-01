@@ -138,7 +138,7 @@ export default {
         margin: 0 auto;
 
         @include mobile {
-            width: 100px;
+            width: 150px;
             margin-top: 0px;
 
         }
@@ -146,13 +146,17 @@ export default {
 
     h1 {
         font-family: 'josefin sans', sans-serif;
-        font-size: 90px;
+        font-size: 82px;
         font-weight: bolder;
         color: #7949a7;
         text-align: center;
 
+        @include bg-tablet {
+            font-size: 64px;
+        }
+
         @include mobile {
-            font-size: 60px;
+            font-size: 48px;
         }
     }
 
