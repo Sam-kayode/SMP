@@ -5,7 +5,7 @@
       <div v-for="(project, i) in allProjects" :key="i" class="project">
         <div class="info">
           <div class="sticky">
-            <nuxt-link to="/works/work">
+            <nuxt-link :to="`/works/${i}`">
               <h2 class="title">{{ project.company }}</h2>
             </nuxt-link>
             <ul class="list">
