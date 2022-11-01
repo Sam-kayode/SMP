@@ -57,7 +57,6 @@
                         <img :src="stat" alt="">
                     </div>
                 </div>
-                {{ $route.params.work }}
 
             </div>
         </div>
