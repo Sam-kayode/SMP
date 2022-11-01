@@ -30,6 +30,7 @@ export default {
       review: [
         'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/mockups/mbi-5_husuox.png',
       ],
+      mockup:""
     },
     {
       company: 'Go buy hub',
