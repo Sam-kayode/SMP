@@ -17,7 +17,7 @@
         </div>
         <div class="scope">
           <div class="header">
-            <nuxt-link to="/works/work">
+            <nuxt-link  :to="`/works/${i}`">
               <div class="desc">{{ project.about }}</div>
               <div class="arrow">
                 <div class="arrow-elem">&rarr; </div>
