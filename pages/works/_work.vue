@@ -25,7 +25,10 @@
                 </ul>
             </div>
             <div class="right col-lg-6 order-1 order-lg-2">
-                <VueSlickCarousel v-bind="settings" ref="carousel">
+                <div class="d-flex">
+                    <img :src="project.mockup" alt="" class="mockup mx-auto ml-lg-auto">
+                </div>
+                <!-- <VueSlickCarousel v-bind="settings" ref="carousel">
                     <div class="review">
                         <img src="~/static/images/mockups/gob1.png" alt="" class="quote mx-auto ml-md-auto" />
                     </div>
@@ -35,7 +38,7 @@
                     <div class="review">
                         <img src="~/static/images/mockups/top1.png" alt="" class="quote mx-auto ml-md-auto" />
                     </div>
-                </VueSlickCarousel>
+                </VueSlickCarousel> -->
             </div>
         </div>
 
@@ -53,7 +56,7 @@
             </div>
             <div class="col-12 gallery">
                 <div class="gallery-in">
-                    <div class="stat " v-for="(stat, idx) in project.stats" :key="idx">
+                    <div v-for="(stat, idx) in project.stats" :key="idx" class="stat ">
                         <img :src="stat" alt="">
                     </div>
                 </div>
@@ -61,22 +64,19 @@
             </div>
         </div>
 
-        <!-- <h3 class="r-head">Client Review</h3> -->
-
-
-
-        <!-- {{                                   allProjects                                   }} -->
+        <h3 class="r-head">Client Review</h3>
+        <img :src="project.review" alt="" class="review">
     </div>
 </template>
   
 <script>
-import VueSlickCarousel from 'vue-slick-carousel'
+// import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import Projects from '~/static/js/projects.js'
 export default {
     name: 'Contact',
-    components: { VueSlickCarousel },
+    // components: { VueSlickCarousel },
     // components: [Projects, VueSlickCarousel],
     data() {
         return {
@@ -181,6 +181,15 @@ export default {
         color: #7949a7;
     }
 
+    .mockup {
+        max-height: 700px;
+
+        @include tablet {
+            max-height: 500px;
+            margin-bottom: 50px;
+        }
+    }
+
     .about {
         text-align: center;
         color: #7949a7;
@@ -263,7 +272,7 @@ export default {
         @include mobile {
             flex-wrap: nowrap;
             width: 100%;
-            overflow-x: scroll;
+            overflow-x: auto;
 
             &::-webkit-scrollbar {
                 height: 5px
@@ -282,8 +291,14 @@ export default {
 
     }
 
-    .r-head {
-        margin-top: 80px;
+    .r-head {}
+
+    .review {
+        max-width: 600px;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 }
 </style>

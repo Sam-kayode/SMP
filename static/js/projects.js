@@ -3,7 +3,7 @@ export default {
     {
       company: 'Mokago Business International',
       about: 'Financial Services',
-      logo: 'hv',
+      logo: 'mbi',
       services: [
         'Social media management',
         'Target audience magnetization',
@@ -36,7 +36,7 @@ export default {
     {
       company: 'Go buy hub',
       about: 'Service based business- Importation',
-      logo: 'aco',
+      logo: 'gb',
       services: [
         'Social media management',
         'Content creation and design',
@@ -151,7 +151,7 @@ export default {
         'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/reviews/myd-1_gv3hld.png',
     },
     {
-      company: 'Top watches NG',
+      company: 'Top Watches Ng',
       about: 'Product based business - Wristwatch sales',
       logo: 'watch',
 
