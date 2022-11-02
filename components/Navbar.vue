@@ -106,7 +106,7 @@ export default {
   }
   @include tablet {
     padding: 4px 2%;
-    height: 60px;
+    height: 70px;
   }
   @include mobile {
     display: flex;
