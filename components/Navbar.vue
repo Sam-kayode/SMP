@@ -111,7 +111,7 @@ export default {
   @include mobile {
     display: flex;
     margin: auto;
-    height: 50px;
+    height: 70px;
   }
 
   .logo {
