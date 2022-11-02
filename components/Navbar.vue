@@ -1,50 +1,60 @@
 <template>
   <div class="navbar-contain">
     <div class="navbar" :class="{ 'nav-position': windowTop > 180 }">
-      <div
-        class="logo-container"
-        :style="[
-          visible
-            ? {
-                position: 'fixed',
-                top: '4px',
-                left: '9px',
-                height: '41.8px',
-                'z-index': 6,
-              }
-            : '',
-        ]"
-      >
+      <div class="logo-container" :style="[
+        visible
+          ? {
+            position: 'fixed',
+            top: '4px',
+            left: '9px',
+            height: '41.8px',
+            'z-index': 6,
+          }
+          : '',
+      ]">
         <img src="~/static/images/logo.svg" alt="" class="logo" />
         <img src="~/static/images/smp.svg" alt="" class="smp" />
       </div>
       <ul class="desktop-nav">
-        <li><nuxt-link to="/">Home</nuxt-link></li>
-        <li><nuxt-link to="/works">Works</nuxt-link></li>
-        <li><nuxt-link to="/services">Services</nuxt-link></li>
-        <li><nuxt-link to="/about">About</nuxt-link></li>
-        <li><nuxt-link to="/contact">Get in touch</nuxt-link></li>
+        <li>
+          <nuxt-link to="/">Home</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/works">Works</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/services">Services</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/about">About</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/contact">Get in touch</nuxt-link>
+        </li>
       </ul>
       <transition name="fade">
         <ul v-show="visible" class="mobLink" :class="[visible ? mob : '']">
-          <li @click="toggle"><nuxt-link to="/">Home</nuxt-link></li>
-          <li @click="toggle"><nuxt-link to="/works">Works</nuxt-link></li>
+          <li @click="toggle">
+            <nuxt-link to="/">Home</nuxt-link>
+          </li>
+          <li @click="toggle">
+            <nuxt-link to="/works">Works</nuxt-link>
+          </li>
           <li @click="toggle">
             <nuxt-link to="/services">Services</nuxt-link>
           </li>
-          <li @click="toggle"><nuxt-link to="/about">About</nuxt-link></li>
+          <li @click="toggle">
+            <nuxt-link to="/about">About</nuxt-link>
+          </li>
           <li @click="toggle">
             <nuxt-link to="/contact">Get in touch</nuxt-link>
           </li>
         </ul>
       </transition>
 
-      <Hamburger
-        :style="[
-          visible ? { position: 'fixed', top: '5px', right: '5px' } : '',
-        ]"
-        @click.native="toggleNav"
-      />
+      <Hamburger :style="[
+        visible ? { position: 'fixed', top: '5px', right: '5px' } : '',
+      ]" @click.native="toggleNav" />
     </div>
   </div>
 </template>
@@ -101,17 +111,23 @@ export default {
   align-items: center;
   height: 80px;
   z-index: 1000;
+
   .logo-container {
     height: 100%;
   }
+
   @include tablet {
     padding: 4px 2%;
-    height: 70px;
+    height: 60px;
+    padding: 8px 0;
+
   }
+
   @include mobile {
     display: flex;
     margin: auto;
-    height: 70px;
+    height: 50px;
+    padding: 8px 0;
   }
 
   .logo {
@@ -191,6 +207,7 @@ export default {
           }
         }
       }
+
       @include mobile {
         display: block;
         width: 70vw;
