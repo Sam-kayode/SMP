@@ -1,11 +1,13 @@
 <template>
-  <div class="services"><img src="~/static/images/anim.gif" alt="" /></div>
+  <div class="services">
+    
+  </div>
 </template>
 
 <script>
 export default {
   name: 'Services',
-  layout:"none"
+
 }
 </script>
 

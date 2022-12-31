@@ -11,7 +11,6 @@
     <FourthSection />
     <Testimonial />
     <ContactMe />
-    <Footer />
   </div>
 </template>
 
