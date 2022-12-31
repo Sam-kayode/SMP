@@ -118,7 +118,7 @@ export default {
     },
     {
       company: 'Mydee Naturals',
-      logo: 'watch',
+      logo: 'mydee',
       about: 'Hair care - Product based',
       services: [
         'Social media management',
@@ -153,7 +153,7 @@ export default {
     {
       company: 'Top Watches Ng',
       about: 'Product based business - Wristwatch sales',
-      logo: 'watch',
+      logo: 'top',
 
       services: [
         'Social media management',
@@ -182,6 +182,9 @@ export default {
       ],
       mockup:
         'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/reviews/top1_alnnzf.png',
+      review: [
+        'https://res.cloudinary.com/sam-kay/image/upload/v1672493127/smp/mockups/top2_l5zuxa.png',
+      ],
     },
     {
       company: 'Wristwatches land Nigeria',
@@ -215,6 +218,9 @@ export default {
       ],
       mockup:
         'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/reviews/top1_alnnzf.png',
+      review: [
+        'https://res.cloudinary.com/sam-kay/image/upload/v1672492696/smp/mockups/wl-2_gdtmr0.png',
+      ],
     },
     {
       company: 'Healthi Avenue',
@@ -248,6 +254,9 @@ export default {
       ],
       mockup:
         'https://res.cloudinary.com/sam-kay/image/upload/q_auto/smp/reviews/hv-1_koyf6h.png',
+      review: [
+        'https://res.cloudinary.com/sam-kay/image/upload/v1672492091/smp/mockups/hv-2_giif8b.png',
+      ],
     },
   ],
 }
