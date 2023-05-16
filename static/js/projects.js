@@ -17,7 +17,7 @@ export default {
       work_done: [
         'Designed content and implemented a working content strategy for the business',
         'Fully optimised their profile which attracted up to 70% target audience for that month ',
-        'Applied a growth and engagement strategy which grew their following from 0-130+ for that month. ▪︎Increased growth and engagement strategy from 0-80%',
+        'Applied a growth and engagement strategy which grew their following from 0-130+ for that month.','Increased growth and engagement strategy from 0-80%'
       ],
       results: [
         '1,200 profile visits with an increasing growth of +29.6% within a month',
